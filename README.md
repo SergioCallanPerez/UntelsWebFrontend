@@ -1,11 +1,11 @@
 # UntelsWebFrontend
 
 Para instalar React Vite:
-\br
+/br
 cd frontend
-\br
+/br
 npm install
-\br\br
+/br/br
 Para ejecutar el código:
-\br
+/br
 npm run dev
