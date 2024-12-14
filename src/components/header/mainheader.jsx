@@ -9,7 +9,7 @@ export default function Header(){
                 <ul>
                     <li><a href='/'><img src={logo}/></a></li>
                     <li><a href='http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV'><img src={portal}/></a></li>
-                    
+                    <li></li>
                 </ul>
             </nav>
         </header>
