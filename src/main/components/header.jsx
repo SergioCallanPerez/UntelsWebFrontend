@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logoUntels.png'
-import portal from '../assets/portalLogo.png'
+import logo from '../../assets/logoUntels.png'
+import portal from '../../assets/portalLogo.png'
 
 export default function Header(){
     return(

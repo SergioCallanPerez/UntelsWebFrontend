@@ -1,10 +1,10 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import MainPage from "./components/pages/mainpage.jsx"
+import Main from "./pages/main"
 function App() {
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage/>}/>
+        <Route path="/" element={<Main/>}/>
       </Routes>
     </BrowserRouter>
   )
