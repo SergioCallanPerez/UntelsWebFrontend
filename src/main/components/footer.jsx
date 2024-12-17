@@ -10,7 +10,7 @@ import "../styles/footer.css";
 export default function Footer() {
   return (
     <footer>
-      <div>
+      <div className="footer-item-container">
         <p>
           <icon>
             <PiMapPinFill />
@@ -33,8 +33,8 @@ export default function Footer() {
         <p>
           <icon>
             <PiRadioButtonFill />
-          </icon>{" "}
-          <strong>Cómo llegar</strong>:{" "}
+          </icon>
+          <strong> Cómo llegar: </strong>
           <a href="https://maps.app.goo.gl/U1LMLXLU2Qd2VtD4A" target="blank">
             Mapa del campus
           </a>

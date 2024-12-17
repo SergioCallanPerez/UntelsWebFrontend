@@ -1,13 +1,14 @@
 footer {
-  background: var(--primary-light);
-  padding: var(--layout-padding);
-  color: var(--untels-white);
+  background: var(--primary-color);
+  padding: var(--layout-padding-vertical) var(--layout-padding-horizontal);
+  color: var(--on-primary-color);
+  font-size: var(--font-size-small);
 }
 
-icon {
-  color: var(--untels-yellow);
+.footer-item-container a, icon {
+  color: var(--on-primary-accent-color);
 }
 
-a {
-  color: var(--untels-yellow);
+.footer-item-container p:last-child {
+  margin: 0;
 }
