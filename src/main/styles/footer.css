@@ -1,0 +1,13 @@
+footer {
+  background: var(--primary-light);
+  padding: var(--layout-padding);
+  color: var(--untels-white);
+}
+
+icon {
+  color: var(--untels-yellow);
+}
+
+a {
+  color: var(--untels-yellow);
+}
