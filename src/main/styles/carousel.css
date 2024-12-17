@@ -1,0 +1,11 @@
+.carousel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carouselIMG {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px; /*Cambiar de acuerdo al tamaño de las imagenes de noticias que nos pasen para que no haya minisaltos*/
+}
