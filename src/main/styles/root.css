@@ -1,0 +1,72 @@
+/* colors */
+:root {
+  --untels-white: #ffffff;
+  --untels-blue-1: #004e9b;
+  --untels-blue-2: #0071b8;
+  --untels-yellow: #ffe601;
+  --untels-mustard: #d39700;
+  --untels-black: #1d1d1b;
+  --untels-gray-1: #4a4a49;
+  --untels-gray-2: #b2b2b2;
+}
+
+/* theme */
+:root {
+  /* Colores principales */
+  --primary-color: var(--untels-blue-1); /* Color principal del tema */
+  --primary-light: var(--untels-blue-2); /* Variante más clara */
+  --on-primary-color: var(--untels-white);
+  --on-primary-accent-color: var(--untels-yellow);
+
+  --secondary-color: var(--untels-yellow); /* Color secundario */
+  --tertiary-color: var(--untels-white); /* Color terciario o neutro */
+
+  /* Colores de fondo */
+  --background-color: var(--untels-white);
+  --on-background-color: var(--untels-black); /* Texto sobre fondo claro */
+  --on-background-accent-color: var(--untels-blue-1);
+  --surface-color: var(--untels-gray-2); /* Color para superficies, tarjetas */
+  --on-surface-color: var(--untels-gray-1); /* Texto sobre superficies */
+
+  /* Colores de alertas */
+  --alert-success: #28a745; /* Verde éxito */
+  --alert-error: #dc3545; /* Rojo error */
+  --alert-warning: var(--untels-mustard); /* Amarillo mostaza */
+  --alert-info: var(--untels-blue-2); /* Azul claro */
+
+  /* Colores interactivos */
+  --hover-primary: #003b73; /* Variante más oscura del azul primario */
+  --hover-secondary: #e0c400; /* Amarillo oscuro en hover */
+  --active-primary: #002851; /* Color de activo */
+  --focus-outline: #ffbf00; /* Amarillo enfoque */
+
+  /* Sombras y bordes */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  --shadow-dark: rgba(0, 0, 0, 0.3); /* Sombra oscura */
+  --border-color: var(--untels-gray-2); /* Bordes neutrales */
+}
+
+.on-primary-accent {
+  color: var(--on-primary-accent-color)
+}
+.on-background-accent {
+  color: var(--on-background-accent-color)
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Avenir", "Arial", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--untels-gray-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--untels-blue-1);
+  border-radius: 3px;
+}
