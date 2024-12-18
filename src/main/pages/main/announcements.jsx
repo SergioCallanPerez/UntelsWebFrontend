@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Schedule from "./schedule";
 import News from "./news";
+import Communications from './communications';
 
 export default function Announcements() {
     
@@ -24,6 +25,7 @@ export default function Announcements() {
                     </Col>
                     <Col>
                         <h2>Comunicados</h2>
+                        <Communications />
                     </Col>
                 </Row>
                 
