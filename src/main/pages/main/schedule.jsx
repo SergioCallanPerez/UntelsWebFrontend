@@ -1,6 +1,3 @@
-import React from 'react';
-
-import "../../styles/news.css"
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,7 +17,8 @@ function Event({day,month,description,time,place}){
         </Row>
     )
 }
-export default function News() {
+
+export default function Schedule() {
     const auditorium ={
         sanJuanPablo: "Auditorio S. S. san Juan Pablo II",
         palacioJuventud: "Palacio de la juventud",
@@ -34,35 +32,21 @@ export default function News() {
         {day:20, month: 'ENE', description:"Clase espejo untels", time:"10:00h", place:`${auditorium.aulaC4_3}`},
         {day:10, month: 'FEB', description: "Ceremonia de Colación", time:"17:00h", place:`${auditorium.sanJuanPablo}`}
     ]
+
     return (
-        <section>
-            <Container>
-                <Row>
-                    <Col>
-                        <h2 className='agenda-title'>Agenda</h2>
-                        {events.map((event,index) => (
-                            <Event
-                                key={index}
-                                day={event.day}
-                                month={event.month}
-                                description={event.description}
-                                time={event.time}
-                                place={event.place}
-                            />
-                        ))}
-
-                    </Col>
-                    <Col>
-                        <h2>Noticias</h2>
-
-                    </Col>
-                    <Col>
-                        <h2>Comunicados</h2>
-                    </Col>
-                </Row>
-                
-            </Container>
-        </section>
+        <Col>
+            {events.map((event,index) => (
+                <Event
+                    key={index}
+                    day={event.day}
+                    month={event.month}
+                    description={event.description}
+                    time={event.time}
+                    place={event.place}
+                />
+            ))}
+        </Col>
     );
+
 }
-    
+
