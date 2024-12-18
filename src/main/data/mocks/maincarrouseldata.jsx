@@ -1,3 +1,4 @@
+//Borrar
 export const mainCarrouselData= [
     {
         id: 1, imgUrl: "../../assets/carrusel1.png"
