@@ -46,6 +46,10 @@
   --border-color: var(--untels-gray-2); /* Bordes neutrales */
 }
 
+.primary {
+  background-color: var(--primary-color);
+}
+
 .on-primary-accent {
   color: var(--on-primary-accent-color)
 }

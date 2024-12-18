@@ -9,13 +9,11 @@ import Experiences from "./experiences.jsx";
 export default function Main() {
   return (
     <main>
-      <body>
-        <MainCarousel />
-        <Announcements />
-        <h2>Experiencias de éxito</h2>
-        <Experiences/>
-        <Follow />
-      </body>
+      <MainCarousel />
+      <Announcements />
+      <h2>Experiencias de éxito</h2>
+      <Experiences/>
+      <Follow />
     </main>
   );
 }
