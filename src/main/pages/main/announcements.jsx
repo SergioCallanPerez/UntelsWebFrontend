@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Schedule from "./schedule";
+import News from "./news";
 
 export default function Announcements() {
     
@@ -14,12 +15,12 @@ export default function Announcements() {
                 <Row>
                     <Col>
                         <h2 className='agenda-title'>Agenda</h2>
-                        <Schedule/>
+                        <Schedule />
 
                     </Col>
                     <Col>
                         <h2>Noticias</h2>
-
+                        <News />
                     </Col>
                     <Col>
                         <h2>Comunicados</h2>
