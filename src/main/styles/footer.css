@@ -1,14 +1,4 @@
 footer {
   background: var(--primary-color);
-  padding: var(--layout-padding-vertical) var(--layout-padding-horizontal);
   color: var(--on-primary-color);
-  font-size: var(--font-size-small);
-}
-
-.footer-item-container a, icon {
-  color: var(--on-primary-accent-color);
-}
-
-.footer-item-container p:last-child {
-  margin: 0;
 }
