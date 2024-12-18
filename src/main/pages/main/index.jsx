@@ -4,6 +4,7 @@ import MainCarousel from "./carousel.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/main_index.css'
 import Announcements from "./announcements.jsx"
+import Experiences from "./experiences.jsx";
 
 export default function Main() {
   return (
@@ -12,6 +13,8 @@ export default function Main() {
       <body>
         <MainCarousel />
         <Announcements/>
+        <h2>Experiencias de éxito</h2>
+        <Experiences/>
         <p>Hello world</p>
       </body>
     </main>
