@@ -1,0 +1,12 @@
+.announcements-container{
+    background-color: var(--primary-light);
+}
+
+.background-schedule{
+    margin-top: 10%;
+    text-align: center;
+}
+.agenda{
+    background-color: var(--on-primary-color);
+    
+}

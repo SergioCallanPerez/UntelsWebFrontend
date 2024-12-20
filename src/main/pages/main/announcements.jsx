@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../../styles/news.css"
+import "../../styles/announcements.css"
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,11 +11,15 @@ import Communications from './communications';
 export default function Announcements() {
     
     return (
-        <section>
+        <section className='py-4'>
             <Container>
-                <Row>
-                    <Col>
-                        <h2 className='agenda-title'>Agenda</h2>
+                <Row className='announcements-container'>
+                    <Col className='justify-content'>
+                        <div className='background-schedule'>
+                            <h2 className='mb-4 on-background-light agenda'>Agenda</h2>
+                        </div>
+                        
+                        
                         <Schedule />
 
                     </Col>

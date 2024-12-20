@@ -25,6 +25,7 @@
   --background-color: var(--untels-white);
   --on-background-color: var(--untels-black); /* Texto sobre fondo claro */
   --on-background-accent-color: var(--untels-blue-1);
+  --on-background-light-color: var(--untels-blue-2);
   --surface-color: var(--untels-gray-2); /* Color para superficies, tarjetas */
   --on-surface-color: var(--untels-gray-1); /* Texto sobre superficies */
 
@@ -55,6 +56,10 @@
 }
 .on-background-accent {
   color: var(--on-background-accent-color)
+}
+
+.on-background-light {
+  color: var(--on-background-light-color)
 }
 
 body {
