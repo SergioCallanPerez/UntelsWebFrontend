@@ -29,7 +29,7 @@ const cases = [
 export default function Experiences() {
   return (
     <section>
-      <h2>Experiencias de éxito</h2>
+      <h2 className='mb-4 on-background-accent'><b>Experiencias de éxito</b></h2>
       <Container>
         <Row xs={1} md={4} className="g-4 justify-content-center">
           {cases.map((caseItem) => (
@@ -38,10 +38,10 @@ export default function Experiences() {
                 <Card.Body>
                   <div className='d-flex align-items-center'>
                     <Card.Img className='cardImg' variant="top" src={userLogo} style={{ width: '50px', height: '50px'}}/>
-                    <Card.Title>{caseItem.name}</Card.Title>
+                    <Card.Title><b>{caseItem.name}</b></Card.Title>
                   </div>
                   <Card.Text>{caseItem.text}</Card.Text>
-                  <Card.Subtitle className="mb-2 text-muted">{caseItem.work}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted"><b>{caseItem.work}</b></Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>
