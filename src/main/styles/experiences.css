@@ -1,5 +1,14 @@
+.cards{
+    background-color: var(--untels-mustard);
+    border-color: var(--untels-white);
+}
+
 .cardImg{
     width: 10%;
     margin-top: 10px;
     margin-left: 10px;
+}
+
+h2{
+    text-align: center;
 }

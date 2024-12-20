@@ -1,51 +1,53 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import userLogo from '../../assets/user_icon.png';
-import '../../styles/experiences.css'
-import { Container } from 'react-bootstrap';
+import '../../styles/experiences.css';
+import { Container, Row, Col } from 'react-bootstrap'; // Corregido: se agregaron Row y Col
 
 const cases = [
   {
     id: '1',
     name: 'Jhon Doe',
     text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-    work: 'Trabajo actual',
+    work: 'Desarrollador',
   },
   {
     id: '2',
     name: 'Jane Doe',
     text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-    work: 'Trabajo actual',
+    work: 'Diseñador UX',
   },
   {
     id: '3',
-    name: 'Jhon Doe',
+    name: 'Jhon Smith',
     text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-    work: 'Trabajo actual',
+    work: 'Desarrollador',
   },
 ];
 
 export default function Experiences() {
   return (
     <section>
-        <Container>
-            <CardGroup>
-                {cases.map((caseItem) => (
-                    <Card key={caseItem.id}>
-                        <Card.Body>
-                            <div className="d-flex align-items-center">
-                                <Card.Img className='cardImg' variant="top" src={userLogo} style={{ width: '50px', height: '50px'}} />
-                                <Card.Title>{caseItem.name}</Card.Title>
-                            </div>
-                            <Card.Text>{caseItem.text}</Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">{caseItem.work}</small>
-                        </Card.Footer>
-                    </Card>
-                ))}
-            </CardGroup>
-        </Container>
+      <h2>Experiencias de éxito</h2>
+      <Container>
+        <Row xs={1} md={4} className="g-4 justify-content-center">
+          {cases.map((caseItem) => (
+            <Col key={caseItem.id}>
+              <Card className='cards'>
+                <Card.Body>
+                  <div className='d-flex align-items-center'>
+                    <Card.Img className='cardImg' variant="top" src={userLogo} style={{ width: '50px', height: '50px'}}/>
+                    <Card.Title>{caseItem.name}</Card.Title>
+                  </div>
+                  <Card.Text>{caseItem.text}</Card.Text>
+                  <Card.Subtitle className="mb-2 text-muted">{caseItem.work}</Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 }

@@ -11,7 +11,6 @@ export default function Main() {
     <main>
       <MainCarousel />
       <Announcements />
-      <h2>Experiencias de éxito</h2>
       <Experiences/>
       <Follow />
     </main>
