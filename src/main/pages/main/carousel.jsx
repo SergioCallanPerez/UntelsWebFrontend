@@ -16,12 +16,14 @@ export default function MainCarousel() {
     };
 
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect} className='carousel'>
+        <section>
+            <Carousel activeIndex={index} onSelect={handleSelect} className='carousel'>
             {carouselImages.map((img, idx) => (
                 <Carousel.Item key={idx} interval={1500}>
                     <img src={img} alt={`Carrusel ${idx + 1}`} className="carouselIMG"/>
                 </Carousel.Item>
             ))}
         </Carousel>
+        </section>
     );
 }
