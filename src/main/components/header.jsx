@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logoUntels.png';
 import portal from '../assets/portalLogo.png';
+import "../styles/header.css"
 import { isBrowser, isMobile } from 'react-device-detect';
 
 const menuData = {
@@ -110,6 +111,7 @@ const renderMenuItems = (items) =>
                         <Nav className="me-auto my-2 my-lg-0" navbarScroll>
                             {Object.entries(menuData).map(([key, value]) => (
                                 <NavDropdown
+                                    className='main-dropdown'
                                     key={key}
                                     title={key}
                                     id={`navbarScrollingDropdown-${key}`}
