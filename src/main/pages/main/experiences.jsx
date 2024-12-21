@@ -3,7 +3,8 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import userLogo from "../../assets/user_icon.png";
 import "../../styles/experiences.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap';
+import { isBrowser, isMobile } from 'react-device-detect';
 
 const cases = [
   {
@@ -29,11 +30,9 @@ const cases = [
 export default function Experiences() {
   return (
     <section>
+      <h2 className={isBrowser ? 'h2-text': 'h2-mobile-text'}><b>Experiencias de éxito</b></h2>
+      <hr className="h2Line" />
       <Container>
-        <h2 className={"mb-4 on-background-accent"}>
-          <b>Experiencias de éxito</b>
-        </h2>
-        <hr className="h2Line" />
         <Row xs={1} md={4} className="g-4 justify-content-center">
           {cases.map((caseItem) => (
             <Col key={caseItem.id}>
