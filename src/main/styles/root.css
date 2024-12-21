@@ -51,6 +51,10 @@
   background-color: var(--primary-color);
 }
 
+.on-primary-color {
+  color: var(--on-primary-color)
+}
+
 .on-primary-accent {
   color: var(--on-primary-accent-color)
 }
@@ -78,4 +82,9 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: var(--untels-blue-1);
   border-radius: 3px;
+}
+
+.h2Line{
+  border: 1px solid var(--untels-mustard);
+  margin-bottom: 20px;
 }

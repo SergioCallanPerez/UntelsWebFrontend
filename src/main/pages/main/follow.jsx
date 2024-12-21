@@ -33,6 +33,7 @@ export default function Follow() {
     <section className="py-4">
       <Container>
         <h2 className="mb-4 on-background-accent"><b>Síguenos</b></h2>
+        <hr className='h2Line'/>
         <Row className="d-flex">
           <Col xs={12} md={6} className="d-flex flex-grow-2 mb-3 mb-md-0">
             <iframe
