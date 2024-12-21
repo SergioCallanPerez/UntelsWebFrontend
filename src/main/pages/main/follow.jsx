@@ -4,9 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 export default function Follow() {
   const [dimensions, setDimensions] = useState({ height: 0, width: 0 });
-  const isXS = useMediaQuery({
-    query: "(max-width: 576px)",
-  });
+
   const isMd = useMediaQuery({
     query: "(max-width: 768px)",
   });
@@ -57,7 +55,7 @@ export default function Follow() {
             <iframe
               src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Funtelsperu&tabs=timeline&width=${dimensions.width}&height=${dimensions.height}&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId`}
               width="100%"
-              height={isXS || isMd ? "510" : "100%"}
+              height={ isMd ? "510" : "100%"}
               scrolling="no"
               frameBorder="0"
               title="Untels Facebook Page"
@@ -69,7 +67,7 @@ export default function Follow() {
             <iframe
               src="https://www.instagram.com/untelsoficial/embed"
               width="100%"
-              height={isXS || isMd ? "450" : "100%"}
+              height={isMd ? "450" : "100%"}
               frameBorder="0"
               title="Untels Instagram Feed"
               allowFullScreen
