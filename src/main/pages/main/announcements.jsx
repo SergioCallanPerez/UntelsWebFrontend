@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Schedule from "./schedule";
 import News from "./news";
 import Communications from './communications';
+import { isBrowser, isMobile } from 'react-device-detect';
 
 export default function Announcements() {
     
@@ -14,7 +15,7 @@ export default function Announcements() {
         <section className='py-4'>
             <Container fluid>
                 <Row className='announcements-container'>
-                    <Col xs={12} md={4} className='d-flex flex-column'>
+                    <Col xs={12} md={3} className={isBrowser ? 'd-flex flex-column': 'd-flex flex-column'}>
                         <Row>
                             <div className='background-schedule'>
                                 <h2 className='mb-4 on-background-light agenda'>Agenda</h2>
@@ -31,34 +32,46 @@ export default function Announcements() {
                         
 
                     </Col>
+
+                    {!isMobile && (
+                        <Col md={1} className="d-flex justify-content-center align-items-stretch">
+                            <div className="vertical-bar"></div>
+                        </Col>
+                    )}
                     
-                    <Col xs={12} md={4} className='d-flex flex-column'>
+                    <Col xs={12} md={3} className={isBrowser ? 'd-flex flex-column ': 'd-flex flex-column'}>
                         <Row>
                             <h2 className='mb-4 news'>Noticias</h2>
                         </Row>
-                        <Row className='flex-grow-1'>
+                        <Row className='flex-grow-1 news-car'>
                             <News />
                         </Row>
                         <Row className='mt-auto justify-content-between align-items-center more-news-row'>
                             <Col md={5} sm={5} lg={5}>
-                                <a className= "more-see link" id="morelink1" href="#Conoce-Más">{'>'} Conoce Más</a>
+                                <a className= "more-see link" href="#Conoce-Más">{'>'} Conoce Más</a>
                             </Col>
                             <Col md={7} sm={7} lg={7}>
-                               <a className= "more-see link" id='morelink2' href="#Noticias">{'>'} Ver todas las noticias</a>
+                               <a className= "more-see link" href="#Noticias">{'>'} Ver todas las noticias</a>
                             </Col>
                             
                             
                         </Row>
                         
                     </Col>
-                    <Col xs={12} md={4}>
+
+                    {!isMobile && (
+                        <Col md={1} className="d-flex justify-content-center align-items-stretch">
+                            <div className="vertical-bar"></div>
+                        </Col>
+                    )}
+                    <Col xs={12} md={4} className='d-flex flex-column communications-section'>
                         <Row>
                             <div className='communications-background'>
                                 <h2 className='mb-4 on-background-light communications-title'>Comunicados</h2>
                                 <Communications />
                             </div>
                         </Row>
-                        <Row>
+                        <Row className='see-more-row'>
                             <a className= "see-more" href="#Comunicados">{'>'} Ver más</a>
                         </Row>
                         
