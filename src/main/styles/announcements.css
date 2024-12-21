@@ -1,8 +1,18 @@
+.border-end {
+    border-right: 2px solid #cccccc; /* Cambia el color según el diseño */
+}
+
 .announcements-container{
     background-color: var(--primary-light);
     padding-left: 4%;
     padding-right: 3%;
-    padding-bottom: 0.5%;
+
+}
+
+.vertical-bar {
+    width: 3px;
+    background-color: #cccccc;
+    height: 100%;
 }
 
 .background-schedule{
@@ -40,6 +50,7 @@
 
 .see-more-row{
     padding-top: auto;
+    margin: 4% 0%;
 }
 .more-news-row{
     display: flex;
@@ -50,13 +61,19 @@
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 110%;
+    font-size: 100%;
+}
+.news-car{
+    margin-bottom: 2%;
+}
+.more-news-row{
+    margin-bottom: 4%;
 }
 .link{
     color: var(--untels-mustard);
     text-decoration: none;
     font-weight: bold;
-    font-size: 110%;
+    font-size: 100%;
     text-transform: uppercase;
-
 }
+
