@@ -22,10 +22,3 @@
 .description-container{
     color: var(--on-primary-color);
 }
-.see-more{
-    color: var(--untels-mustard);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 150%;
-    margin: 2% 4%;
-}

@@ -47,10 +47,6 @@ export default function News() {
 
                 ))}
             </Carousel>
-            <div className='more-row' >
-                <a md={6} className= "more-see" href="#Noticias">{'>'} Conoce Más</a>
-                <a md={6} className= "more-see" href="#Noticias">{'>'} Ver todas las noticias</a>
-            </div>
             
         </section>
         

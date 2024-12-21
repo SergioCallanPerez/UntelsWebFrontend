@@ -14,25 +14,53 @@ export default function Announcements() {
         <section className='py-4'>
             <Container fluid>
                 <Row className='announcements-container'>
-                    <Col xs={12} md={4}>
-                        <div className='background-schedule'>
-                            <h2 className='mb-4 on-background-light agenda'>Agenda</h2>
-                        </div>
+                    <Col xs={12} md={4} className='d-flex flex-column'>
+                        <Row>
+                            <div className='background-schedule'>
+                                <h2 className='mb-4 on-background-light agenda'>Agenda</h2>
+                            </div>
+                        </Row>
+                        <Row className='flex-grow-1'>
+                            <Schedule />
+                        </Row>
+                        <Row className='mt-auto see-more-row'>
+                            <a className= "see-more" href="#Agenda">{'>'} Ver más</a>
+                        </Row>
+                            
                         
                         
-                        <Schedule />
 
                     </Col>
                     
-                    <Col xs={12} md={4}>
-                        <h2 className='mb-4 news'>Noticias</h2>
-                        <News />
+                    <Col xs={12} md={4} className='d-flex flex-column'>
+                        <Row>
+                            <h2 className='mb-4 news'>Noticias</h2>
+                        </Row>
+                        <Row className='flex-grow-1'>
+                            <News />
+                        </Row>
+                        <Row className='mt-auto justify-content-between align-items-center more-news-row'>
+                            <Col md={5} sm={5} lg={5}>
+                                <a className= "more-see link" id="morelink1" href="#Conoce-Más">{'>'} Conoce Más</a>
+                            </Col>
+                            <Col md={7} sm={7} lg={7}>
+                               <a className= "more-see link" id='morelink2' href="#Noticias">{'>'} Ver todas las noticias</a>
+                            </Col>
+                            
+                            
+                        </Row>
+                        
                     </Col>
                     <Col xs={12} md={4}>
-                        <div className='communications-background'>
-                            <h2 className='mb-4 on-background-light communications-title'>Comunicados</h2>
-                            <Communications />
-                        </div>
+                        <Row>
+                            <div className='communications-background'>
+                                <h2 className='mb-4 on-background-light communications-title'>Comunicados</h2>
+                                <Communications />
+                            </div>
+                        </Row>
+                        <Row>
+                            <a className= "see-more" href="#Comunicados">{'>'} Ver más</a>
+                        </Row>
                         
                     </Col>
                 </Row>

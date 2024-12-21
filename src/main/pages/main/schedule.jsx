@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 function Event({day,month,description,time,place}){
     return(
         <Row className='event-row'>
-            <Col className='background-date' xs={3} md={2}>
+            <Col className='background-date' xs={3} sm={2} md={3} lg={2}>
                 <div className='date-column'>
                     <Row className='date'>{day}</Row>
                     <Row className='date'>{month}</Row>
@@ -49,9 +49,6 @@ export default function Schedule() {
                     place={event.place}
                 />
             ))}
-            <Row>
-                <a className= "see-more" href="#Noticias">{'>'} Ver más</a>
-            </Row>
         </Col>
     );
 
