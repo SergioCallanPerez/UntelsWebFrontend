@@ -1,11 +1,15 @@
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import "../../styles/communications.css"
 
 function Messages({no,message}){
     return(
         <Row className='message-column'>
-            <Col>{`Comunicado ${no}: ${message}`}</Col>
+            <Col className='communications-text'>
+            <span className="bold-text">{`Comunicado ${no}:`}</span> {message}
+            <hr className='CommunicationsLine'/>
+            </Col>
         </Row>
     )
 }

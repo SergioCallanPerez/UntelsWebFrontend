@@ -88,3 +88,13 @@ body {
   border: 1px solid var(--untels-mustard);
   margin-bottom: 20px;
 }
+
+.CommunicationsLine{
+  border: 1px solid var(--untels-mustard);
+  margin: 1.4% 0%;
+}
+
+.announcementsLine{
+  border: 1px solid var(--untels-white);
+  margin: 0% 1.4%;
+}

@@ -12,9 +12,9 @@ export default function Announcements() {
     
     return (
         <section className='py-4'>
-            <Container>
+            <Container fluid>
                 <Row className='announcements-container'>
-                    <Col className='justify-content'>
+                    <Col xs={12} md={4}>
                         <div className='background-schedule'>
                             <h2 className='mb-4 on-background-light agenda'>Agenda</h2>
                         </div>
@@ -23,13 +23,17 @@ export default function Announcements() {
                         <Schedule />
 
                     </Col>
-                    <Col>
-                        <h2>Noticias</h2>
+                    
+                    <Col xs={12} md={4}>
+                        <h2 className='mb-4 news'>Noticias</h2>
                         <News />
                     </Col>
-                    <Col>
-                        <h2>Comunicados</h2>
-                        <Communications />
+                    <Col xs={12} md={4}>
+                        <div className='communications-background'>
+                            <h2 className='mb-4 on-background-light communications-title'>Comunicados</h2>
+                            <Communications />
+                        </div>
+                        
                     </Col>
                 </Row>
                 

@@ -5,7 +5,25 @@ import carouselIMG1 from '../../assets/new1.png';
 import carouselIMG2 from '../../assets/new2.png';
 import carouselIMG3 from '../../assets/new3.png';
 
-const carouselImages = [carouselIMG1, carouselIMG2, carouselIMG3];
+const carouselElements = [
+    {
+        id: '1',
+        img: carouselIMG1,
+        text: "Lorem, ipsum dolor sit amet consectetur",
+    },
+    {
+        id: '2',
+        img: carouselIMG2,
+        text: "Lorem, ipsum dolor sit amet consectetur",
+    },
+    {
+        id: '3',
+        img: carouselIMG3,
+        text: "Lorem, ipsum dolor sit amet consectetur",
+    },
+
+    
+]
 
 export default function News() {
     const [index, setIndex] = useState(0);
@@ -14,12 +32,27 @@ export default function News() {
     };
 
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect} className='carousel'>
-            {carouselImages.map((img, idx) => (
-                <Carousel.Item key={idx} interval={1500}>
-                    <img src={img} alt={`Carrusel ${idx + 1}`} className="carouselNewIMG"/>
-                </Carousel.Item>
-            ))}
-        </Carousel>
+        <section>
+            <Carousel activeIndex={index} onSelect={handleSelect} className='carousel'>
+                {carouselElements.map((element) => (
+                    <Carousel.Item key={element.id} interval={1500}>
+                        <img src={element.img} alt={`Carrusel ${element.id + 1}`} className="carouselNewIMG"/>
+                        <div >
+                            <Carousel.Caption className='captions'>
+                                <p>{element.text}</p>
+                            </Carousel.Caption>
+                        </div>
+                        
+                    </Carousel.Item>
+
+                ))}
+            </Carousel>
+            <div className='more-row' >
+                <a md={6} className= "more-see" href="#Noticias">{'>'} Conoce Más</a>
+                <a md={6} className= "more-see" href="#Noticias">{'>'} Ver todas las noticias</a>
+            </div>
+            
+        </section>
+        
     );
 }

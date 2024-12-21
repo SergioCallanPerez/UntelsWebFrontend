@@ -1,12 +1,37 @@
 .announcements-container{
     background-color: var(--primary-light);
+    padding-left: 4%;
+    padding-right: 3%;
 }
 
 .background-schedule{
     margin-top: 10%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .agenda{
     background-color: var(--on-primary-color);
-    
+    padding: 2% 20%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.news{
+    color: var(--untels-mustard);
+    font-size: 250%;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 10%;
+}
+
+.communications-background{
+    background-color: var(--on-primary-color);
+    margin: 10% 0%;
+    border-radius: 10px;
+}
+.communications-title{
+    text-align: center;
+    font-weight: bold;
 }

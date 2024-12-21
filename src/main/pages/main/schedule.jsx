@@ -1,15 +1,19 @@
 import { Container } from 'react-bootstrap';
+import "../../styles/schedule.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Event({day,month,description,time,place}){
     return(
         <Row className='event-row'>
-            <Col className='date-column'>
-                <Row>{day}</Row>
-                <Row>{month}</Row>
+            <Col className='background-date' xs={3} md={2}>
+                <div className='date-column'>
+                    <Row className='date'>{day}</Row>
+                    <Row className='date'>{month}</Row>
+                </div>
+                
             </Col>
-            <Col>
+            <Col className='description-container' xs>
                 <Row>{`Evento: ${description}`}</Row>
                 <Row>{`Hora: ${time}`}</Row>
                 <Row>{`Lugar: ${place}`}</Row>
@@ -45,6 +49,9 @@ export default function Schedule() {
                     place={event.place}
                 />
             ))}
+            <Row>
+                <a className= "see-more" href="#Noticias">{'>'} Ver más</a>
+            </Row>
         </Col>
     );
 
