@@ -50,6 +50,10 @@
   background-color: var(--primary-color);
 }
 
+.on-primary-color {
+  color: var(--on-primary-color)
+}
+
 .on-primary-accent {
   color: var(--on-primary-accent-color)
 }

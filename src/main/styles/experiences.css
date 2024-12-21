@@ -1,6 +1,8 @@
 .cards{
-    background-color: var(--untels-mustard);
-    border-color: var(--untels-white);
+    background-color: var(--untels-blue-2);
+    border-color: var(--untels-gray-2);
+    border-width: 4px;
+    
 }
 
 .cardImg{

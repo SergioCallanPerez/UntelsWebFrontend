@@ -38,10 +38,10 @@ export default function Experiences() {
                 <Card.Body>
                   <div className='d-flex align-items-center'>
                     <Card.Img className='cardImg' variant="top" src={userLogo} style={{ width: '50px', height: '50px'}}/>
-                    <Card.Title><b>{caseItem.name}</b></Card.Title>
+                    <Card.Title className='on-primary-color'><b>{caseItem.name}</b></Card.Title>
                   </div>
-                  <Card.Text>{caseItem.text}</Card.Text>
-                  <Card.Subtitle className="mb-2 text-muted"><b>{caseItem.work}</b></Card.Subtitle>
+                  <Card.Text className='on-primary-color'>{caseItem.text}</Card.Text>
+                  <Card.Subtitle className="on-primary-color"><b>{caseItem.work}</b></Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>
