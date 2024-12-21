@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Container, Row, Col } from "react-bootstrap";
-import { isBrowser, isMobile } from 'react-device-detect';
 
 export default function Follow() {
   const [dimensions, setDimensions] = useState({ height: 0, width: 0 });
@@ -32,9 +31,8 @@ export default function Follow() {
 
   return (
     <section className="py-4">
-      <h2 className={isBrowser ? 'h2-text': 'h2-mobile-text'}><b>Síguenos</b></h2>
-      <hr className='h2Line'/>
       <Container>
+        <h2 className="mb-4 on-background-accent"><b>Síguenos</b></h2>
         <Row className="d-flex">
           <Col xs={12} md={6} className="d-flex flex-grow-2 mb-3 mb-md-0">
             <iframe

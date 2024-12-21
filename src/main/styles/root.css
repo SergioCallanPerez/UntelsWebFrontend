@@ -98,15 +98,3 @@ body {
   border: 1px solid var(--untels-white);
   margin: 0% 1.4%;
 }
-
-.h2-text{
-  color: var(--untels-blue-1);
-  margin-top: 10px;
-  margin-left: 10%;
-}
-
-.h2-mobile-text{
-  color: var(--untels-blue-1);
-  margin-top: 10px;
-  margin-left: 20px;
-}
