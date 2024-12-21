@@ -6,7 +6,7 @@ import "./styles/root.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/UntelsWebFrontend">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
