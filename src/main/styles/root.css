@@ -50,6 +50,7 @@
 
 .primary {
   background-color: var(--primary-color);
+  color: var(--on-primary-color);
 }
 
 .background {

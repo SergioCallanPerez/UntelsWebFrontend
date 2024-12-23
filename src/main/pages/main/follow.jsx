@@ -30,7 +30,7 @@ export default function Follow() {
   }, []);
 
   return (
-    <section className="py-4">
+    <section >
       <Container>
         <h2 className="mb-4 on-background-accent"><b>Síguenos</b></h2>
         <Row className="d-flex">

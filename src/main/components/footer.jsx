@@ -7,11 +7,10 @@ import {
 } from "react-icons/pi";
 import { IoIosMail } from "react-icons/io";
 import { strings } from "../data/strings";
-import "../styles/footer.css";
 
 export default function Footer() {
   return (
-    <footer className="py-4">
+    <footer className="primary py-4">
       <Container>
         <Row className="text-center text-md-start d-flex">
           <Col xs={12} md={6} className="mb-3 mb-md-0">
