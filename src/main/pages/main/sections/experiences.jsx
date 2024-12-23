@@ -1,8 +1,9 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import userLogo from "../../assets/user_icon.png";
-import "../../styles/experiences.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+
+import userLogo from "@/assets/user_icon.png";
+import "@/styles/experiences.css";
 
 const cases = [
   {

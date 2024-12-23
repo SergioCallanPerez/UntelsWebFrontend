@@ -6,7 +6,8 @@ import {
   PiRadioButtonFill,
 } from "react-icons/pi";
 import { IoIosMail } from "react-icons/io";
-import { strings } from "../data/strings";
+
+import { strings } from "@/data/strings";
 
 export default function Footer() {
   return (

@@ -4,11 +4,12 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import logo from "../assets/logoUntels.png";
-import portal from "../assets/portalLogo.png";
-import "../styles/header.css";
-import { isBrowser, isMobile } from "react-device-detect";
 import { Link } from "react-router-dom";
+import { isBrowser, isMobile } from "react-device-detect";
+
+import logo from "@/assets/logoUntels.png";
+import portal from "@/assets/portalLogo.png";
+import "@/styles/header.css";
 
 const menuData = {
   Nosotros: {

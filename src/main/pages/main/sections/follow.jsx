@@ -30,9 +30,11 @@ export default function Follow() {
   }, []);
 
   return (
-    <section >
+    <section>
       <Container>
-        <h2 className="mb-4 on-background-accent"><b>Síguenos</b></h2>
+        <h2 className="mb-4 on-background-accent">
+          <b>Síguenos</b>
+        </h2>
         <Row className="d-flex">
           <Col xs={12} md={6} className="d-flex flex-grow-2 mb-3 mb-md-0">
             <iframe
@@ -55,7 +57,7 @@ export default function Follow() {
             <iframe
               src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Funtelsperu&tabs=timeline&width=${dimensions.width}&height=${dimensions.height}&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId`}
               width="100%"
-              height={ isMd ? "510" : "100%"}
+              height={isMd ? "510" : "100%"}
               scrolling="no"
               frameBorder="0"
               title="Untels Facebook Page"

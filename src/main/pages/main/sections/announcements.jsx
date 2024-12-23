@@ -1,13 +1,13 @@
 import React from "react";
-
-import "../../styles/announcements.css";
+import { isBrowser, isMobile } from "react-device-detect";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Schedule from "./schedule";
 import News from "./news";
 import Communications from "./communications";
-import { isBrowser, isMobile } from "react-device-detect";
+
+import "@/styles/announcements.css";
 
 export default function Announcements() {
   return (
