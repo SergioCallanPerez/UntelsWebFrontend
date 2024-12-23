@@ -1,3 +1,16 @@
 .main-dropdown .dropdown-menu {
-    margin-top: 0;
+  margin-top: 0;
+  border-width: 0;
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-toggler-container:focus {
+  box-shadow: none;
 }

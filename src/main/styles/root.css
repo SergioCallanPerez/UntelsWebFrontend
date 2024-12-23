@@ -1,6 +1,7 @@
 /* colors */
 :root {
   --untels-white: #ffffff;
+  --untels-white-rgb: 255, 255, 255;
   --untels-blue-1: #004e9b;
   --untels-blue-2: #0071b8;
   --untels-yellow: #ffe601;
@@ -51,6 +52,10 @@
   background-color: var(--primary-color);
 }
 
+.background {
+  background-color: var(--background-color);
+}
+
 .on-primary-color {
   color: var(--on-primary-color)
 }
@@ -58,6 +63,7 @@
 .on-primary-accent {
   color: var(--on-primary-accent-color)
 }
+
 .on-background-accent {
   color: var(--on-background-accent-color)
 }

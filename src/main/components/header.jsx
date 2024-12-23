@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
@@ -90,6 +90,28 @@ export default function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
+  useEffect(() => {
+    let lastScrollY = 0;
+    const navbar = document.querySelector(".navbar");
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        if (window.scrollY > 76)
+          // header height
+          navbar.classList.add("hidden");
+      } else {
+        navbar.classList.remove("hidden");
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleMouseEnter = (key, type) => {
     if (type === "menu") {
       if (isBrowser) setActiveMenu(key);
@@ -107,14 +129,15 @@ export default function Header() {
   };
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary fixed-top">
+    <Navbar expand="lg" className="navbar background fixed-top">
       <Container fluid>
         <Navbar.Brand>
           <Link to="/">
-            <img src={logo} width="250" height="50" alt="Logo" />
+            <img src={logo} height="50" alt="Logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle
+          className="navbar-toggler-container"
           aria-controls="navbarScroll"
           aria-expanded={!!activeMenu}
         />
@@ -122,7 +145,7 @@ export default function Header() {
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             {Object.entries(menuData).map(([key, value]) => (
               <NavDropdown
-                className="main-dropdown"
+                className="background main-dropdown"
                 key={key}
                 title={key}
                 id={`navbarScrollingDropdown-${key}`}
@@ -151,8 +174,11 @@ export default function Header() {
               </NavDropdown>
             ))}
           </Nav>
-          <Nav.Link href="http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV">
-            <img src={portal} width="150" height="50" alt="Portal" />
+          <Nav.Link
+            target="_blank"
+            href="http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV"
+          >
+            <img src={portal} height="50" alt="Portal" />
           </Nav.Link>
           <Form className="d-flex">
             <Form.Control
