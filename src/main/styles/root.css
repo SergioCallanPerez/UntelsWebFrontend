@@ -9,6 +9,7 @@
   --untels-black: #1d1d1b;
   --untels-gray-1: #4a4a49;
   --untels-gray-2: #b2b2b2;
+  --untels-gray-3: #d6d6d6;
 }
 
 /* theme */
@@ -17,7 +18,7 @@
   --primary-color: var(--untels-blue-1); /* Color principal del tema */
   --primary-light: var(--untels-blue-2); /* Variante más clara */
   --on-primary-color: var(--untels-white);
-  --on-primary-accent-color: var(--untels-yellow);
+  --on-primary-accent-color: var(--untels-mustard);
 
   --secondary-color: var(--untels-yellow); /* Color secundario */
   --tertiary-color: var(--untels-white); /* Color terciario o neutro */
@@ -25,10 +26,11 @@
   /* Colores de fondo */
   --background-color: var(--untels-white);
   --on-background-color: var(--untels-black); /* Texto sobre fondo claro */
-  --on-background-accent-color: var(--untels-blue-1);
+  --on-background-title: var(--untels-blue-1); /* Texto sobre fondo claro */
+  --on-background-accent-color: var(--untels-mustard);
   --on-background-light-color: var(--untels-blue-2);
-  --surface-color: var(--untels-gray-2); /* Color para superficies, tarjetas */
-  --on-surface-color: var(--untels-gray-1); /* Texto sobre superficies */
+  --surface-color: var(--untels-mustard); /* Color para superficies, tarjetas */
+  --on-surface-color: var(--untels-black); /* Texto sobre superficies */
 
   /* Colores de alertas */
   --alert-success: #28a745; /* Verde éxito */
@@ -55,6 +57,7 @@
 
 .background {
   background-color: var(--background-color);
+  color: var(--on-background-color);
 }
 
 .on-primary-color {
@@ -69,12 +72,19 @@
   color: var(--on-background-accent-color);
 }
 
-.on-background-light {
+.badge-card {
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  border-radius: 8px;
+  box-shadow: var(--untels-gray-1);
+}
+
+.on-background-title {
   color: var(--on-background-light-color);
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--untels-gray-3);
   font-family: "Avenir", "Arial", sans-serif;
 }
 
@@ -82,12 +92,20 @@ main {
   margin-top: 76px;
 }
 
+section {
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--untels-gray-2);
+  background-color: var(--untels-gray-3);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -95,17 +113,30 @@ main {
   border-radius: 3px;
 }
 
-.h2Line {
-  border: 1px solid var(--untels-mustard);
-  margin-bottom: 20px;
+.with-v-divider-on-background {
+  border-right: 2px solid var(--on-background-accent-color);
 }
 
-.CommunicationsLine {
-  border: 1px solid var(--untels-mustard);
-  margin: 1.4% 0%;
+.with-h-divider-on-background {
+  border-bottom: 2px solid var(--on-background-accent-color);
 }
 
-.announcementsLine {
-  border: 1px solid var(--untels-white);
-  margin: 0% 1.4%;
+.with-v-divider-on-primary {
+  border-right: 2px solid var(--on-primary-color);
+}
+
+.with-h-divider-on-primary {
+  border-bottom: 2px solid var(--on-primary-color);
+}
+
+.with-auto-divider-on-primary {
+  border-right: 2px solid var(--on-primary-color);
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .with-auto-divider-on-primary {
+    border-right: none;
+    border-bottom: 2px solid var(--on-primary-color);
+  }
 }

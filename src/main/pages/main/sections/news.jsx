@@ -31,27 +31,19 @@ export default function News() {
   };
 
   return (
-    <section>
-      <Carousel
-        activeIndex={index}
-        onSelect={handleSelect}
-        className="carousel"
-      >
-        {carouselElements.map((element) => (
-          <Carousel.Item key={element.id} interval={1500}>
-            <img
-              src={element.img}
-              alt={`Carrusel ${element.id + 1}`}
-              className="carouselNewIMG"
-            />
-            <div>
-              <Carousel.Caption className="captions">
-                <p>{element.text}</p>
-              </Carousel.Caption>
-            </div>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </section>
+    <Carousel activeIndex={index} onSelect={handleSelect} className="carousel">
+      {carouselElements.map((element) => (
+        <Carousel.Item key={element.id} interval={4000}>
+          <img
+            src={element.img}
+            alt={`Carrusel ${element.id + 1}`}
+            className="carouselNewIMG"
+          />
+          <Carousel.Caption className="captions">
+            {element.text}
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 }

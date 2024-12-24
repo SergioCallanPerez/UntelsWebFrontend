@@ -1,38 +1,31 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-import "@/styles/communications.css";
+const note = "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida";
 
-function Messages({ no, message }) {
+const messagesList = [
+  { no: 301, message: note },
+  { no: 302, message: note },
+  { no: 303, message: note },
+  { no: 306, message: note },
+  { no: 305, message: note },
+];
+
+function Messages({ event }) {
   return (
-    <Row className="message-column">
-      <Col className="communications-text">
-        <span className="bold-text">{`Comunicado ${no}:`}</span> {message}
-        <hr className="CommunicationsLine" />
-      </Col>
-    </Row>
+    <div className="with-h-divider-on-background">
+      <p>
+        <b>{`Comunicado ${event.no}:`}</b> <small>{event.message}</small>
+      </p>
+    </div>
   );
 }
+
 export default function Communications() {
-  const notes = {
-    note1:
-      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida",
-  };
-  const messagesList = [
-    { no: 301, message: notes.note1 },
-    { no: 302, message: notes.note1 },
-    { no: 303, message: notes.note1 },
-    { no: 306, message: notes.note1 },
-    { no: 305, message: notes.note1 },
-    { no: 306, message: notes.note1 },
-    { no: 307, message: notes.note1 },
-  ];
   return (
-    <Col>
+    <div className="d-flex flex-column gap-3">
       {messagesList.map((event, index) => (
-        <Messages key={index} no={event.no} message={event.message} />
+        <Messages key={`message-${index}`} event={event} />
       ))}
-    </Col>
+    </div>
   );
 }
