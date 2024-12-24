@@ -80,6 +80,8 @@ const menuData = {
   ],
 };
 
+let lastScrollY = 0;
+
 const renderMenuItems = (items) =>
   items.map((item) => (
     <NavDropdown.Item key={item.href} href={item.href}>
@@ -90,24 +92,19 @@ const renderMenuItems = (items) =>
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [headerVisible, setHeaderVisible] = useState(true);
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY || window.scrollY === 76) {
+      setHeaderVisible(false);
+    } else {
+      setHeaderVisible(true);
+    }
+    lastScrollY = window.scrollY;
+  };
 
   useEffect(() => {
-    let lastScrollY = 0;
-    const navbar = document.querySelector(".navbar");
-
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        if (window.scrollY > 76)
-          // header height
-          navbar.classList.add("hidden");
-      } else {
-        navbar.classList.remove("hidden");
-      }
-      lastScrollY = window.scrollY;
-    };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -130,7 +127,10 @@ export default function Header() {
   };
 
   return (
-    <Navbar expand="lg" className="navbar background fixed-top">
+    <Navbar
+      expand="lg"
+      className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
+    >
       <Container fluid>
         <Navbar.Brand>
           <Link to="/">

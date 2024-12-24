@@ -12,5 +12,5 @@
 }
 
 .navbar-toggler-container:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }
