@@ -3,7 +3,6 @@ import MainCarousel from "./sections/carousel.jsx"
 import Follow from "./sections/follow.jsx";
 import Announcements from "./sections/announcements.jsx";
 import Experiences from "./sections/experiences.jsx";
-import FloatingWhatsAppButton from "../../components/floating_button.jsx";
 
 export default function Main() {
   return (
@@ -12,7 +11,6 @@ export default function Main() {
       <Announcements />
       <Experiences/>
       <Follow />
-      <FloatingWhatsAppButton/>
     </main>
   );
 }
