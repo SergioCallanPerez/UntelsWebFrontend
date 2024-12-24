@@ -30,9 +30,9 @@ export default function Follow() {
   }, []);
 
   return (
-    <section>
+    <section className="py-4">
       <Container>
-        <h2 className="mb-4 on-background-accent">
+        <h2 className="pb-3 text-center text-md-start on-background-title with-h-divider-on-background on-background-title">
           <b>Síguenos</b>
         </h2>
         <Row className="d-flex">

@@ -28,12 +28,11 @@ const cases = [
 
 export default function Experiences() {
   return (
-    <section>
+    <section className="py-4">
       <Container>
-        <h2 className={"mb-4 on-background-accent"}>
+        <h2 className={"pb-3 on-background-title text-center text-md-start with-h-divider-on-background"}>
           <b>Experiencias de éxito</b>
         </h2>
-        <hr className="h2Line" />
         <Row xs={1} md={4} className="g-4 justify-content-center">
           {cases.map((caseItem) => (
             <Col key={caseItem.id}>
