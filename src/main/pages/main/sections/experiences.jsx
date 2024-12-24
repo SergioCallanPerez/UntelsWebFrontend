@@ -33,28 +33,25 @@ export default function Experiences() {
         <h2 className={"pb-3 on-background-title text-center text-md-start with-h-divider-on-background"}>
           <b>Experiencias de éxito</b>
         </h2>
-        <Row xs={1} md={4} className="g-4 justify-content-center">
+        <Row className="g-4 justify-content-center">
           {cases.map((caseItem) => (
-            <Col key={caseItem.id}>
-              <Card className="cards">
+            <Col xs={12} md={3} key={caseItem.id}>
+              <Card className="primary">
                 <Card.Body>
-                  <div className="d-flex align-items-center">
+                  <div className="d-flex pb-3 align-items-center with-h-divider-on-background">
                     <Card.Img
-                      className="cardImg"
+                      className="cardImg background rounded-circle"
                       variant="top"
                       src={userLogo}
-                      style={{ width: "50px", height: "50px" }}
                     />
                     <Card.Title className="on-primary-color">
                       <b>{caseItem.name}</b>
                     </Card.Title>
                   </div>
-                  <hr className="cardLine" />
-                  <Card.Text className="on-primary-color">
+                  <Card.Text className="py-3 with-h-divider-on-background">
                     {caseItem.text}
                   </Card.Text>
-                  <hr className="cardLine" />
-                  <Card.Subtitle className="on-primary-color">
+                  <Card.Subtitle>
                     <b>{caseItem.work}</b>
                   </Card.Subtitle>
                 </Card.Body>
