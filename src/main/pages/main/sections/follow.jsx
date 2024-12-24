@@ -10,11 +10,7 @@ export default function Follow() {
   });
 
   const updateFacebookContainerDimension = () => {
-    var facebookContainer = document.getElementById("facebook-container");
-    console.log({
-      height: facebookContainer.clientHeight,
-      width: facebookContainer.clientWidth,
-    });
+    const facebookContainer = document.getElementById("facebook-container");
     setDimensions({
       height: facebookContainer.clientHeight,
       width: facebookContainer.clientWidth - 22,
