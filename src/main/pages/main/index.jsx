@@ -6,7 +6,7 @@ import Experiences from "./sections/experiences.jsx";
 
 export default function Main() {
   return (
-    <main className="d-flex flex-column gap-4 pb-4" >
+    <main className="d-flex flex-column gap-2 pb-2" >
       <MainCarousel />
       <Announcements />
       <Experiences/>
