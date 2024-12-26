@@ -1,3 +1,15 @@
+.cards{
+    background-color: var(--untels-blue-2);
+    border-color: var(--untels-gray-2);
+    border-width: 4px;
+    
+}
+
+.cardLine{
+    border: 2px solid var(--untels-gray-2);
+    margin: 10px 0;
+}
+
 .cardImg{
     width: 50px;
     margin-right: 10px;

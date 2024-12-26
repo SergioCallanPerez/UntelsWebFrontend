@@ -11,6 +11,8 @@ import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
 
+const portalURL='http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV'
+
 const menuData = {
   Nosotros: {
     "Nuestra Universidad": [
@@ -177,7 +179,7 @@ export default function Header() {
           </Nav>
           <Nav.Link
             target="_blank"
-            href="http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV"
+            href={portalURL}
           >
             <img src={portal} height="50" alt="Portal" />
           </Nav.Link>
