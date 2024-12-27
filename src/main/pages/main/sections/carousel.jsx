@@ -7,6 +7,9 @@ import carouselIMG2 from "@/assets/carrusel2.png";
 import carouselIMG3 from "@/assets/carrusel3.png";
 import carouselIMG4 from "@/assets/carrusel4.png";
 import carouselIMG5 from "@/assets/carrusel5.png";
+import { useMediaQuery } from "react-responsive";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const carouselImages = [
   carouselIMG1,
@@ -18,12 +21,22 @@ const carouselImages = [
 
 export default function MainCarousel() {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
+  
+  const isMd = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+ 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
+  const handleLink = () => {
+    navigate("/experiences/e");
+  }
+
   return (
-    <section>
+    <section className="position-relative">
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
@@ -40,6 +53,9 @@ export default function MainCarousel() {
           </Carousel.Item>
         ))}
       </Carousel>
+      <Button onClick={handleLink} className="position-absolute carousel-info-btn">
+        Mas información
+      </Button>
     </section>
   );
 }

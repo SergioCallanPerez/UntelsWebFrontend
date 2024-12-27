@@ -14,6 +14,40 @@
   border-radius: 50% !important;
   margin-right: 10px !important;
   margin-left: 10px !important;
-  margin-left: 10px !important;
   background-color: var(--untels-white) !important;
+}
+
+.carousel-info-btn {
+  bottom: 10%;
+  right: 8%;
+  background-color: brown;
+  border: none;
+  transition: transform ease .5s;
+  --bs-btn-active-bg: rgb(207, 48, 48) !important;
+}
+
+.carousel-info-btn:hover {
+  background-color: rgb(207, 48, 48);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carouselIMG {
+    width: 100%;
+    aspect-ratio: 9/16;
+  }
+
+  .carousel-info-btn {
+    align-self: center;
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(50%);
+    transition: ease .5s;
+  }
+
+  .carousel-info-btn:hover {
+    background-color: brown;
+    transform: translateX(50%);
+    right: 50%;
+  }
 }
