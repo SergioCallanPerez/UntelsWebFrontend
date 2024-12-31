@@ -145,12 +145,12 @@ export default function Header() {
           aria-expanded={!!activeMenu}
         />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+          <Nav className={`m-auto my-2 my-lg-0 justify-content-between ${isMobile ? '':'w-50 my-2 my-lg-0'}`} navbarScroll>
             {Object.entries(menuData).map(([key, value]) => (
               <NavDropdown
-                className="background main-dropdown"
+                className="background main-dropdown navbar-item"
                 key={key}
-                title={key}
+                title={<b>{key}</b>}
                 id={`navbarScrollingDropdown-${key}`}
                 show={isBrowser ? activeMenu === key : undefined}
                 onMouseEnter={() => handleMouseEnter(key, "menu")}
