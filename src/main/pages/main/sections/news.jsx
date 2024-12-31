@@ -2,9 +2,9 @@ import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 import "@/styles/news.css";
-import carouselIMG1 from "@/assets/new1.png";
-import carouselIMG2 from "@/assets/new2.png";
-import carouselIMG3 from "@/assets/new3.png";
+import carouselIMG1 from "@/assets/news_assets/new1.png";
+import carouselIMG2 from "@/assets/news_assets/new2.png";
+import carouselIMG3 from "@/assets/news_assets/new3.png";
 
 const carouselElements = [
   {

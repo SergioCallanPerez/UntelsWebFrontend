@@ -16,7 +16,7 @@ const portalURL='http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.a
 const menuData = {
   Nosotros: {
     "Nuestra Universidad": [
-      { title: "Misión, visión y valores", href: "#Mision" },
+      { title: "Misión, visión y valores", href: "./Mission" },
       { title: "Reseña histórica", href: "#Resena" },
       { title: "Estatuto", href: "#Estatuto" },
       { title: "Organigrama", href: "#Organigrama" },
