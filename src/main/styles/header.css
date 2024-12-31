@@ -1,6 +1,11 @@
 .main-dropdown .dropdown-menu {
   margin-top: 0;
   border-width: 0;
+  font-size: 20px;
+}
+
+.main-dropdown{
+  font-size: 20px;
 }
 
 .navbar {
