@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "./styles/root.css";
 import FloatingWhatsAppButton from "./components/floating_button.jsx";
+import Administracion from "./pages/pregrade/area1/careers/administracion"; 
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/administracion" element={<Administracion/>}/>
       </Routes>
       <Footer />
       <FloatingWhatsAppButton/>
