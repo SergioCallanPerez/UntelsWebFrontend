@@ -4,7 +4,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { FaChevronRight } from "react-icons/fa6";
 import adminIMG from '../../../../assets/admin.jpg';
+import { otherscareers } from "../careers-summary/administracion";
 import '../../../../styles/careers.css';
 
 export default function Administracion(){
@@ -18,13 +20,13 @@ export default function Administracion(){
                     <Row>
                         <Col md={8}>
                             <Row>
-                                <Col md={6}>
+                                <Col md={6} className="with-auto-divider-primary">
                                     <h3 className="background-title">Descripción de la carrera</h3>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae totam assumenda porro dolores maxime, reprehenderit esse rerum optio excepturi ipsa nemo quis consequuntur id sapiente aspernatur a obcaecati velit reiciendis.</p>
                                     <h3 className="background-title">Perfil del egresado</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni pariatur ut placeat architecto? Ab accusantium fuga omnis, odit saepe itaque, aliquam doloribus quasi minus voluptate optio consequuntur enim praesentium voluptatum?</p>
                                 </Col>
-                                <Col md={6}>
+                                <Col md={6} className="with-auto-divider-primary">
                                     <div className="career-field">
                                         <h3 className="background-title">Campo laboral</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem eius itaque quasi esse illum sequi eos excepturi aut eveniet placeat ipsum nobis, dolorem eaque neque amet sed ratione expedita provident.</p>
@@ -37,10 +39,6 @@ export default function Administracion(){
                                     </div>
                                 </Col>
                             </Row>
-                            <div className="career-downloads">
-                                <button>Plan de estudios</button>
-                                <button>Malla curricular</button>
-                            </div>
                         </Col>
                         
                         <Col md={4}>
@@ -50,41 +48,33 @@ export default function Administracion(){
                         </Col>
                     </Row>
                 </Container>
+            <div className="career-downloads">
+                <button>Plan de estudios</button>
+                <button>Malla curricular</button>
+            </div>
             <div className="other-careers">
                 <h3 className="background-title">Carreras relacionadas</h3>
-                <CardGroup>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This card has supporting text below as a natural lead-in to
-                            additional content.
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This card has even longer content than the
-                            first to show that equal height action.
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    </CardGroup>
+                <Container>
+                    <Row className="g-4 justify-content-center">
+                        {otherscareers.map((careerItem) => (
+                            <Col xs={12} md={3} key={careerItem.careerName}>
+                                <Card className="primary">
+                                    <Card.Img variant="top" src={adminIMG} />
+                                    <Card.Body>
+                                    <Card.Title className="with-h-divider-on-background"><b>{careerItem.careerName}</b></Card.Title>
+                                    <Card.Text className="with-h-divider-on-background">
+                                        {careerItem.description}
+                                    </Card.Text>
+                                    </Card.Body>
+
+                                    <a className="primary" href={careerItem.href}>
+                                        <FaChevronRight /> <b>Ver más</b>
+                                    </a>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
             </div>
         </main>
     )

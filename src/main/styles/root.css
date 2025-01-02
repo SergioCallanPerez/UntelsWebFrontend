@@ -139,6 +139,11 @@ a {
   border-bottom: none;
 }
 
+.with-auto-divider-primary {
+  border-right: 2px solid var(--primary-color);
+  border-bottom: none;
+}
+
 @media (max-width: 768px) {
   .with-auto-divider-on-primary {
     border-right: none;
