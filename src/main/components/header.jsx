@@ -14,6 +14,7 @@ import "@/styles/header.css";
 const portalURL =
   "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
 
+
 const menuData2 = [
   {
     title: "Nosotros",
