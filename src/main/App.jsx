@@ -9,7 +9,7 @@ import Administracion from "./pages/pregrade/area1/careers/administracion";
 
 function App() {
   return (
-    <BrowserRouter basename="/UntelsWebFrontend">
+    <BrowserRouter basename="/UntelsWebFrontend/">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
