@@ -43,7 +43,7 @@ export default function Administracion(){
                         
                         <Col md={4}>
                             <div className="career-img">
-                                <img src={adminIMG}/>
+                                <img src={adminIMG} width="100%"/>
                             </div>
                         </Col>
                     </Row>
