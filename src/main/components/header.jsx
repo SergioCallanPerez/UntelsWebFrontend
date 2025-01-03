@@ -78,7 +78,7 @@ const menuData2 = [
     children: [
       {
         title: "Area 1",
-        href: "#area1",
+        /*TODO: Agregar el href a area*/
         children: [
           { title: "Administración", href: "/UntelsWebFrontend/administracion" },
           { title: "Carrera 2", href: "#Carrera2" },
@@ -89,7 +89,7 @@ const menuData2 = [
       },
       {
         title: "Area 2",
-        href: "#area2",
+        /*TODO: Agregar el href a area*/
         children: [
           { title: "Carrera 1", href: "#Carrera1" },
           { title: "Carrera 2", href: "#Carrera2" },
