@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
+import Mission from "./pages/about-us/mission";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./styles/root.css";
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/administracion" element={<Administracion/>}/>
+        <Route path="/Mission" element={<Mission />} />
       </Routes>
       <Footer />
       <FloatingWhatsAppButton/>

@@ -8,6 +8,14 @@
   font-size: 20px;
 }
 
+.cursor-none >  a {
+  cursor: default; 
+}
+
+.cursor-pointer >  a {
+  cursor: pointer; 
+}
+
 .navbar {
   transition: transform 0.3s ease-in-out;
 }
