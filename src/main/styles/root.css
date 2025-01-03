@@ -60,6 +60,11 @@
   color: var(--on-background-color);
 }
 
+.background-title {
+  background-color: var(--background-color);
+  color: var(--on-background-title);
+}
+
 .on-primary-color {
   color: var(--on-primary-color);
 }
@@ -131,6 +136,11 @@ a {
 
 .with-auto-divider-on-primary {
   border-right: 2px solid var(--on-primary-color);
+  border-bottom: none;
+}
+
+.with-auto-divider-primary {
+  border-right: 2px solid var(--primary-color);
   border-bottom: none;
 }
 

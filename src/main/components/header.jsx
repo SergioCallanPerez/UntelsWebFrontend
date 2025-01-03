@@ -1,109 +1,137 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
 
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
 
-const portalURL='http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV'
+const portalURL =
+  "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
 
-const menuData = {
-  Nosotros: {
-    "Nuestra Universidad": [
-      { title: "Misión, visión y valores", href: "./mission" },
-      { title: "Reseña histórica", href: "#Resena" },
-      { title: "Estatuto", href: "#Estatuto" },
-      { title: "Organigrama", href: "#Organigrama" },
-      { title: "Directorio institucional", href: "#Directorio" },
-      { title: "Mapa del Campus", href: "#Campus" },
-      { title: "Convenios", href: "#Convenios" },
-      { title: "Memoria Anual", href: "#Memoria" },
-      { title: "Mesa de Parte", href: "#Mesa" },
-    ],
-    Autoridades: [
-      { title: "Rectora", href: "#Rectora" },
-      { title: "Vicerrectora académica", href: "#Vicerrectora" },
-      { title: "Vicerrector de investigación", href: "#Vicerrector" },
-      { title: "Decano", href: "#Decano" },
-    ],
-    Oficinas: [
-      { title: "Gestión Académica y Prospectiva", href: "#Gestion" },
+
+const menuData2 = [
+  {
+    title: "Nosotros",
+    children: [
       {
-        title: "Dirección de Responsabilidad Social Universitaria",
-        href: "#Direccion",
+        title: "Nuestra Universidad",
+        children: [
+          { title: "Misión, visión y valores", href: "#Mision" },
+          { title: "Reseña histórica", href: "#Resena" },
+          { title: "Estatuto", href: "#Estatuto" },
+          { title: "Organigrama", href: "#Organigrama" },
+          { title: "Directorio institucional", href: "#Directorio" },
+          { title: "Mapa del Campus", href: "#Campus" },
+          { title: "Convenios", href: "#Convenios" },
+          { title: "Memoria Anual", href: "#Memoria" },
+          { title: "Mesa de Parte", href: "#Mesa" },
+          {
+            title: "Test 3 deep",
+            children: [
+              { title: "test1", href: "#test1" },
+              { title: "test2", href: "#test2" },
+              { title: "test3", href: "#test3" },
+            ],
+          },
+        ],
       },
       {
-        title: "Cooperación y Relaciones internacionales",
-        href: "#Cooperación",
+        title: "Autoridades",
+        children: [
+          { title: "Rectora", href: "#Rectora" },
+          { title: "Vicerrectora académica", href: "#Vicerrectora" },
+          { title: "Vicerrector de investigación", href: "#Vicerrector" },
+          { title: "Decano", href: "#Decano" },
+        ],
+      },
+      {
+        title: "Oficinas",
+        children: [
+          { title: "Gestión Académica y Prospectiva", href: "#Gestion" },
+          {
+            title: "Dirección de Responsabilidad Social Universitaria",
+            href: "#Direccion",
+          },
+          {
+            title: "Cooperación y Relaciones internacionales",
+            href: "#Cooperación",
+          },
+        ],
+      },
+      {
+        title: "Documentos de gestión",
+        children: [
+          { title: "Reglamento Académico", href: "#Reglamento" },
+          { title: "TUPA", href: "#TUPA" },
+        ],
       },
     ],
-    "Documentos de gestión": [
-      { title: "Reglamento Académico", href: "#Reglamento" },
-      { title: "TUPA", href: "#TUPA" },
+  },
+  {
+    title: "Pregrado",
+    children: [
+      {
+        title: "Area 1",
+        /*TODO: Agregar el href a area*/
+        children: [
+          { title: "Administración", href: "/UntelsWebFrontend/administracion" },
+          { title: "Carrera 2", href: "#Carrera2" },
+          { title: "Carrera 3", href: "#Carrera3" },
+          { title: "Carrera 4", href: "#Carrera4" },
+          { title: "Carrera 5", href: "#Carrera5" },
+        ],
+      },
+      {
+        title: "Area 2",
+        /*TODO: Agregar el href a area*/
+        children: [
+          { title: "Carrera 1", href: "#Carrera1" },
+          { title: "Carrera 2", href: "#Carrera2" },
+          { title: "Carrera 3", href: "#Carrera3" },
+          { title: "Carrera 4", href: "#Carrera4" },
+          { title: "Carrera 5", href: "#Carrera5" },
+        ],
+      },
     ],
   },
-  Pregrado: {
-    "Area 1": [
-      { title: "Carrera 1", href: "#Carrera1" },
-      { title: "Carrera 2", href: "#Carrera2" },
-      { title: "Carrera 3", href: "#Carrera3" },
-      { title: "Carrera 4", href: "#Carrera4" },
-      { title: "Carrera 5", href: "#Carrera5" },
-    ],
-    "Area 2": [
-      { title: "Carrera 1", href: "#Carrera1" },
-      { title: "Carrera 2", href: "#Carrera2" },
-      { title: "Carrera 3", href: "#Carrera3" },
-      { title: "Carrera 4", href: "#Carrera4" },
-      { title: "Carrera 5", href: "#Carrera5" },
+  {
+    title: "Posgrado",
+    children: [
+      { title: "Proceso de Admisión 2024-II", href: "#Admision" },
+      { title: "Estructura Orgánica", href: "#Estructura" },
+      { title: "Presentación", href: "#Presentacion" },
     ],
   },
-  Posgrado: [
-    { title: "Proceso de Admisión 2024-II", href: "#Admision" },
-    { title: "Estructura Orgánica", href: "#Estructura" },
-    { title: "Presentación", href: "#Presentacion" },
-  ],
-  Admision: [
-    { title: "Cronograma", href: "#Cronograma" },
-    { title: "Modalidades", href: "#Modalidades" },
-    { title: "Vacantes", href: "#Vacantes" },
-    { title: "Temario", href: "#Temario" },
-    { title: "Prospecto", href: "#Prospecto" },
-    { title: "Modelo de examen", href: "#Modelo" },
-    { title: "Infórmate", href: "#Informate" },
-    { title: "Preguntas frecuentes", href: "#Preguntas" },
-    { title: "Contáctanos", href: "#Contactanos" },
-  ],
-};
+  {
+    title: "Admision",
+    children: [
+      { title: "Cronograma", href: "#Cronograma" },
+      { title: "Modalidades", href: "#Modalidades" },
+      { title: "Vacantes", href: "#Vacantes" },
+      { title: "Temario", href: "#Temario" },
+      { title: "Prospecto", href: "#Prospecto" },
+      { title: "Modelo de examen", href: "#Modelo" },
+      { title: "Infórmate", href: "#Informate" },
+      { title: "Preguntas frecuentes", href: "#Preguntas" },
+      { title: "Contáctanos", href: "#Contactanos" },
+    ],
+  },
+];
 
 let lastScrollY = 0;
 
-const renderMenuItems = (items) =>
-  items.map((item) => (
-    <NavDropdown.Item key={item.href} href={item.href}>
-      {item.title}
-    </NavDropdown.Item>
-  ));
-
 export default function Header() {
-  const [activeMenu, setActiveMenu] = useState(null);
-  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [showList, setShowList] = useState([]);
   const [headerVisible, setHeaderVisible] = useState(true);
-
-  const handleScroll = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 76) {
-      setHeaderVisible(false);
-    } else {
-      setHeaderVisible(true);
-    }
-    lastScrollY = window.scrollY;
-  };
+  const [collapsed, setCollapsed] = useState(true);
+  const ref = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -112,26 +140,85 @@ export default function Header() {
     };
   }, []);
 
-  const handleMouseEnter = (key, type) => {
-    if (type === "menu") {
-      if (isBrowser) setActiveMenu(key);
-    } else if (type === "submenu") {
-      if (isBrowser) setActiveSubmenu(key);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 76) {
+      setHeaderVisible(false);
+    } else {
+      setHeaderVisible(true);
+    }
+    setCollapsed(true); // close navbar in mobile on scroll
+    setShowList([]); // close all dropdowns on scroll
+    lastScrollY = window.scrollY;
+  };
+
+  const handleClickOutside = (event) => {
+    // close all dropdowns on click outside
+    if (ref.current && !ref.current.contains(event.target)) {
+      setShowList([]); // close all dropdowns on scroll
     }
   };
 
-  const handleMouseLeave = (type) => {
-    if (type === "menu") {
-      if (isBrowser) setActiveMenu(null);
-    } else if (type === "submenu") {
-      if (isBrowser) setActiveSubmenu(null);
+  const handleNavDropdownClick = (link) => {
+    setShowList([]); // close all dropdowns on scroll
+    navigate("/" + link);
+  };
+
+  const handleMouseEnter = (key, index) => {
+    setShowList((prevList) => {
+      const newList = [...prevList];
+      newList[index] = key;
+      return newList;
+    });
+  };
+
+  const renderNavItem = (item, deep = 0) => {
+    if (item.children) {
+      return (
+        <NavDropdown
+          className={`background main-dropdown ${
+            item.href ? "cursor=pointer" : "cursor-none"
+          }`}
+          key={item.title}
+          title={deep === 0 ? <b>{item.title}</b> : item.title}
+          id={`nav-drop-${deep}-${item.title}`}
+          drop={deep === 0 ? undefined : "end"}
+          show={isBrowser ? showList.includes(item.title) : undefined}
+          onMouseEnter={
+            isBrowser ? () => handleMouseEnter(item.title, deep) : undefined
+          }
+          onClick={
+            isBrowser && item.href
+              ? () => handleNavDropdownClick(item.href)
+              : undefined
+          }
+        >
+          {item.children.map((child) => renderNavItem(child, deep + 1))}
+        </NavDropdown>
+      );
     }
+    return (
+      <NavDropdown.Item key={item.href} href={item.href}>
+        {item.title}
+      </NavDropdown.Item>
+    );
   };
 
   return (
     <Navbar
       expand="lg"
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
+      onSelect={() => {
+        setShowList([]); // close all dropdowns
+        setCollapsed(true); // close navbar in mobile
+      }}
+      expanded={!collapsed}
     >
       <Container fluid>
         <Navbar.Brand>
@@ -142,45 +229,19 @@ export default function Header() {
         <Navbar.Toggle
           className="navbar-toggler-container"
           aria-controls="navbarScroll"
-          aria-expanded={!!activeMenu}
+          onClick={() => setCollapsed(!collapsed)}
         />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className={`m-auto my-2 my-lg-0 justify-content-between ${isMobile ? '':'w-50 my-2 my-lg-0'}`} navbarScroll>
-            {Object.entries(menuData).map(([key, value]) => (
-              <NavDropdown
-                className="background main-dropdown navbar-item"
-                key={key}
-                title={<b>{key}</b>}
-                id={`navbarScrollingDropdown-${key}`}
-                show={isBrowser ? activeMenu === key : undefined}
-                onMouseEnter={() => handleMouseEnter(key, "menu")}
-                onMouseLeave={() => handleMouseLeave("menu")}
-                onClick={isMobile ? () => setActiveMenu(key) : undefined}
-              >
-                {Array.isArray(value)
-                  ? renderMenuItems(value)
-                  : Object.entries(value).map(([subKey, subItems]) => (
-                      <NavDropdown
-                        key={subKey}
-                        title={subKey}
-                        drop="end"
-                        show={isBrowser ? activeSubmenu === subKey : undefined}
-                        onMouseEnter={() => handleMouseEnter(subKey, "submenu")}
-                        onMouseLeave={() => handleMouseLeave("submenu")}
-                        onClick={
-                          isMobile ? () => setActiveSubmenu(subKey) : undefined
-                        }
-                      >
-                        {renderMenuItems(subItems)}
-                      </NavDropdown>
-                    ))}
-              </NavDropdown>
-            ))}
-          </Nav>
-          <Nav.Link
-            target="_blank"
-            href={portalURL}
+          <Nav
+            className={`m-auto my-2 my-lg-0 justify-content-between ${
+              isMobile ? "" : "w-50 my-2 my-lg-0"
+            }`}
+            navbarScroll
+            ref={ref}
           >
+            {menuData2.map((item) => renderNavItem(item))}
+          </Nav>
+          <Nav.Link target="_blank" href={portalURL}>
             <img src={portal} height="50" alt="Portal" />
           </Nav.Link>
           <Form className="d-flex">
