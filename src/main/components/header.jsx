@@ -22,7 +22,7 @@ const menuData2 = [
       {
         title: "Nuestra Universidad",
         children: [
-          { title: "Misión, visión y valores", href: "#Mision" },
+          { title: "Misión, visión y valores", href: "./mission" },
           { title: "Reseña histórica", href: "#Resena" },
           { title: "Estatuto", href: "#Estatuto" },
           { title: "Organigrama", href: "#Organigrama" },
