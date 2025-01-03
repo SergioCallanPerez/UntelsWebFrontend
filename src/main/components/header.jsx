@@ -80,7 +80,7 @@ const menuData2 = [
         title: "Area 1",
         href: "#area1",
         children: [
-          { title: "Carrera 1", href: "#Carrera1" },
+          { title: "Administración", href: "/UntelsWebFrontend/administracion" },
           { title: "Carrera 2", href: "#Carrera2" },
           { title: "Carrera 3", href: "#Carrera3" },
           { title: "Carrera 4", href: "#Carrera4" },
