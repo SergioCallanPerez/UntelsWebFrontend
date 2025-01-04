@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Admin from "../../../assets/admin.jpg"
 import Button from "react-bootstrap/Button";
 import "../../../styles/academic_programs.css"
+
 export default function AcademicPrograms(){
 
     const navigate= useNavigate()
@@ -13,7 +14,7 @@ export default function AcademicPrograms(){
     return(
         <section>
             <Container>
-                <div className="d-flex align-items-center with-h-divider-primary">
+                <div className="d-flex align-items-center with-h-divider-primary justify-content-center">
                     <h3 className="background-title"><b>Programas académicos</b></h3>
                 </div>
                 <Row className="g-4 justify-content-center">
