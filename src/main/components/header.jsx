@@ -22,7 +22,7 @@ const menuData2 = [
       {
         title: "Nuestra Universidad",
         children: [
-          { title: "Misión, visión y valores", href: "./mission" },
+          { title: "Misión, visión y valores", href: "/mision" },
           { title: "Reseña histórica", href: "#Resena" },
           { title: "Estatuto", href: "#Estatuto" },
           { title: "Organigrama", href: "#Organigrama" },
@@ -80,7 +80,7 @@ const menuData2 = [
         title: "Area 1",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Administración", href: "/UntelsWebFrontend/administracion" },
+          { title: "Administración", href: "/administracion" },
           { title: "Carrera 2", href: "#Carrera2" },
           { title: "Carrera 3", href: "#Carrera3" },
           { title: "Carrera 4", href: "#Carrera4" },
@@ -204,7 +204,7 @@ export default function Header() {
       );
     }
     return (
-      <NavDropdown.Item key={item.href} href={item.href}>
+      <NavDropdown.Item as={Link} key={item.href} to={item.href}>
         {item.title}
       </NavDropdown.Item>
     );
