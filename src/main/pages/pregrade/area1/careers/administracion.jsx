@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import { FaChevronRight } from "react-icons/fa6";
 import adminIMG from '../../../../assets/admin.jpg';
 import { otherscareers } from "../careers-summary/administracion";
