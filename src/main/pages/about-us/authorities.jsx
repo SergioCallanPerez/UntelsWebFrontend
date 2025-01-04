@@ -1,10 +1,10 @@
 import { React } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "../../styles/root.css";
-import rectoraIMG from "@/assets/rectora.png";
-import viceAcademicoIMG from "@/assets/viceAcademico.png";
-import viceInvestigacionIMG from "@/assets/viceInvestigacion.png";
-import decanoIMG from "@/assets/decano.png";
+import rectoraIMG from "@/assets/authorities/rectora.png";
+import viceAcademicoIMG from "@/assets/authorities/viceAcademico.png";
+import viceInvestigacionIMG from "@/assets/authorities/viceInvestigacion.png";
+import decanoIMG from "@/assets/authorities/decano.png";
 import "@/styles/about-us.css";
 
 export default function Authorities(){
