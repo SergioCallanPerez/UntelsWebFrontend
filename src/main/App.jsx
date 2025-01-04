@@ -8,6 +8,9 @@ import "./styles/root.css";
 import FloatingWhatsAppButton from "./components/floating_button.jsx";
 import Administracion from "./pages/pregrade/area1/careers/administracion"; 
 import Directory from "./pages/about-us/directory";
+import Statute from "./pages/about-us/statute";
+import OrganizationChart from "./pages/about-us/organization_chart";
+import Campus from "./pages/about-us/campus";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/mision" element={<Mission />} />
         <Route path="/resena" element={<Review />} />
         <Route path="/directorio_institucional" element={<Directory  />} />
+        <Route path="/estatuto" element={<Statute />} />
+        <Route path="/organigrama" element={<OrganizationChart />} />
+        <Route path="/campus" element={<Campus />} />
       </Routes>
       <Footer />
       <FloatingWhatsAppButton />

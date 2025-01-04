@@ -24,21 +24,13 @@ const menuData2 = [
         children: [
           { title: "Misión, visión y valores", href: "./mision" },
           { title: "Reseña histórica", href: "./resena" },
-          { title: "Estatuto", href: "#Estatuto" },
-          { title: "Organigrama", href: "#Organigrama" },
+          { title: "Estatuto", href: "./estatuto" },
+          { title: "Organigrama", href: "./organigrama" },
           { title: "Directorio institucional", href: "./directorio_institucional" },
-          { title: "Mapa del Campus", href: "#Campus" },
+          { title: "Mapa del Campus", href: "./campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
           { title: "Mesa de Parte", href: "#Mesa" },
-          {
-            title: "Test 3 deep",
-            children: [
-              { title: "test1", href: "#test1" },
-              { title: "test2", href: "#test2" },
-              { title: "test3", href: "#test3" },
-            ],
-          },
         ],
       },
       {
