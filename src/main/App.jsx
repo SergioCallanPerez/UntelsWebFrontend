@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
 import Mission from "./pages/about-us/mission";
 import Review from "./pages/about-us/review"
@@ -11,7 +11,7 @@ import Directory from "./pages/about-us/directory";
 
 function App() {
   return (
-    <BrowserRouter basename="/UntelsWebFrontend/">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -21,8 +21,8 @@ function App() {
         <Route path="/directorio_institucional" element={<Directory  />} />
       </Routes>
       <Footer />
-      <FloatingWhatsAppButton/>
-    </BrowserRouter>
+      <FloatingWhatsAppButton />
+    </Router>
   );
 }
 
