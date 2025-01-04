@@ -4,6 +4,11 @@
   font-size: 20px;
 }
 
+.main-dropdown.show .dropdown-menu {
+  border: 2px solid var(--untels-gray-2);
+  border-radius: 5px;
+}
+
 .main-dropdown{
   font-size: 20px;
 }

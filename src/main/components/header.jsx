@@ -6,7 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
-
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
@@ -23,32 +22,18 @@ const menuData2 = [
         title: "Nuestra Universidad",
         children: [
           { title: "Misión, visión y valores", href: "/mision" },
-          { title: "Reseña histórica", href: "#Resena" },
-          { title: "Estatuto", href: "#Estatuto" },
-          { title: "Organigrama", href: "#Organigrama" },
-          { title: "Directorio institucional", href: "#Directorio" },
-          { title: "Mapa del Campus", href: "#Campus" },
+          { title: "Reseña histórica", href: "/resena" },
+          { title: "Estatuto", href: "/estatuto" },
+          { title: "Organigrama", href: "/organigrama" },
+          { title: "Directorio institucional", href: "/directorio_institucional" },
+          { title: "Mapa del Campus", href: "/campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
           { title: "Mesa de Parte", href: "#Mesa" },
-          {
-            title: "Test 3 deep",
-            children: [
-              { title: "test1", href: "#test1" },
-              { title: "test2", href: "#test2" },
-              { title: "test3", href: "#test3" },
-            ],
-          },
         ],
       },
       {
-        title: "Autoridades",
-        children: [
-          { title: "Rectora", href: "#Rectora" },
-          { title: "Vicerrectora académica", href: "#Vicerrectora" },
-          { title: "Vicerrector de investigación", href: "#Vicerrector" },
-          { title: "Decano", href: "#Decano" },
-        ],
+        title: "Autoridades", href: "/autoridades" 
       },
       {
         title: "Oficinas",

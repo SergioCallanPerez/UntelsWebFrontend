@@ -55,6 +55,11 @@
   color: var(--on-primary-color);
 }
 
+.secondary-title {
+  background-color: var(--untels-yellow);
+  color: var(--on-background-title)
+}
+
 .background {
   background-color: var(--background-color);
   color: var(--on-background-color);
@@ -120,6 +125,10 @@ a {
 
 .with-v-divider-on-background {
   border-right: 2px solid var(--on-background-accent-color);
+}
+
+.with-h-divider-primary {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .with-h-divider-on-background {

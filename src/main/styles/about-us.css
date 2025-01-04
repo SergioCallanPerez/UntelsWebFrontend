@@ -3,8 +3,16 @@
     height: 80%;
 }
 .about-us-title{
-    font-size: 400%;
+    font-size: 300%;
+    margin-right: 40%;
+}
+.about-us-title-mobile{
+    font-size: 300%;
+}
+.vision-title{
+    font-size: 300%;
+    margin-left: 40%;
 }
 .about-us-message{
-    font-size: 130%;
+    font-size: 120%;
 }
