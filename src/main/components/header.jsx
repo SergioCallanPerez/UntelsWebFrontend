@@ -22,11 +22,11 @@ const menuData2 = [
       {
         title: "Nuestra Universidad",
         children: [
-          { title: "Misión, visión y valores", href: "./mission" },
-          { title: "Reseña histórica", href: "#Resena" },
+          { title: "Misión, visión y valores", href: "./mision" },
+          { title: "Reseña histórica", href: "./resena" },
           { title: "Estatuto", href: "#Estatuto" },
           { title: "Organigrama", href: "#Organigrama" },
-          { title: "Directorio institucional", href: "#Directorio" },
+          { title: "Directorio institucional", href: "./directorio_institucional" },
           { title: "Mapa del Campus", href: "#Campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
