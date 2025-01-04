@@ -6,7 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
-
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
@@ -22,19 +21,19 @@ const menuData2 = [
       {
         title: "Nuestra Universidad",
         children: [
-          { title: "Misión, visión y valores", href: "./mision" },
-          { title: "Reseña histórica", href: "./resena" },
-          { title: "Estatuto", href: "./estatuto" },
-          { title: "Organigrama", href: "./organigrama" },
-          { title: "Directorio institucional", href: "./directorio_institucional" },
-          { title: "Mapa del Campus", href: "./campus" },
+          { title: "Misión, visión y valores", href: "/mision" },
+          { title: "Reseña histórica", href: "/resena" },
+          { title: "Estatuto", href: "/estatuto" },
+          { title: "Organigrama", href: "/organigrama" },
+          { title: "Directorio institucional", href: "/directorio_institucional" },
+          { title: "Mapa del Campus", href: "/campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
           { title: "Mesa de Parte", href: "#Mesa" },
         ],
       },
       {
-        title: "Autoridades", href: "./autoridades" 
+        title: "Autoridades", href: "/autoridades" 
       },
       {
         title: "Oficinas",
