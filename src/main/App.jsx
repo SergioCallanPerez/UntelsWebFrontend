@@ -11,6 +11,7 @@ import Directory from "./pages/about-us/directory";
 import Statute from "./pages/about-us/statute";
 import OrganizationChart from "./pages/about-us/organization_chart";
 import Campus from "./pages/about-us/campus";
+import Authorities from "./pages/about-us/authorities";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/estatuto" element={<Statute />} />
         <Route path="/organigrama" element={<OrganizationChart />} />
         <Route path="/campus" element={<Campus />} />
+        <Route path="/autoridades" element={<Authorities />} />
       </Routes>
       <Footer />
       <FloatingWhatsAppButton />

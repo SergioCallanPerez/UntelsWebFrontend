@@ -2,7 +2,6 @@ import { React } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "../../styles/root.css";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css"; 
 import statutePDF from "@/assets/pdfs/estatuto.pdf";
 import "@/styles/about-us.css";

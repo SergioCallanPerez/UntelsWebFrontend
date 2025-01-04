@@ -34,13 +34,7 @@ const menuData2 = [
         ],
       },
       {
-        title: "Autoridades",
-        children: [
-          { title: "Rectora", href: "#Rectora" },
-          { title: "Vicerrectora académica", href: "#Vicerrectora" },
-          { title: "Vicerrector de investigación", href: "#Vicerrector" },
-          { title: "Decano", href: "#Decano" },
-        ],
+        title: "Autoridades", href: "./autoridades" 
       },
       {
         title: "Oficinas",
