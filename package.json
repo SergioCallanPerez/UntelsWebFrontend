@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "homepage": "https://sergiocallanperez.github.io/UntelsWebFrontend",
   "scripts": {
     "dev": "vite",
     "dev:host": "vite --host",
