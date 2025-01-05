@@ -34,12 +34,12 @@ export default function CampusLife(){
     return(
         <section>
             <Container>
-                <div className="d-flex align-items-center with-h-divider-primary justify-content-center">
+                <div className="d-flex align-items-center with-h-divider-on-background justify-content-center">
                     <h3 className="background-title"><b>Vida universitaria: ¿Qué encontrarás en Untels?</b></h3>
                 </div>
                 <Row className="g-4 justify-content-center">
                     {cards.map((item)=> (
-                        <Col md={4}>
+                        <Col md={4} key={item.id}>
                             <img src={item.img} width="95%" className="mt-4 campus-img"/>
                             <Card className="on-primary-color m-3">
                                 <Card.Img

@@ -65,6 +65,10 @@
   color: var(--on-background-color);
 }
 
+.background-light {
+  background-color: var(--primary-light);
+}
+
 .background-title {
   background-color: var(--background-color);
   color: var(--on-background-title);
