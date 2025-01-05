@@ -1,3 +1,7 @@
+.carousel-container {
+  margin-bottom: 23px;
+}
+
 .carousel {
   width: 100%;
   margin: 0 auto;
@@ -8,27 +12,24 @@
   aspect-ratio: 3/1;
 }
 
+.carousel-indicators {
+  top: 100% !important;
+  margin-bottom: 20;
+}
+
 .carousel-indicators button {
-  width: 0.8rem !important;
-  height: 0.8rem !important;
-  border-radius: 50% !important;
-  margin-right: 10px !important;
-  margin-left: 10px !important;
-  background-color: var(--untels-white) !important;
+  background-color: var(--untels-gray-2) !important;
 }
 
-.carousel-info-btn {
-  bottom: 10%;
-  right: 8%;
-  background-color: brown;
-  border: none;
-  transition: transform ease .5s;
-  --bs-btn-active-bg: rgb(207, 48, 48) !important;
+.carousel-indicators button.active {
+  background-color: var(--untels-blue-1) !important;
 }
 
-.carousel-info-btn:hover {
-  background-color: rgb(207, 48, 48);
-  transform: scale(1.1);
+.carousel-card {
+  right: 23px;
+  bottom: -23px;
+  height: 100%;
+  aspect-ratio: 9/10;
 }
 
 @media (max-width: 768px) {
@@ -37,17 +38,10 @@
     aspect-ratio: 9/16;
   }
 
-  .carousel-info-btn {
-    align-self: center;
-    bottom: 10%;
-    right: 50%;
-    transform: translateX(50%);
-    transition: ease .5s;
-  }
-
-  .carousel-info-btn:hover {
-    background-color: brown;
-    transform: translateX(50%);
-    right: 50%;
+  .carousel-card {
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: 0px;
+    height: 50%;
   }
 }

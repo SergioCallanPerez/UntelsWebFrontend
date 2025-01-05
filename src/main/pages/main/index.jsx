@@ -9,7 +9,7 @@ import CampusLife from "./sections/campus_life.jsx";
 
 export default function Main() {
   return (
-    <main className="d-flex flex-column gap-2 pb-2" >
+    <main className="d-flex flex-column gap-5 pb-5">
       <MainCarousel />
       <Achievements />
       <AcademicPrograms />
