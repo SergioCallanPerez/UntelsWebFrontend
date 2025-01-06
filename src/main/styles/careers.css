@@ -1,3 +1,34 @@
 .career-title{
     text-align: center;
 }
+
+.career-reasons-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.career-reasons-img {
+    width: 52%;
+    top: -50px;
+    position: absolute;
+}
+
+.career-reasons-card {
+    width: 52%;
+    margin-left: auto;
+    margin-top: 50px;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .career-reasons-img {
+      position: static;
+      width: 100%;
+    }
+    
+    .career-reasons-card {
+      width: 100%;
+      margin-top: 0;
+      border-radius: 0;
+    }
+  }

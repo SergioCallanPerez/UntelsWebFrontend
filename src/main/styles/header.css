@@ -1,7 +1,7 @@
 .main-dropdown .dropdown-menu {
   margin-top: 0;
   border-width: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .main-dropdown.show .dropdown-menu {
@@ -10,7 +10,8 @@
 }
 
 .main-dropdown{
-  font-size: 20px;
+  font-size: 18px;
+  text-align: justify;
 }
 
 .cursor-none >  a {

@@ -18,7 +18,7 @@
   --primary-color: var(--untels-blue-1); /* Color principal del tema */
   --primary-light: var(--untels-blue-2); /* Variante más clara */
   --on-primary-color: var(--untels-white);
-  --on-primary-accent-color: var(--untels-mustard);
+  --on-primary-accent-color: var(--untels-yellow);
 
   --secondary-color: var(--untels-yellow); /* Color secundario */
   --tertiary-color: var(--untels-white); /* Color terciario o neutro */
@@ -50,6 +50,8 @@
   --border-color: var(--untels-gray-2); /* Bordes neutrales */
 }
 
+/* classes */
+
 .primary {
   background-color: var(--primary-color);
   color: var(--on-primary-color);
@@ -57,12 +59,17 @@
 
 .secondary-title {
   background-color: var(--untels-yellow);
-  color: var(--on-background-title)
+  color: var(--on-background-title);
 }
 
 .background {
   background-color: var(--background-color);
   color: var(--on-background-color);
+}
+
+.background-light {
+  background-color: var(--primary-light);
+  color: var(--on-primary-color);
 }
 
 .background-title {
@@ -82,6 +89,36 @@
   color: var(--on-background-accent-color);
 }
 
+.btn-on-primary {
+  background-color: var(--on-primary-accent-color);
+  color: var(--untels-black);
+  border: none;
+  border-radius: 15px;
+  transition: ease 0.5s;
+}
+
+.btn-on-primary:hover {
+  background-color: var(--untels-mustard);
+  color: var(--untels-white);
+  transform: scale(1.1);
+}
+
+.btn-on-primary.mobile:hover {
+  background-color: var(--untels-yellow);
+  color: var(--untels-black);
+  transform: none;
+}
+
+.btn-on-primary.mobile:active {
+  color: var(--untels-white);
+  background-color: var(--untels-mustard) !important;
+}
+
+.btn-on-primary:active {
+  color: var(--untels-white);
+  background-color: var(--untels-mustard) !important;
+}
+
 .badge-card {
   background-color: var(--surface-color);
   color: var(--on-surface-color);
@@ -94,7 +131,6 @@
 }
 
 body {
-  background-color: var(--untels-gray-3);
   font-family: "Avenir", "Arial", sans-serif;
 }
 
@@ -151,6 +187,25 @@ a {
 .with-auto-divider-primary {
   border-right: 2px solid var(--primary-color);
   border-bottom: none;
+}
+
+.with-underline {
+  position: relative;
+}
+
+.with-underline::after {
+  content: ""; 
+  position: absolute;
+  top: 120%;
+  width: 150px;
+  height: 6px;
+  background-color: currentColor;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.with-box-shadow {
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {

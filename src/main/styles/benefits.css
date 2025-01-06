@@ -1,0 +1,31 @@
+.benefits-container {
+  position: relative;
+}
+
+.benefits-img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  top: -50px;
+  width: 52%;
+}
+
+.benefits-card {
+  width: 52%;
+  margin-left: auto;
+  margin-top: 50px;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .benefits-img {
+    position: static;
+    width: 100%;
+  }
+  
+  .benefits-card {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
