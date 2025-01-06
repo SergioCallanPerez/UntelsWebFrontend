@@ -7,6 +7,7 @@ import Achievements from "./sections/achievements.jsx";
 import AcademicPrograms from "./sections/academic_programs.jsx";
 import CampusLife from "./sections/campus_life.jsx";
 import Benefits from "./sections/benefits.jsx";
+import AdmissionAd from "./sections/admission_ad.jsx";
 
 export default function Main() {
   return (
@@ -16,7 +17,10 @@ export default function Main() {
       <Benefits />
       <AcademicPrograms />
       <CampusLife />
-      <Announcements />
+      {
+        //<Announcements />
+      }
+      <AdmissionAd />
       <Experiences/>
       <Follow />
     </main>

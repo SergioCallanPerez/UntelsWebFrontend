@@ -93,7 +93,7 @@
   color: var(--untels-black);
   border: none;
   border-radius: 15px;
-  transition: transform ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .btn-on-primary:hover {
