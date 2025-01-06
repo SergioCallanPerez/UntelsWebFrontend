@@ -16,3 +16,46 @@
 .about-us-message{
     font-size: 120%;
 }
+.main-image {
+    text-align: center;
+    margin: 0 auto;
+}
+  
+.main-image img {
+    width: 100%;
+    height: auto;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Asegura que se ajusten al ancho del contenedor */
+  }
+  
+.button-blue {
+    background-color: var(--untels-blue-1); /* Azul oscuro */
+    color: white;
+    padding: 12px 16px; /* Espaciado interno */
+    text-align: center;
+    border: none;
+    border-radius: 12px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-gray {
+    background-color: #E0E0E0; /* Gris claro */
+    color: black;
+    padding: 12px 16px;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.button-gray:hover {
+    background-color: #C0C0C0; /* Gris más oscuro al pasar el mouse */
+}

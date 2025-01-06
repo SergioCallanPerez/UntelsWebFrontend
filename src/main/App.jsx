@@ -13,6 +13,7 @@ import Statute from "./pages/about-us/statute";
 import OrganizationChart from "./pages/about-us/organization_chart";
 import Campus from "./pages/about-us/campus";
 import Authorities from "./pages/about-us/authorities";
+import AboutUs from "./pages/about-us/about-us";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/pregrado" element={<Pregrade/>}/>
         <Route path="/carreras/administracion" element={<Administracion/>}/>
+        <Route path="/nosotros" element={<AboutUs/>}/>
         <Route path="/mision" element={<Mission />} />
         <Route path="/resena" element={<Review />} />
         <Route path="/directorio_institucional" element={<Directory  />} />

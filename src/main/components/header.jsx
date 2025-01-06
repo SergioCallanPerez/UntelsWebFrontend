@@ -19,18 +19,7 @@ const menuData2 = [
     title: "Nosotros",
     children: [
       {
-        title: "Nuestra Universidad",
-        children: [
-          { title: "Misión, visión y valores", href: "/mision" },
-          { title: "Reseña histórica", href: "/resena" },
-          { title: "Estatuto", href: "/estatuto" },
-          { title: "Organigrama", href: "/organigrama" },
-          { title: "Directorio institucional", href: "/directorio_institucional" },
-          { title: "Mapa del Campus", href: "/campus" },
-          { title: "Convenios", href: "#Convenios" },
-          { title: "Memoria Anual", href: "#Memoria" },
-          { title: "Mesa de Parte", href: "#Mesa" },
-        ],
+        title: "Nuestra Universidad", href: "/nosotros"
       },
       {
         title: "Autoridades", href: "/autoridades" 

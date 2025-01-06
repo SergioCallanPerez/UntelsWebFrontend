@@ -2,21 +2,36 @@ import { React } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "../../styles/root.css";
 import nosotrosIMG from "@/assets/nosotros.png";
+import nosotrosIMG2 from "@/assets/review_image.png";
 import "@/styles/about-us.css";
 
 export default function Review(){
-    const message = "Desde la década de los 70, en el siglo XX, cuando surgió Villa El Salvador, sus pobladores que crearon la Comunidad Autogestionaria de Villa El Salvador  incluyeron en su Primer Plan de Desarrollo Integral la creación de una universidad pública, entre las instituciones educativas con que debía contar la comunidad, asignándole un terreno en la zona de Lomo de Corvina. Posteriormente, creado ya el distrito de Villa El Salvador, gracias a la gestión de una Comisión integrada por dirigentes de ese distrito y del conjunto de Lima Sur, el 10 de enero de 2001 fue creada la Universidad Nacional Tecnológica del Cono Sur, mediante la Ley N° 27431 promulgada por el Gobierno de Transición Democrática presidido por Valentín Paniagua Corazao. El 29 de setiembre de 2005, por disposición del Ministro de Educación, Javier Sota Nadal, se constituyó la primera Comisión Organizadora y el 15 de marzo del 2006 se entregó a la universidad el terreno de su Sede Central, así como el presupuesto destinado para la construcción del primer pabellón de aulas en el campus universitario. El 6 de noviembre de ese año se aprobó su Proyecto de Desarrollo Institucional. El 25 de febrero del año 2007 se efectuó el primer concurso público de admisión y el 1 de abril de ese mismo año se dio inicio al primer año académico. Mediante la Ley Nº 30184, de fecha 6 de mayo de 2014, pasó a denominarse Universidad Nacional Tecnológica de Lima Sur."
+    const messages = {
+        message1:"La historia de la Universidad Nacional Tecnológica de Lima Sur (UNTELS) comienza en la década de los 70, cuando los pobladores de Villa El Salvador, un distrito emergente, soñaron con una comunidad autogestionaria que incluyera una universidad pública. En su Primer Plan de Desarrollo Integral, propusieron asignar un terreno en Lomo de Corvina para este fin.",
+        message2:"Décadas más tarde, el 10 de enero del 2002, este sueño se materializó con la creación de la Universidad Nacional Tecnológica del Cono Sur, establecida mediante la Ley N° 27431 durante el Gobierno de Transición Democrática liderado por Valentín Paniagua. Este logro fue posible gracias al esfuerzo de líderes comunitarios de Villa El Salvador y otros distritos de Lima Sur.",
+        message3:"En 2005, bajo la dirección del Ministro de Educación, Javier Sota Nadal, se designó la primera Comisión Organizadora. En marzo de 2006, la universidad recibió el terreno para su Sede Central y los recursos para construir su primer pabellón de aulas. Ese mismo año se aprobó el Proyecto de Desarrollo Institucional, consolidando los cimientos para su funcionamiento.",
+        message4:"El inicio de las actividades académicas llegó en 2007, con su primer examen de admisión en febrero y el inicio de clases en abril. Desde entonces, UNTELS ha crecido y evolucionado, adoptando su nombre actual en 2014 mediante la Ley Nº 30184. Hoy, UNTELS es un referente en la educación superior de Lima Sur, comprometida con la formación de profesionales integrales y el desarrollo de la comunidad.",
+
+    };
     return (
         <main>
+            <h3 className="ms-3 about-us-title with-h-divider-on-background">Reseña Historica</h3>
             <Row>
                 <Row className="background">
                     <Col md={9}>
-                    <h3 className="ms-3 about-us-title with-h-divider-on-background">Reseña Historica</h3>
-                    <p className="ms-3 about-us-message">{message}</p>
+                    <h4>1970s(Siglo XX)</h4>
+                    <p className="ms-3 about-us-message">{messages.message1}</p>
+                    <h4>2001</h4>
+                    <p className="ms-3 about-us-message">{messages.message2}</p>
+                    <h4>2005</h4>
+                    <p className="ms-3 about-us-message">{messages.message3}</p>
+                    <h4>2007</h4>
+                    <p className="ms-3 about-us-message">{messages.message4}</p>
                     
                     </Col>
                     <Col md={3} className="mt-auto">
                     <img className="about-us-img" src= {nosotrosIMG}></img>
+                    <img className="about-us-img" src= {nosotrosIMG2}></img>
                     </Col>
                     
                 </Row>

@@ -81,6 +81,14 @@
   color: var(--on-primary-color);
 }
 
+.primary-color{
+  color: var(--primary-color);
+}
+.primary-color-bold{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 .on-primary-accent {
   color: var(--on-primary-accent-color);
 }
@@ -213,4 +221,38 @@ a {
     border-right: none;
     border-bottom: 2px solid var(--on-primary-color);
   }
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta las columnas dinámicamente */
+  gap: 20px; /* Espacio entre los elementos */
+  justify-items: center; /* Centra los círculos horizontalmente */
+  align-items: center; /* Centra los círculos verticalmente */
+  margin-top: 20px;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.value-circle {
+  background-color: #004A99; /* Azul oscuro */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Hace que el elemento sea circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Texto blanco dentro del círculo */
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+.value-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000; /* Texto negro */
 }
