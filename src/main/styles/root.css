@@ -203,6 +203,10 @@ a {
   transform: translateX(-50%)
 }
 
+.with-box-shadow {
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
   .with-auto-divider-on-primary {
     border-right: none;
