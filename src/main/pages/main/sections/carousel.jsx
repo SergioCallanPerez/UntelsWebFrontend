@@ -34,8 +34,13 @@ export default function MainCarousel() {
 
   return (
     <section>
-      <div className="position-relative carousel-container">
-        <Carousel activeIndex={index} onSelect={handleSelect} controls={false}>
+      <div className="carousel-container">
+        <Carousel
+          activeIndex={index}
+          onSelect={handleSelect}
+          controls={false}
+          //indicators={false}
+        >
           {carouselImages.map((img, idx) => (
             <Carousel.Item key={idx} interval={4000}>
               <img
@@ -46,7 +51,7 @@ export default function MainCarousel() {
             </Carousel.Item>
           ))}
         </Carousel>
-        <Card className="primary position-absolute carousel-card border-0">
+        <Card className="primary carousel-card border-0">
           <Card.Body className="d-flex m-5 p-0 gap-4 flex-column text-center justify-content-center">
             <Card.Title as={"h2"}>
               <b>UNTELS en el Top 10 de Investigación 2024</b>
@@ -55,9 +60,16 @@ export default function MainCarousel() {
               Excelencia en producción científica y compromiso con la
               innovación.
             </Card.Text>
-            <Button className={`btn-on-primary mx-auto px-5 py-2 ${isMobile? "mobile": ""}`}>Ver más</Button>
+            <Button
+              className={`btn-on-primary mx-auto px-5 py-2 ${
+                isMobile ? "mobile" : ""
+              }`}
+            >
+              <b>Ver más</b>
+            </Button>
           </Card.Body>
         </Card>
+        <div className="carousel-indicators"></div>
       </div>
     </section>
   );

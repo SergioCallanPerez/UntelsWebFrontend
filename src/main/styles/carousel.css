@@ -1,5 +1,6 @@
 .carousel-container {
   margin-bottom: 23px;
+  position: relative;
 }
 
 .carousel {
@@ -26,6 +27,7 @@
 }
 
 .carousel-card {
+  position: absolute;
   right: 23px;
   bottom: -23px;
   height: 100%;
@@ -33,15 +35,24 @@
 }
 
 @media (max-width: 768px) {
+  .carousel-container {
+    position: static;
+  }
+
   .carouselIMG {
     width: 100%;
-    aspect-ratio: 9/16;
+    aspect-ratio: 9/8;
   }
 
   .carousel-card {
-    left: 50%; 
-    transform: translateX(-50%);
-    bottom: 0px;
-    height: 50%;
+    border-radius: 0;
+    position: static;
+    width: 100%;
+    aspect-ratio: 9/8;
+  }
+
+  .carousel-indicators {
+    top: 200% !important;
+    margin-bottom: 20;
   }
 }

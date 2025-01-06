@@ -92,7 +92,8 @@
   background-color: var(--on-primary-accent-color);
   color: var(--untels-black);
   border: none;
-  transition: ease .5s;
+  border-radius: 15px;
+  transition: transform ease .5s;
 }
 
 .btn-on-primary:hover {
