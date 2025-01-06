@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import adminIMG from '@/assets/admin.jpg';
 import ReasonsStudy from "./career_reasons";
+import Syllabus from "./syllabus";
 import '@/styles/careers.css';
 
 export default function Administracion(){
@@ -19,12 +20,12 @@ export default function Administracion(){
                 </div>
                 <div className="aditional-info">
                     <Row>
-                        <Col md={2}>
-                            <h4 className="aditional-info-title"><b>Duración</b></h4>
+                        <Col md={3} className="text-center">
+                            <h4 className="aditional-info-title background-title"><b>Duración</b></h4>
                             <h4>5 años (10 periodos académicos)</h4>
                         </Col>
-                        <Col md={2}>
-                            <h4 className="aditional-info-title"><b>Grado académico</b></h4>
+                        <Col md={3}>
+                            <h4 className="aditional-info-title background-title"><b>Grado académico</b></h4>
                             <h4>Bachiller en Administración de Empresas</h4>
                         </Col>
                     </Row>
@@ -45,6 +46,7 @@ export default function Administracion(){
                     </Row>
                 </div>
                 <ReasonsStudy/>
+                <Syllabus/>
             </Container>
         </main>
     )
