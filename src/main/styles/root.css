@@ -59,7 +59,7 @@
 
 .secondary-title {
   background-color: var(--untels-yellow);
-  color: var(--on-background-title)
+  color: var(--on-background-title);
 }
 
 .background {
@@ -93,7 +93,7 @@
   color: var(--untels-black);
   border: none;
   border-radius: 15px;
-  transition: transform ease .5s;
+  transition: transform ease 0.5s;
 }
 
 .btn-on-primary:hover {
@@ -186,6 +186,22 @@ a {
 .with-auto-divider-primary {
   border-right: 2px solid var(--primary-color);
   border-bottom: none;
+}
+
+.with-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.with-underline::after {
+  content: ""; 
+  position: absolute;
+  top: 110%;
+  width: 150px;
+  height: 6px;
+  background-color: currentColor;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 @media (max-width: 768px) {
