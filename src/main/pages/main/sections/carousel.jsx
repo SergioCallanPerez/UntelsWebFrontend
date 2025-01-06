@@ -40,6 +40,7 @@ export default function MainCarousel() {
           onSelect={handleSelect}
           controls={false}
           //indicators={false}
+          className="carousel-main"
         >
           {carouselImages.map((img, idx) => (
             <Carousel.Item key={idx} interval={4000}>

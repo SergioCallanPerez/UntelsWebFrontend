@@ -69,6 +69,7 @@
 
 .background-light {
   background-color: var(--primary-light);
+  color: var(--on-primary-color);
 }
 
 .background-title {

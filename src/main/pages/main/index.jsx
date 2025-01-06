@@ -22,7 +22,9 @@ export default function Main() {
       }
       <AdmissionAd />
       <Experiences/>
-      <Follow />
+      {
+        //  <Follow />
+      }
     </main>
   );
 }
