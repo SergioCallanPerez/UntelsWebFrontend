@@ -10,8 +10,12 @@ export default function OrganizationChart(){
             <h3 className="ms-3 about-us-title with-h-divider-on-background">Organigrama</h3>
             <Container>
                 <div style={{ height: "600px" }}>
-
-
+                <embed
+                    src= {organization_chartPDF}
+                    type="application/pdf" 
+                    width="100%" 
+                    height="600px">
+                </embed>
                 </div>
             </Container>
                     
