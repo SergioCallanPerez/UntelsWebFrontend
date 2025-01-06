@@ -4,9 +4,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import { FaChevronRight } from "react-icons/fa6";
-import adminIMG from '../../../../assets/admin.jpg';
+import adminIMG from '@/assets/admin.jpg';
 import { otherscareers } from "../careers-summary/administracion";
-import '../../../../styles/careers.css';
+import '@/styles/careers.css';
 
 export default function Administracion(){
 
