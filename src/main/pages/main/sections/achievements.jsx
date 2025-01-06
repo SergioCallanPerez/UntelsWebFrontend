@@ -10,41 +10,29 @@ export default function Achievements() {
     <section>
       <Container>
         <Row>
-          <Col
-            md={3}
-            className="text-center"
-          >
-            <img src={TopTen}  height="50px" className="mb-3"/>
+          <Col xs={6} md={3} className="text-center">
+            <img src={TopTen} height="50px" className="mb-3" />
             <h4 className="background-title">
               <b>Top 10</b>
             </h4>
             <p>en Investigación 2024, reconocimiento nacional.</p>
           </Col>
-          <Col
-            md={3}
-            className="text-center"
-          >
-            <img src={Career} height="50px" className="mb-3"/>
+          <Col xs={6} md={3} className="text-center">
+            <img src={Career} height="50px" className="mb-3" />
             <h4 className="background-title">
-              <b>5 carreras</b>
+              <b>10 carreras</b>
             </h4>
             <p>acreditadas y con un alto índice de empleabilidad.</p>
           </Col>
-          <Col
-            md={3}
-            className="text-center"
-          >
-            <img src={Laboratories} height="50px" className="mb-3"/>
+          <Col xs={6} md={3} className="text-center">
+            <img src={Laboratories} height="50px" className="mb-3" />
             <h4 className="background-title">
               <b>24 laboratorios</b>
             </h4>
             <p>equipados para el aprendizaje práctico.</p>
           </Col>
-          <Col
-            md={3}
-            className="text-center"
-          >
-            <img src={Agreements} height="50px" className="mb-3"/>
+          <Col xs={6} md={3} className="text-center">
+            <img src={Agreements} height="50px" className="mb-3" />
             <h4 className="background-title">
               <b>Convenio con la UNAB</b>
             </h4>
