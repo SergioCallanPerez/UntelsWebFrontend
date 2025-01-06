@@ -190,13 +190,12 @@ a {
 
 .with-underline {
   position: relative;
-  display: inline-block;
 }
 
 .with-underline::after {
   content: ""; 
   position: absolute;
-  top: 110%;
+  top: 120%;
   width: 150px;
   height: 6px;
   background-color: currentColor;
