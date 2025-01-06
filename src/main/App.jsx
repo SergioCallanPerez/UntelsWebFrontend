@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 import "./styles/root.css";
 import FloatingWhatsAppButton from "./components/floating_button.jsx";
 import Pregrade from "./pages/pregrade";
-import Administracion from "./pages/pregrade/faculties/admin_science/careers/administracion";
+import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Directory from "./pages/about-us/directory";
 import Statute from "./pages/about-us/statute";
 import OrganizationChart from "./pages/about-us/organization_chart";

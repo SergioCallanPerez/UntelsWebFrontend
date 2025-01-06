@@ -1,13 +1,15 @@
 import React from "react";
 
-const note = "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida";
+const note =
+  "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida";
 
 const messagesList = [
-  { no: 301, message: note },
-  { no: 302, message: note },
-  { no: 303, message: note },
-  { no: 306, message: note },
-  { no: 305, message: note },
+  { no: 301, message: note, date: "2024-12-29" },
+  { no: 302, message: note, date: "2024-12-29" },
+  { no: 303, message: note, date: "2024-12-29" },
+  { no: 304, message: note, date: "2024-12-29" },
+  { no: 305, message: note, date: "2024-12-29" },
+  { no: 306, message: note, date: "2024-12-29" },
 ];
 
 function Messages({ event }) {

@@ -14,11 +14,16 @@ export default function AdmissionAd() {
             md={6}
             className="d-flex flex-column gap-2 py-4 px-0 order-md-first order-last align-items-center justify-content-center text-center"
           >
-            <h2>El futuro empieza aquí.<br/>  <b>¡Postula ahora!</b></h2>
+            <h2>
+              El futuro empieza aquí.
+              <br /> <b>¡Postula ahora!</b>
+            </h2>
             <p>
               Inicia tu camino con nosotros. ¡Haz clic para más información!
             </p>
-            <Button className={`px-4 btn-admission-ad ${isMobile? "mobile" : ""}`}>
+            <Button
+              className={`px-4 btn-admission-ad ${isMobile ? "mobile" : ""}`}
+            >
               Mayor información <LuArrowUpRight />
             </Button>
           </Col>

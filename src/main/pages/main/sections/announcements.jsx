@@ -1,67 +1,50 @@
 import React from "react";
-import { FaChevronRight } from "react-icons/fa6";
-import { Container } from "react-bootstrap";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Schedule from "./schedule";
-import News from "./news";
-import Communications from "./communications";
+import { CiCalendar } from "react-icons/ci";
+import { Col, Container, Row } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
+
+const note =
+  "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida";
+
+const messagesList = [
+  { no: 301, message: note, date: "2024-12-29" },
+  { no: 302, message: note, date: "2024-12-29" },
+  { no: 303, message: note, date: "2024-12-29" },
+  { no: 304, message: note, date: "2024-12-29" },
+  { no: 305, message: note, date: "2024-12-29" },
+  { no: 306, message: note, date: "2024-12-29" },
+];
 
 export default function Announcements() {
+  const isMd = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   return (
-    <section className="primary">
-      <Container>
-        <Row>
-          <Col
-            xs={12}
-            md={4}
-            className="py-4 with-auto-divider-on-primary  d-flex flex-column justify-content-between"
-          >
-            <div className="mb-4 d-flex flex-column align-items-center">
-              <h2 className="mb-4 px-4 rounded-3 d-inline-block background on-background-title">
-                <b>Agenda</b>
-              </h2>
-              <Schedule />
-            </div>
-            <a className="on-primary-accent" href="#Agenda">
-              <FaChevronRight /> Ver más
-            </a>
-          </Col>
-          <Col
-            xs={12}
-            md={4}
-            className="py-4 with-auto-divider-on-primary d-flex flex-column justify-content-between"
-          >
-            <div className="mb-4 d-flex flex-column align-items-center">
-              <h2 className="mb-4 px-4 on-primary-accent">
-                <b>Noticias</b>
-              </h2>
-              <News />
-            </div>
-            <div className="d-flex justify-content-between">
-              <a className="on-primary-accent" href="#Conoce-Más">
-                <FaChevronRight /> Conoce Más
-              </a>
-              <a className="on-primary-accent" href="#Noticias">
-                <FaChevronRight /> Ver todas las noticias
-              </a>
-            </div>
-          </Col>
-          <Col
-            xs={12}
-            md={4}
-            className="py-4 d-flex flex-column justify-content-between"
-          >
-            <div className="mb-4 d-flex flex-column align-items-center">
-              <h2 className="mb-4 px-4 rounded-3 d-inline-block on-background-title background">
-                <b>Comunicados</b>
-              </h2>
-              <Communications />
-            </div>
-            <a className="on-primary-accent" href="#Comunicados">
-              <FaChevronRight /> Ver más
-            </a>
-          </Col>
+    <section>
+      <Container className="d-flex flex-column">
+        <h2 className="background-title with-underline text-center">
+          <b>Comunicados</b>
+        </h2>
+        <Link className={`background my-4 ${isMd ? "mx-auto" : "ms-auto"}`}>
+          Ver todo
+        </Link>
+        <Row className="g-4">
+          {messagesList.map((item) => (
+            <Col key={item.no} md={4} xs={12}>
+              <div className="card p-3 with-box-shadow border-0 rounded-4">
+                <h5 className="card-title background-title">
+                  {" "}
+                  <b>Comunicado N° {item.no}</b>
+                </h5>
+                <p className="card-text">{item.message}</p>
+                <p className="text-muted mb-0">
+                  <CiCalendar className="me-2 mb-1" /> {item.date}
+                </p>
+              </div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
