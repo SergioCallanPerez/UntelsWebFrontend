@@ -3,7 +3,7 @@ import { Row, Col, Carousel } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import "@/styles/pager.css"
 
-export default function PagerView({ children }) {
+export default function PagerView({ children, onBackground }) {
   const isMd = useMediaQuery({
     query: "(max-width: 768px)",
   });
@@ -21,7 +21,7 @@ export default function PagerView({ children }) {
   );
 
   return (
-    <Carousel className="pager-main">
+    <Carousel className={`pager-main ${onBackground? "on-background": ""}`}>
       {chunkedChildren.map((group, index) => (
         <Carousel.Item key={`pager-item-${index}`} interval={4000}>
           <Row className="px-3">
