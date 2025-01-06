@@ -1,0 +1,10 @@
+.campus-img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.campus-card {
+    width: 90%;
+    margin: auto;
+    margin-top: -50px;
+}

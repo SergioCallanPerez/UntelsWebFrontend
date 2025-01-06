@@ -1,0 +1,29 @@
+.admission-ad-container {
+  background-color: #31a4dd;
+  color: var(--on-primary-color);
+}
+
+.btn-admission-ad {
+  background-color: var(--untels-black);
+  color: var(--untels-white);
+  border: none;
+  border-radius: 15px;
+  transition: ease 0.5s;
+}
+
+.btn-admission-ad:hover {
+  background-color: var(--untels-yellow);
+  color: var(--untels-black);
+  transform: scale(1.1);
+}
+
+.btn-admission-ad.mobile:hover {
+  background-color: var(--untels-black);
+  color: var(--untels-white);
+  transform: none;
+}
+
+.btn-admission-ad:active {
+  background-color: var(--untels-yellow) !important;
+  color: var(--untels-black) !important;
+}

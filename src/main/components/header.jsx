@@ -9,15 +9,19 @@ import { isBrowser, isMobile } from "react-device-detect";
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
+import { useMediaQuery } from "react-responsive";
 
 const portalURL =
   "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
-
 
 const menuData2 = [
   {
     title: "Nosotros",
     children: [
+      {
+        title: "Autoridades",
+        href: "/autoridades",
+      },
       {
         title: "Nuestra Universidad",
         children: [
@@ -25,15 +29,15 @@ const menuData2 = [
           { title: "Reseña histórica", href: "/resena" },
           { title: "Estatuto", href: "/estatuto" },
           { title: "Organigrama", href: "/organigrama" },
-          { title: "Directorio institucional", href: "/directorio_institucional" },
+          {
+            title: "Directorio institucional",
+            href: "/directorio_institucional",
+          },
           { title: "Mapa del Campus", href: "/campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
           { title: "Mesa de Parte", href: "#Mesa" },
         ],
-      },
-      {
-        title: "Autoridades", href: "/autoridades" 
       },
       {
         title: "Oficinas",
@@ -118,17 +122,14 @@ export default function Header() {
   const ref = useRef(null);
   const navigate = useNavigate();
 
+  const isMd = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -141,13 +142,6 @@ export default function Header() {
     setCollapsed(true); // close navbar in mobile on scroll
     setShowList([]); // close all dropdowns on scroll
     lastScrollY = window.scrollY;
-  };
-
-  const handleClickOutside = (event) => {
-    // close all dropdowns on click outside
-    if (ref.current && !ref.current.contains(event.target)) {
-      setShowList([]); // close all dropdowns on scroll
-    }
   };
 
   const handleNavDropdownClick = (link) => {
@@ -163,6 +157,13 @@ export default function Header() {
     });
   };
 
+  const handleMouseLeave = (index) => {
+    setShowList((prevList) => {
+      const newList = prevList.slice(0, index);
+      return newList;
+    });
+  };
+
   const renderNavItem = (item, deep = 0) => {
     if (item.children) {
       return (
@@ -171,13 +172,15 @@ export default function Header() {
             item.href ? "cursor=pointer" : "cursor-none"
           }`}
           key={item.title}
-          title={deep === 0 ? <b>{item.title}</b> : item.title}
+          title={item.title}
           id={`nav-drop-${deep}-${item.title}`}
-          drop={deep === 0 ? undefined : "end"}
+          drop={deep === 0 || isMd ? undefined : "start"}
           show={isBrowser ? showList.includes(item.title) : undefined}
+          align={isMd ? undefined : "end"}
           onMouseEnter={
             isBrowser ? () => handleMouseEnter(item.title, deep) : undefined
           }
+          onMouseLeave={isBrowser ? () => handleMouseLeave(deep) : undefined}
           onClick={
             isBrowser && item.href
               ? () => handleNavDropdownClick(item.href)
@@ -189,7 +192,15 @@ export default function Header() {
       );
     }
     return (
-      <NavDropdown.Item as={Link} key={item.href} to={item.href}>
+      <NavDropdown.Item
+        as={Link}
+        key={item.href}
+        to={item.href}
+        onClick={() => {
+          setShowList([]); // close all dropdowns
+          setCollapsed(true); // close navbar in mobile
+        }}
+      >
         {item.title}
       </NavDropdown.Item>
     );
@@ -199,17 +210,11 @@ export default function Header() {
     <Navbar
       expand="lg"
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
-      onSelect={() => {
-        setShowList([]); // close all dropdowns
-        setCollapsed(true); // close navbar in mobile
-      }}
       expanded={!collapsed}
     >
-      <Container fluid>
-        <Navbar.Brand>
-          <Link to="/">
-            <img src={logo} height="50" alt="Logo" />
-          </Link>
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img src={logo} height="50" alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           className="navbar-toggler-container"
@@ -218,14 +223,15 @@ export default function Header() {
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className={`m-auto my-2 my-lg-0 justify-content-between ${
-              isMobile ? "" : "w-50 my-2 my-lg-0"
+            className={`ms-auto my-2 my-lg-0 ${
+              isMd ? "gap-1" : "gap-4"
             }`}
             navbarScroll
             ref={ref}
           >
             {menuData2.map((item) => renderNavItem(item))}
           </Nav>
+          {/*
           <Nav.Link target="_blank" href={portalURL}>
             <img src={portal} height="50" alt="Portal" />
           </Nav.Link>
@@ -237,6 +243,7 @@ export default function Header() {
               aria-label="Search"
             />
           </Form>
+          */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
