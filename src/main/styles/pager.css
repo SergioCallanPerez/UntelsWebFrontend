@@ -1,3 +1,7 @@
+.pager-main {
+  margin-bottom: 30px;
+}
+
 .pager-main .carousel-indicators {
   top: 100% !important;
   margin-bottom: 20;
