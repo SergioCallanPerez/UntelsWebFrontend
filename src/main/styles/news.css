@@ -1,11 +1,5 @@
-.carouselNewIMG {
-  width: 100%;
-  height: 420px;
+.news-cardImg {
+  width: 100%x ;
+  aspect-ratio: 1;
   object-fit: cover;
-}
-
-.captions {
-  background-color: var(--untels-black);
-  opacity: 80%;
-  font-size: 150%;
 }

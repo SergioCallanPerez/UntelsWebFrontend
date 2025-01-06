@@ -14,3 +14,7 @@
 .pager-main .carousel-indicators button.active {
   background-color: var(--untels-white) !important;
 }
+
+.pager-main.on-background .carousel-indicators button.active {
+  background-color: var(--untels-blue-1) !important;
+}
