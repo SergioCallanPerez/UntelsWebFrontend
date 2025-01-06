@@ -38,7 +38,7 @@ export default function AcademicPrograms() {
                   className={`btn-on-primary ms-auto ${
                     isMobile ? "mobile" : ""
                   }`}
-                  onClick={() => navigate("/mision")}
+                  onClick={() => navigate("/pregrado")}
                 >
                   Ver más{"  "}
                   <FaChevronRight />

@@ -9,19 +9,15 @@ import { isBrowser, isMobile } from "react-device-detect";
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
-import { useMediaQuery } from "react-responsive";
 
 const portalURL =
   "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
+
 
 const menuData2 = [
   {
     title: "Nosotros",
     children: [
-      {
-        title: "Autoridades",
-        href: "/autoridades",
-      },
       {
         title: "Nuestra Universidad",
         children: [
@@ -29,15 +25,15 @@ const menuData2 = [
           { title: "Reseña histórica", href: "/resena" },
           { title: "Estatuto", href: "/estatuto" },
           { title: "Organigrama", href: "/organigrama" },
-          {
-            title: "Directorio institucional",
-            href: "/directorio_institucional",
-          },
+          { title: "Directorio institucional", href: "/directorio_institucional" },
           { title: "Mapa del Campus", href: "/campus" },
           { title: "Convenios", href: "#Convenios" },
           { title: "Memoria Anual", href: "#Memoria" },
           { title: "Mesa de Parte", href: "#Mesa" },
         ],
+      },
+      {
+        title: "Autoridades", href: "/autoridades" 
       },
       {
         title: "Oficinas",
@@ -66,10 +62,32 @@ const menuData2 = [
     title: "Pregrado",
     children: [
       {
-        title: "Area 1",
+        title: "Facultad de Ciencias Administrativas y Financieras",
         /*TODO: Agregar el href a area*/
         children: [
           { title: "Administración", href: "/carreras/administracion" },
+          { title: "Marketing y Negocios Internacionales", href: "#Carrera2" },
+          { title: "Carrera 3", href: "#Carrera3" },
+          { title: "Carrera 4", href: "#Carrera4" },
+          { title: "Carrera 5", href: "#Carrera5" },
+        ],
+      },
+      {
+        title: "Facultad de Ingeniería Ambiental e Industrial",
+        /*TODO: Agregar el href a area*/
+        children: [
+          { title: "Ingeniería Ambiental", href: "#Carrera1" },
+          { title: "Ingeniería Industrial", href: "#Carrera2" },
+          { title: "Carrera 3", href: "#Carrera3" },
+          { title: "Carrera 4", href: "#Carrera4" },
+          { title: "Carrera 5", href: "#Carrera5" },
+        ],
+      },
+      {
+        title: "Facultad de Ingeniería de Sistemas Computacionales",
+        /*TODO: Agregar el href a area*/
+        children: [
+          { title: "Carrera 1", href: "#Carrera1" },
           { title: "Carrera 2", href: "#Carrera2" },
           { title: "Carrera 3", href: "#Carrera3" },
           { title: "Carrera 4", href: "#Carrera4" },
@@ -77,7 +95,7 @@ const menuData2 = [
         ],
       },
       {
-        title: "Area 2",
+        title: "Facultad de Ingeniería Mecánica y Electrónica",
         /*TODO: Agregar el href a area*/
         children: [
           { title: "Carrera 1", href: "#Carrera1" },
@@ -122,14 +140,17 @@ export default function Header() {
   const ref = useRef(null);
   const navigate = useNavigate();
 
-  const isMd = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -142,6 +163,13 @@ export default function Header() {
     setCollapsed(true); // close navbar in mobile on scroll
     setShowList([]); // close all dropdowns on scroll
     lastScrollY = window.scrollY;
+  };
+
+  const handleClickOutside = (event) => {
+    // close all dropdowns on click outside
+    if (ref.current && !ref.current.contains(event.target)) {
+      setShowList([]); // close all dropdowns on scroll
+    }
   };
 
   const handleNavDropdownClick = (link) => {
@@ -157,13 +185,6 @@ export default function Header() {
     });
   };
 
-  const handleMouseLeave = (index) => {
-    setShowList((prevList) => {
-      const newList = prevList.slice(0, index);
-      return newList;
-    });
-  };
-
   const renderNavItem = (item, deep = 0) => {
     if (item.children) {
       return (
@@ -172,15 +193,13 @@ export default function Header() {
             item.href ? "cursor=pointer" : "cursor-none"
           }`}
           key={item.title}
-          title={item.title}
+          title={deep === 0 ? <b>{item.title}</b> : item.title}
           id={`nav-drop-${deep}-${item.title}`}
-          drop={deep === 0 || isMd ? undefined : "start"}
+          drop={deep === 0 ? undefined : "end"}
           show={isBrowser ? showList.includes(item.title) : undefined}
-          align={isMd ? undefined : "end"}
           onMouseEnter={
             isBrowser ? () => handleMouseEnter(item.title, deep) : undefined
           }
-          onMouseLeave={isBrowser ? () => handleMouseLeave(deep) : undefined}
           onClick={
             isBrowser && item.href
               ? () => handleNavDropdownClick(item.href)
@@ -192,15 +211,7 @@ export default function Header() {
       );
     }
     return (
-      <NavDropdown.Item
-        as={Link}
-        key={item.href}
-        to={item.href}
-        onClick={() => {
-          setShowList([]); // close all dropdowns
-          setCollapsed(true); // close navbar in mobile
-        }}
-      >
+      <NavDropdown.Item as={Link} key={item.href} to={item.href}>
         {item.title}
       </NavDropdown.Item>
     );
@@ -210,11 +221,17 @@ export default function Header() {
     <Navbar
       expand="lg"
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
+      onSelect={() => {
+        setShowList([]); // close all dropdowns
+        setCollapsed(true); // close navbar in mobile
+      }}
       expanded={!collapsed}
     >
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          <img src={logo} height="50" alt="Logo" />
+      <Container fluid>
+        <Navbar.Brand>
+          <Link to="/">
+            <img src={logo} height="50" alt="Logo" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle
           className="navbar-toggler-container"
@@ -223,15 +240,14 @@ export default function Header() {
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className={`ms-auto my-2 my-lg-0 ${
-              isMd ? "gap-1" : "gap-4"
+            className={`m-auto my-2 my-lg-0 justify-content-between ${
+              isMobile ? "" : "w-50 my-2 my-lg-0"
             }`}
             navbarScroll
             ref={ref}
           >
             {menuData2.map((item) => renderNavItem(item))}
           </Nav>
-          {/*
           <Nav.Link target="_blank" href={portalURL}>
             <img src={portal} height="50" alt="Portal" />
           </Nav.Link>
@@ -243,7 +259,6 @@ export default function Header() {
               aria-label="Search"
             />
           </Form>
-          */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

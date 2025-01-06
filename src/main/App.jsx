@@ -6,7 +6,8 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import "./styles/root.css";
 import FloatingWhatsAppButton from "./components/floating_button.jsx";
-import Administracion from "./pages/pregrade/area1/careers/administracion"; 
+import Pregrade from "./pages/pregrade";
+import Administracion from "./pages/pregrade/admin_science/careers/administracion";
 import Directory from "./pages/about-us/directory";
 import Statute from "./pages/about-us/statute";
 import OrganizationChart from "./pages/about-us/organization_chart";
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/pregrado" element={<Pregrade/>}/>
         <Route path="/carreras/administracion" element={<Administracion/>}/>
         <Route path="/mision" element={<Mission />} />
         <Route path="/resena" element={<Review />} />
