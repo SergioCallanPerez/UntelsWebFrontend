@@ -9,6 +9,7 @@ import { isBrowser, isMobile } from "react-device-detect";
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
 import "@/styles/header.css";
+import { useMediaQuery } from "react-responsive";
 
 const portalURL =
   "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
@@ -121,6 +122,10 @@ export default function Header() {
   const ref = useRef(null);
   const navigate = useNavigate();
 
+  const isMd = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -154,8 +159,7 @@ export default function Header() {
 
   const handleMouseLeave = (index) => {
     setShowList((prevList) => {
-      // Corta la lista hasta el índice especificado
-      const newList = prevList.slice(0, index); 
+      const newList = prevList.slice(0, index);
       return newList;
     });
   };
@@ -168,16 +172,15 @@ export default function Header() {
             item.href ? "cursor=pointer" : "cursor-none"
           }`}
           key={item.title}
-          title={deep === 0 ? <b>{item.title}</b> : item.title}
+          title={item.title}
           id={`nav-drop-${deep}-${item.title}`}
-          drop={deep === 0 ? undefined : "end"}
+          drop={deep === 0 || isMd ? undefined : "start"}
           show={isBrowser ? showList.includes(item.title) : undefined}
+          align={isMd ? undefined : "end"}
           onMouseEnter={
             isBrowser ? () => handleMouseEnter(item.title, deep) : undefined
           }
-          onMouseLeave={
-            isBrowser? () => handleMouseLeave(deep) : undefined
-          }
+          onMouseLeave={isBrowser ? () => handleMouseLeave(deep) : undefined}
           onClick={
             isBrowser && item.href
               ? () => handleNavDropdownClick(item.href)
@@ -209,7 +212,7 @@ export default function Header() {
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
       expanded={!collapsed}
     >
-      <Container fluid>
+      <Container>
         <Navbar.Brand as={Link} to="/">
           <img src={logo} height="50" alt="Logo" />
         </Navbar.Brand>
@@ -220,8 +223,8 @@ export default function Header() {
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className={`m-auto my-2 my-lg-0 justify-content-between ${
-              isMobile ? "" : "w-50 my-2 my-lg-0"
+            className={`ms-auto my-2 my-lg-0 ${
+              isMd ? "gap-1" : "gap-4"
             }`}
             navbarScroll
             ref={ref}

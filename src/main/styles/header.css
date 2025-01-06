@@ -14,7 +14,7 @@
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition:  visibility 0.3s, opacity 0.3s ease-in-out; /* Animación de opacidad */
+  transition: visibility 0.3s, opacity 0.3s ease-in-out; /* Animación de opacidad */
   transition-delay: 0.6s;
 }
 
@@ -27,6 +27,13 @@
 @media (max-width: 768px) {
   .dropdown-menu {
     display: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
