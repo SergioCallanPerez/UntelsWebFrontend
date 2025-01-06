@@ -4,6 +4,8 @@
 
 .benefits-img {
   position: absolute;
+  height: 100%;
+  object-fit: cover;
   top: -50px;
   width: 52%;
 }
