@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/administracion" element={<Administracion/>}/>
+        <Route path="/carreras/administracion" element={<Administracion/>}/>
         <Route path="/mision" element={<Mission />} />
         <Route path="/resena" element={<Review />} />
         <Route path="/directorio_institucional" element={<Directory  />} />

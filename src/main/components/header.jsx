@@ -69,7 +69,7 @@ const menuData2 = [
         title: "Area 1",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Administración", href: "/administracion" },
+          { title: "Administración", href: "/carreras/administracion" },
           { title: "Carrera 2", href: "#Carrera2" },
           { title: "Carrera 3", href: "#Carrera3" },
           { title: "Carrera 4", href: "#Carrera4" },
