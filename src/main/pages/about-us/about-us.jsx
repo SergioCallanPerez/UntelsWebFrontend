@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Card } from "react-bootstrap";
 import "../../styles/root.css";
 import nosotrosIMG from "@/assets/aboutus_assets/top_image.png";
 import "@/styles/about-us.css";
@@ -54,14 +54,24 @@ export default function AboutUs() {
     }, []);
 
     return (
-    <main>
-        <div className="main-image">
-        <img
-            src={nosotrosIMG}
-            alt="Universidad"
-            className="img-fluid"
-        />
+    <section>
+        <div className="main-img-container">
+            <div className="main-image">
+            <img
+                src={nosotrosIMG}
+                alt="Universidad"
+                className="img-fluid"
+            />
+            </div>
+            <Card className="primary about-us-card border-0">
+                <Card.Body className="d-flex m-5 p-0 gap-4 flex-column text-center justify-content-center">
+                    <Card.Title as={"h2"}>
+                    <b>Más que una universidad, una comunidad que inspira y construye futuro</b>
+                    </Card.Title>
+                </Card.Body>
+            </Card>
         </div>
+        
 
         <Container className="mt-4 mb-4">
             <Row>
@@ -117,6 +127,6 @@ export default function AboutUs() {
             
         </Container>
         
-    </main>
+    </section>
   );
 }

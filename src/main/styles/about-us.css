@@ -1,3 +1,8 @@
+.main-img-container {
+    margin-bottom: 23px;
+    position: relative;
+}
+
 .about-us-img{
     width: 80%;
     height: 80%;
@@ -8,6 +13,12 @@
 }
 .about-us-title-mobile{
     font-size: 300%;
+}
+.about-us-card {
+    position: absolute;
+    left: 2%;
+    bottom: 30%;
+    aspect-ratio: 17/4;
 }
 .vision-title{
     font-size: 300%;
