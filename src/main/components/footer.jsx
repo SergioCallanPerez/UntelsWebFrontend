@@ -15,40 +15,40 @@ export default function Footer() {
       <Container>
         <Row className="text-center text-md-start d-flex">
           <Row className="with-h-divider-on-background-footer py-4">
-            <Col md={3}>
-              <p className="pb-3 on-background-color-bold">Nuestra universidad</p>
-              <p>Misión, visión y valores</p>
-              <p>Reseña histórica</p>
-              <p>Organigrama</p>
-              <p>Directorio institucional</p>
-              <p>Mapa de campus</p>
-              <p>Convenios</p>
-              <p>Memoria anual</p>
-              <p>Mesa de parte</p>
+            <Col md={3} xs={3}>
+              <p className="pb-3 on-primary-accent">Nuestra universidad</p>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Misión, visión y valores</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Reseña histórica</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Organigrama</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Directorio institucional</a>
+              <a className="on-primary-accent d-block text-light" href={strings.google_maps_url} target="_blank" rel="noopener noreferrer">Mapa de campus</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Convenios</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Memoria anual</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Mesa de parte</a>
             </Col>
-            <Col md={3}>
-              <p className="pb-3 on-background-color-bold">Pregrado</p>
-              <p>Facultad de Ciencias Administrativas y Financieras</p>
-              <p>Facultad de Ingeniería Ambiental e Industrial</p>
-              <p>Facultad de Ingeniería de Sistemas Computacionales</p>
-              <p>Facultad de Ingeniería Mecánica y Electrónica</p>
+            <Col md={3} xs={3}>
+              <p className="pb-3 on-primary-accent">Pregrado</p>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ciencias Administrativas y Financieras</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería Ambiental e Industrial</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería de Sistemas Computacionales</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería Mecánica y Electrónica</a>
             </Col>
-            <Col md={3}>
-              <p className="pb-3 on-background-color-bold">Posgrado</p>
-              <p>Proceso de admisión 2024-II</p>
-              <p>Estructura orgánica</p>
-              <p>Presentación</p>
+            <Col md={3} xs={3}>
+              <p className="pb-3 on-primary-accent">Posgrado</p>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Proceso de admisión 2024-II</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Estructura orgánica</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Presentación</a>
             </Col>
-            <Col md={3}>
-              <p className="pb-3 on-background-color-bold">Admisión</p>
-              <p>Cronograma</p>
-              <p>Modalidades</p>
-              <p>Vacantes</p>
-              <p>Prospecto</p>
-              <p>Modelo de examen</p>
-              <p>Infórmate</p>
-              <p>Preguntas frecuentes</p>
-              <p>Contáctanos</p>
+            <Col md={3} xs={3}>
+              <p className="pb-3 on-primary-accent">Admisión</p>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Cronograma</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Modalidades</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Vacantes</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Prospecto</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Modelo de examen</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Infórmate</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Preguntas frecuentes</a>
+              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Contáctanos</a>
             </Col>
           </Row>
           <Row className="pt-5">
