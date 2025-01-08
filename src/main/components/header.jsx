@@ -62,7 +62,7 @@ const menuData2 = [
         title: "Facultad de Ingeniería Ambiental e Industrial",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Ingeniería Ambiental", href: "#Carrera1" },
+          { title: "Ingeniería Ambiental", href: "/carreras/ingenieria_ambiental" },
           { title: "Ingeniería Industrial", href: "#Carrera2" },
         ],
       },

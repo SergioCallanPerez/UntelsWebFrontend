@@ -9,6 +9,7 @@ import FloatingWhatsAppButton from "./components/floating_button.jsx";
 import Pregrade from "./pages/pregrade";
 import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketing/marketing";
+import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
 import Directory from "./pages/about-us/directory";
 import Statute from "./pages/about-us/statute";
 import OrganizationChart from "./pages/about-us/organization_chart";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/pregrado" element={<Pregrade/>}/>
         <Route path="/carreras/administracion" element={<Administracion/>}/>
         <Route path="/carreras/marketing" element={<Marketing/>}/>
+        <Route path="/carreras/ingenieria_ambiental" element={<Environmental/>}/>
         <Route path="/nosotros" element={<AboutUs/>}/>
         <Route path="/mision" element={<Mission />} />
         <Route path="/resena" element={<Review />} />
