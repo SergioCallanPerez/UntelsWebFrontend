@@ -38,11 +38,11 @@ export default function Administracion(){
                     <Row>
                         <Col md={6} className="m-auto">
                             <h3 className="background-title with-underline-left mb-4"><b>Descripción de la carrera</b></h3>
-                            <h4>
+                            <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, amet? Iure 
                                 perferendis explicabo aspernatur ratione, sed odit voluptatum sapiente aut tenetur 
                                 laborum nemo iste porro molestiae praesentium earum reprehenderit dolorum.
-                            </h4>
+                            </p>
                         </Col>
                         <Col md={5}>
                             <img src={adminIMG} width="100%"/>

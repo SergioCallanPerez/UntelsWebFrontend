@@ -3,7 +3,6 @@
   width: 100%;
 }
 
-
 .banner-career{
   position: absolute;
   top: 200px;
@@ -19,6 +18,11 @@
 .career-reasons-container {
     position: relative;
     margin-top: 10px;
+}
+
+.syllabus-btn{
+  border-radius: 15px;
+  padding: 10px 20px;
 }
 
 .banner-text{

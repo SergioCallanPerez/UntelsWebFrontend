@@ -1,6 +1,10 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 import Abilities from "@/assets/svgs/sentiment_satisfied.svg"
 import Capacities from "@/assets/svgs/psychology.svg"
+import { FaCheckCircle } from "react-icons/fa";
+import Sectors from "@/assets/admin_sectors.png"
+
 
 const career_abilities=[
     {
@@ -48,6 +52,49 @@ const career_capacities=[
     },
 ]
 
+const sectors=[
+    {
+        id: "1",
+        sectorname: "Empresario promotor y gestor.",
+    },
+    {
+        id: "2",
+        sectorname: "Gerente.",
+    },
+    {
+        id: "3",
+        sectorname: "Planificador Empresarial.",
+    },
+    {
+        id: "4",
+        sectorname: "Auditor Administrativo.",
+    },
+    {
+        id: "5",
+        sectorname: "Asesor y Consultor.",
+    },
+    {
+        id: "6",
+        sectorname: "Investigador.",
+    },
+    {
+        id: "7",
+        sectorname: "En la administración estratégica.",
+    },
+    {
+        id: "8",
+        sectorname: "En la administración de la tecnología.",
+    },
+    {
+        id: "9",
+        sectorname: "Capacitador Empresarial.",
+    },
+    {
+        id: "10",
+        sectorname: "Docente Universitario y de estudios superiores.",
+    }
+]
+
 export default function Profile(){
 
 
@@ -84,6 +131,26 @@ export default function Profile(){
                         <li><b>{item.capacityname}</b>{item.capacitydesc}</li>
                     </ul>
                 ))}
+            </div>
+            <div>
+                <h3 className="background-title text-center mt-5">
+                    <b>¿En qué sectores liderarás como profesional?</b>
+                </h3>
+                <p className="text-center">Como Licenciado en Administración de Empresas UNTELS, podrás desempeñarte en roles como:</p>
+                <div>
+                    <Row>
+                        <Col md={7}>
+                            {sectors.map((item)=>(
+                                <div key={item.id}>
+                                    <p className="m-2"><FaCheckCircle className="me-2"/>{item.sectorname}</p>
+                                </div>
+                            ))}
+                        </Col>
+                        <Col md={5}>
+                            <img src={Sectors} width="100%"/>
+                        </Col>
+                    </Row>
+                </div>
             </div>
         </section>
     );

@@ -129,16 +129,37 @@ const syllabusItems=[
 ]
 
 export default function Syllabus() {
+
+    const downloadPlan=()=>{
+        const pdfUrl = "@/assets/pdfs/plan_de_estudios_administracion.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Plan de Estudios Administración 2021.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    const downloadMalla=()=>{
+        const pdfUrl = "@/assets/pdfs/malla_curricular_administracion.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Malla Curricular Administración 2021.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
     return (
         <section>
             <div className="syllabus-title background-title with-underline mb-4">
                 <h2 className="background-title text-center"><b>Plan de estudios</b></h2>
             </div>
-            <div className="syllabus-buttons pb-5">
-                <Button className="syllabus-plan">
+            <div className="d-flex syllabus-buttons pb-5 justify-content-end">
+                <Button className="syllabus-btn me-2 primary" onClick={downloadPlan}>
                     Plan de estudios <FaDownload />
                 </Button>
-                <Button className="syllabus-malla">
+                <Button className="syllabus-btn ms-2 primary" onClick={downloadMalla}>
                     Malla Curricular <FaDownload />
                 </Button>
             </div>
