@@ -11,7 +11,7 @@ import Syllabus from "./syllabus";
 import '@/styles/careers.css';
 import Profile from "./profile";
 
-export default function Administracion(){
+export default function Marketing(){
 
     return(
         <main className="background d-flex flex-column gap-5 pb-5">
@@ -38,7 +38,7 @@ export default function Administracion(){
                     <Row>
                         <Col md={6} className="m-auto">
                             <h3 className="background-title with-underline-left mb-4"><b>Descripción de la carrera</b></h3>
-                            <p className="paragraph-career">
+                            <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, amet? Iure 
                                 perferendis explicabo aspernatur ratione, sed odit voluptatum sapiente aut tenetur 
                                 laborum nemo iste porro molestiae praesentium earum reprehenderit dolorum.
