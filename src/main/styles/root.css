@@ -88,6 +88,10 @@
   color: var(--primary-color);
   font-weight: bold;
 }
+.on-background-color-bold{
+  color: var(--on-primary-color);
+  font-weight: bold;
+}
 
 .on-primary-accent {
   color: var(--on-primary-accent-color);
@@ -177,6 +181,9 @@ a {
 
 .with-h-divider-on-background {
   border-bottom: 2px solid var(--on-background-accent-color);
+}
+.with-h-divider-on-background-footer {
+  border-bottom: 2px solid var(--primary-light);
 }
 
 .with-v-divider-on-primary {

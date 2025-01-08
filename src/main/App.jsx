@@ -10,9 +10,6 @@ import Pregrade from "./pages/pregrade";
 import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketing/marketing";
 import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
-import Directory from "./pages/about-us/directory";
-import Statute from "./pages/about-us/statute";
-import OrganizationChart from "./pages/about-us/organization_chart";
 import Campus from "./pages/about-us/campus";
 import Authorities from "./pages/about-us/authorities";
 import AboutUs from "./pages/about-us/about-us";
@@ -28,11 +25,6 @@ function App() {
         <Route path="/carreras/marketing" element={<Marketing/>}/>
         <Route path="/carreras/ingenieria_ambiental" element={<Environmental/>}/>
         <Route path="/nosotros" element={<AboutUs/>}/>
-        <Route path="/mision" element={<Mission />} />
-        <Route path="/resena" element={<Review />} />
-        <Route path="/directorio_institucional" element={<Directory  />} />
-        <Route path="/estatuto" element={<Statute />} />
-        <Route path="/organigrama" element={<OrganizationChart />} />
         <Route path="/campus" element={<Campus />} />
         <Route path="/autoridades" element={<Authorities />} />
       </Routes>

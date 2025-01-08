@@ -1,0 +1,23 @@
+.circle-button {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 3px solid #ffaa00; /* Borde dorado */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.circle-button img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.circle-button:hover {
+    transform: scale(1.1);
+}

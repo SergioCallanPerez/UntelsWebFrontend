@@ -9,6 +9,7 @@ import CampusLife from "./sections/campus_life.jsx";
 import Benefits from "./sections/benefits.jsx";
 import AdmissionAd from "./sections/admission_ad.jsx";
 import News from "./sections/news.jsx";
+import Redirection from "./sections/redirection.jsx";
 
 export default function Main() {
   return (
@@ -22,6 +23,7 @@ export default function Main() {
       <News />
       <Announcements />
       <Experiences />
+      <Redirection />
       {
         //  <Follow />
       }
