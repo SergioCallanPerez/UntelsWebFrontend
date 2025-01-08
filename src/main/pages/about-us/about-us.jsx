@@ -118,10 +118,10 @@ export default function AboutUs() {
             <Row ref={reviewRef}>
                 <Review />
             </Row>
-            <Row ref={statuteRef}>
+            <Row ref={statuteRef} className="py-4">
                 <Statute />
             </Row>
-            <Row ref={orgChartRef}>
+            <Row ref={orgChartRef} className="py-4">
                 <OrganizationChart />
             </Row>
             

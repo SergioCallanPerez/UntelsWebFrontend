@@ -39,10 +39,12 @@ export default function Review(){
                         ))}
                     </div>
                     </Col>
-                    <Col md={3} className="mt-auto">
-                    <img className="about-us-img" src= {nosotrosIMG}></img>
-                    <img className="about-us-img" src= {nosotrosIMG2}></img>
-                    </Col>
+                    <Col md={3}>
+                    <div className="image-container">
+                        <img className="about-us-img mb-3" src={nosotrosIMG} alt="Imagen 1" />
+                        <img className="about-us-img" src={nosotrosIMG2} alt="Imagen 2" />
+                    </div>
+                </Col>
 
                     
                 </Row>
