@@ -24,11 +24,11 @@ export default function Footer() {
               <a className="on-primary-accent d-block text-light" href={strings.google_maps_url} target="_blank" rel="noopener noreferrer">Mapa de campus</a>
               <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Convenios</a>
               <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Memoria anual</a>
-              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Mesa de parte</a>
+              <a className="on-primary-accent d-block text-light" href={strings.mesa_partes_url} target="_blank" rel="noopener noreferrer">Mesa de parte</a>
             </Col>
             <Col md={3} xs={3}>
               <p className="pb-3 on-primary-accent">Pregrado</p>
-              <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ciencias Administrativas y Financieras</a>
+              <a className="on-primary-accent d-block text-light" href="/#/facultades/ciencias_administrativas" rel="noopener noreferrer">Facultad de Ciencias Administrativas y Financieras</a>
               <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería Ambiental e Industrial</a>
               <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería de Sistemas Computacionales</a>
               <a className="on-primary-accent d-block text-light" href="/#/nosotros" rel="noopener noreferrer">Facultad de Ingeniería Mecánica y Electrónica</a>

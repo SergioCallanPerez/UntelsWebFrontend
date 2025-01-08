@@ -1,6 +1,5 @@
 import React from "react";
 import bannerIMG from '@/assets/admin_banner.png';
-import { Row, Col } from "react-bootstrap";
 import "@/styles/careers.css"
 export default function Banner(){
     return(

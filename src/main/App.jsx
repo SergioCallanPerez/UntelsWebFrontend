@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import "./styles/root.css";
 import FloatingWhatsAppButton from "./components/floating_button.jsx";
 import Pregrade from "./pages/pregrade";
+import FacultadAdministracion from "./pages/pregrade/faculties/admin_science/faculty"
 import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketing/marketing";
 import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/pregrado" element={<Pregrade/>}/>
+        <Route path="/facultades/ciencias_administrativas" element={<FacultadAdministracion/>}/>
         <Route path="/carreras/administracion" element={<Administracion/>}/>
         <Route path="/carreras/marketing" element={<Marketing/>}/>
         <Route path="/carreras/ingenieria_ambiental" element={<Environmental/>}/>
