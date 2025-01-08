@@ -77,6 +77,10 @@
   color: var(--on-background-title);
 }
 
+.background-footer {
+  color: var(--untels-white);
+}
+
 .on-primary-color {
   color: var(--on-primary-color);
 }
