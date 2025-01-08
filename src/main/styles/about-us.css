@@ -57,5 +57,43 @@
 }
 
 .button-gray:hover {
-    background-color: #C0C0C0; /* Gris más oscuro al pasar el mouse */
+    background-color: #C0C0C0;
 }
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--untels-blue-2);
+}
+
+.timeline-item {
+    display: flex;
+    margin: 2% 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -0.8%; 
+    width: 20px;
+    height: 20px;
+    background-color: var(--untels-blue-2);
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .timeline-dot {
+        position: absolute;
+        left: -2.2%; 
+        width: 20px;
+        height: 20px;
+        background-color: var(--untels-blue-2);
+        border-radius: 50%;
+    }
+  }

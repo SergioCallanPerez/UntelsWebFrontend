@@ -1,4 +1,4 @@
-import { React } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "../../styles/root.css";
 import nosotrosIMG from "@/assets/aboutus_assets/top_image.png";
@@ -8,20 +8,52 @@ import Review from "./review";
 import Statute from "./statute";
 import OrganizationChart from "./organization_chart";
 
-const desc = {
-  missionDesc: "Formar profesionales, investigadores e innovadores, con base humanista, ética, social, tecnológica y científica. Que participen en la solución de los problemas de la sociedad, con un enfoque de desarrollo sostenible, vocación de servicio y espíritu emprendedor. En el ámbito local, nacional y con proyección internacional.",
-  visionDesc: "Ser reconocida como una Universidad socialmente responsable. Integrado por un equipo humano comprometido y competente en la formación integral de sus estudiantes. Con aporte de innovación hacia la sociedad, mediante centros de investigación y desarrollo, incubadoras de emprendimiento y educación continua.",
-  valuesDesc: "Respeto, libertad, mejora continua, honestidad, solidaridad y justicia, responsabilidad social.",
-  values1: "Respeto",
-  values2: "Libertad",
-  values3: "Mejora continua",
-  values4: "Honestidad",
-  values5: "Solidaridad y justicia",
-  values6: "Responsabilidad social",
-};
-
 export default function AboutUs() {
-  return (
+    const [activeButton, setActiveButton] = useState("Misión, visión y valores");
+
+    // Referencias para las secciones
+    const missionRef = useRef(null);
+    const reviewRef = useRef(null);
+    const statuteRef = useRef(null);
+    const orgChartRef = useRef(null);
+
+    // Función para hacer scroll hacia una sección específica
+    const handleScrollToSection = (section) => {
+        setActiveButton(section);
+        const refs = {
+        "Misión, visión y valores": missionRef,
+        "Reseña histórica": reviewRef,
+        "Estatuto": statuteRef,
+        "Organigrama": orgChartRef,
+        };
+        refs[section]?.current.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // Listener para cambiar el botón activo según el scroll
+    useEffect(() => {
+        const handleScroll = () => {
+        const sections = [
+            { name: "Misión, visión y valores", ref: missionRef },
+            { name: "Reseña histórica", ref: reviewRef },
+            { name: "Estatuto", ref: statuteRef },
+            { name: "Organigrama", ref: orgChartRef },
+        ];
+
+        // Detectar la sección visible
+        for (let section of sections) {
+            const rect = section.ref.current.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveButton(section.name);
+            break;
+            }
+        }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
     <main>
         <div className="main-image">
         <img
@@ -31,15 +63,35 @@ export default function AboutUs() {
         />
         </div>
 
-        <Container className="mt-4">
+        <Container className="mt-4 mb-4">
             <Row>
                 <h4 className="primary-color-bold">Acerca de la Universidad</h4>
                 <Col md={4}>
                 <div className="container-buttons">
-                    <p className="button-blue">Misión, visión y valores</p>
-                    <p className="button-gray">Reseña histórica</p>
-                    <p className="button-gray">Estatuto</p>
-                    <p className="button-gray">Organigrama</p>
+                    <p
+                        className={`button-${activeButton === "Misión, visión y valores" ? "blue" : "gray"}`}
+                        onClick={() => handleScrollToSection("Misión, visión y valores")}
+                    >
+                        Misión, visión y valores
+                    </p>
+                    <p
+                        className={`button-${activeButton === "Reseña histórica" ? "blue" : "gray"}`}
+                        onClick={() => handleScrollToSection("Reseña histórica")}
+                    >
+                        Reseña histórica
+                    </p>
+                    <p
+                        className={`button-${activeButton === "Estatuto" ? "blue" : "gray"}`}
+                        onClick={() => handleScrollToSection("Estatuto")}
+                    >
+                        Estatuto
+                    </p>
+                    <p
+                        className={`button-${activeButton === "Organigrama" ? "blue" : "gray"}`}
+                        onClick={() => handleScrollToSection("Organigrama")}
+                    >
+                        Organigrama
+                    </p>
                     <p className="button-gray">Directorio institucional</p>
                     <p className="button-gray">Mapa del campus</p>
                     <p className="button-gray">Convenios</p>
@@ -49,17 +101,17 @@ export default function AboutUs() {
                 
                 </Col>
 
-                <Col>
-                <Mission />
+                <Col ref={missionRef}>
+                    <Mission />
                 </Col>
             </Row>
-            <Row>
+            <Row ref={reviewRef}>
                 <Review />
             </Row>
-            <Row>
+            <Row ref={statuteRef}>
                 <Statute />
             </Row>
-            <Row>
+            <Row ref={orgChartRef}>
                 <OrganizationChart />
             </Row>
             
