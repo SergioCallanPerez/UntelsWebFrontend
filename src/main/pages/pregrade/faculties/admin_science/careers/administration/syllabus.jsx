@@ -2,6 +2,8 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { FaDownload } from "react-icons/fa6";
+import pdfPlan from "@/assets/pdfs/plan.pdf";
+import pdfMalla from "@/assets/pdfs/malla.pdf"
 import PagerView from "@/components/pager";
 import "@/styles/careers.css"
 
@@ -131,9 +133,8 @@ const syllabusItems=[
 export default function Syllabus() {
 
     const downloadPlan=()=>{
-        const pdfUrl = "@/assets/pdfs/plan_de_estudios_administracion.pdf";
         const link = document.createElement("a");
-        link.href = pdfUrl;
+        link.href = {pdfPlan};
         link.download = "Plan de Estudios Administración 2021.pdf";
         document.body.appendChild(link);
         link.click();
@@ -156,11 +157,25 @@ export default function Syllabus() {
                 <h2 className="background-title text-center"><b>Plan de estudios</b></h2>
             </div>
             <div className="d-flex syllabus-buttons pb-5 justify-content-end">
-                <Button className="syllabus-btn me-2 primary" onClick={downloadPlan}>
-                    Plan de estudios <FaDownload />
+                <Button className="syllabus-btn me-2 primary">
+                    <a 
+                        href={pdfPlan} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        download="Plan de Estudios Administración 2021.pdf"
+                    >
+                        Plan de estudios <FaDownload />
+                    </a>
                 </Button>
-                <Button className="syllabus-btn ms-2 primary" onClick={downloadMalla}>
-                    Malla Curricular <FaDownload />
+                <Button className="syllabus-btn me-2 primary">
+                    <a 
+                        href={pdfMalla} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        download="Malla Curricular Administracion 2021.pdf"
+                    >
+                        Malla Curricular <FaDownload />
+                    </a>
                 </Button>
             </div>
             <PagerView className="pagerview" controls={false}>

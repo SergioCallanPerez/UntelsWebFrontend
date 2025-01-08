@@ -103,6 +103,18 @@
   width: 80px;
 }
 
+.syllabus-btn a {
+  color: inherit !important; /* Hereda el color del botón y fuerza el estilo */
+  text-decoration: none !important; /* Elimina subrayado y fuerza el estilo */
+}
+
+.syllabus-btn a:hover, 
+.syllabus-btn a:focus, 
+.syllabus-btn a:active {
+  color: inherit !important; /* Mantiene el color original en todos los estados */
+  text-decoration: none !important; /* Asegura que no se subraye */
+}
+
 .paragraph-career{
   font-size: medium;
 }
