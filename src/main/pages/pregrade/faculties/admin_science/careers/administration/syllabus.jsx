@@ -1,8 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import {Row, Col} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { FaDownload } from "react-icons/fa6";
+import PagerView from "@/components/pager";
+import "@/styles/careers.css"
 
 const syllabusItems=[
     {
@@ -127,41 +128,41 @@ const syllabusItems=[
     }
 ]
 
-export default function Syllabus(){
-    return(
+export default function Syllabus() {
+    return (
         <section>
-            <div className="syllabus-title">
-                <h2><b>Plan de estudios</b></h2>
+            <div className="syllabus-title background-title with-underline mb-4">
+                <h2 className="background-title text-center"><b>Plan de estudios</b></h2>
             </div>
-            <div className="syllabus-buttons">
+            <div className="syllabus-buttons pb-5">
                 <Button className="syllabus-plan">
-                    Plan de estudios
-                    <FaDownload/>
+                    Plan de estudios <FaDownload />
                 </Button>
                 <Button className="syllabus-malla">
-                    Malla Curricular
-                    <FaDownload/>
+                    Malla Curricular <FaDownload />
                 </Button>
             </div>
-            <Row>
-            {syllabusItems.map((item)=>{
-                <Col md={3}>
+            <PagerView className="pagerview" controls={false}>
+                {syllabusItems.map((item) => (
                     <Card
                         key={item.id}
-                        className="asd"
+                        className="background border-0 rounded-4 mx-4 mb-2 with-box-shadow"
                     >
-                        <Card.Body className="asd">
-                            <Card.Title className="asd">
+                        <Card.Body className="d-flex flex-column">
+                            <Card.Title className="mt-3 primary syllabus-card-title rounded-circle justify-content-center align-items-center d-flex align-self-center">
                                 {item.title}
                             </Card.Title>
                             <Card.Text>
-                                <li>{item.subject}</li>
+                                <ul>
+                                    {item.subject.map((subject, index) => (
+                                        <li key={index}>{subject}</li>
+                                    ))}
+                                </ul>
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-            })}
-            </Row>
+                ))}
+            </PagerView>
         </section>
     );
 }

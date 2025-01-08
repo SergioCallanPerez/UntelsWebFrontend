@@ -7,7 +7,7 @@ import "@/styles/careers.css"
 export default function ReasonsStudy(){
     return(
         <section>
-            <div className="career-reasons-container">
+            <div className="career-reasons-container pb-5">
                 <img src={adminIMG} className="career-reasons-img"/>
                 <Card className="primary career-reasons-card border-0">
                     <Card.Body className="d-flex m-5 p-0 gap-4 flex-column justify-content-center">

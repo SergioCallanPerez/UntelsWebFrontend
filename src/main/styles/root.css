@@ -193,6 +193,10 @@ a {
   position: relative;
 }
 
+.with-underline-left {
+  position: relative;
+}
+
 .with-underline::after {
   content: ""; 
   position: absolute;
@@ -204,6 +208,17 @@ a {
   transform: translateX(-50%)
 }
 
+.with-underline-left::after {
+  content: ""; 
+  position: absolute;
+  top: 120%;
+  width: 150px;
+  height: 6px;
+  background-color: currentColor;
+  left: 27%;
+  transform: translateX(-100%)
+}
+
 .with-box-shadow {
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
 }
@@ -212,5 +227,17 @@ a {
   .with-auto-divider-on-primary {
     border-right: none;
     border-bottom: 2px solid var(--on-primary-color);
+  }
+
+  .with-underline-left::after {
+    content: ""; 
+    position: absolute;
+    top: 120%;
+    width: 150px;
+    height: 6px;
+    background-color: currentColor;
+    margin-left: 15%;
+    left: 27%;
+    transform: translateX(-100%)
   }
 }

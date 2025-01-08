@@ -1,10 +1,35 @@
 .career-title{
-    text-align: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+.banner-career{
+  position: absolute;
+  top: 200px;
+  left: 50px;
+}
+
+.banner-img{
+  width: 100%;
+  position: static;
+  aspect-ratio: 3/1;
 }
 
 .career-reasons-container {
     position: relative;
     margin-top: 10px;
+}
+
+.banner-text{
+  text-align: left;
+}
+
+.banner-title{
+  background-color: var(--untels-blue-1);
+  color: var(--untels-white);
+  width: 75%;
+  padding: 20px 40px;
 }
 
 .career-reasons-img {
@@ -20,15 +45,57 @@
     right: 0;
 }
 
+.slogan-text {
+  border: 2px solid var(--untels-blue-1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
-    .career-reasons-img {
-      position: static;
-      width: 100%;
-    }
-    
-    .career-reasons-card {
-      width: 100%;
-      margin-top: 0;
-      border-radius: 0;
-    }
+  .banner-career{
+    position: absolute;
+    top: 100px;
+    left: 20px;
   }
+
+  .banner-text{
+    text-align: left;
+    font-size: small;
+  }
+  
+  .banner-title{
+    background-color: var(--untels-blue-1);
+    color: var(--untels-white);
+    width: 75%;
+    padding: 10px 20px;
+    font-size: small;
+  }  
+
+  .career-reasons-img {
+    position: static;
+    width: 100%;
+  }
+  
+  .career-reasons-card {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .slogan-text {
+    border: 2px solid var(--untels-blue-1);
+    border-radius: 0px;
+    padding: 10px 20px;
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.syllabus-card-title {
+  height: 80px;
+  width: 80px;
+}
+
