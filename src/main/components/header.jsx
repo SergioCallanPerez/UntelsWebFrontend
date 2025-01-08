@@ -54,44 +54,34 @@ const menuData2 = [
         title: "Facultad de Ciencias Administrativas y Financieras",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Administración", href: "/carreras/administracion" },
-          { title: "Marketing y Negocios Internacionales", href: "#Carrera2" },
-          { title: "Carrera 3", href: "#Carrera3" },
-          { title: "Carrera 4", href: "#Carrera4" },
-          { title: "Carrera 5", href: "#Carrera5" },
+          { title: "Administración de empresas", href: "/carreras/administracion" },
+          { title: "Marketing y Negocios Internacionales", href: "/carreras/marketing" },
         ],
       },
       {
         title: "Facultad de Ingeniería Ambiental e Industrial",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Ingeniería Ambiental", href: "#Carrera1" },
+          { title: "Ingeniería Ambiental", href: "/carreras/ingenieria_ambiental" },
           { title: "Ingeniería Industrial", href: "#Carrera2" },
-          { title: "Carrera 3", href: "#Carrera3" },
-          { title: "Carrera 4", href: "#Carrera4" },
-          { title: "Carrera 5", href: "#Carrera5" },
         ],
       },
       {
         title: "Facultad de Ingeniería de Sistemas Computacionales",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Carrera 1", href: "#Carrera1" },
-          { title: "Carrera 2", href: "#Carrera2" },
-          { title: "Carrera 3", href: "#Carrera3" },
-          { title: "Carrera 4", href: "#Carrera4" },
-          { title: "Carrera 5", href: "#Carrera5" },
+          { title: "Ingeniería de Sistemas de Información", href: "#Carrera1" },
+          { title: "Ingeniería en Ciencia de Datos e Inteligencia Artificial", href: "#Carrera2" },
+          { title: "Ingeniería de Software", href: "#Carrera3" },
         ],
       },
       {
         title: "Facultad de Ingeniería Mecánica y Electrónica",
         /*TODO: Agregar el href a area*/
         children: [
-          { title: "Carrera 1", href: "#Carrera1" },
-          { title: "Carrera 2", href: "#Carrera2" },
-          { title: "Carrera 3", href: "#Carrera3" },
-          { title: "Carrera 4", href: "#Carrera4" },
-          { title: "Carrera 5", href: "#Carrera5" },
+          { title: "Ingeniería Mecánica y Eléctrica", href: "#Carrera1" },
+          { title: "Ingeniería Electrónica y Telecomunicaciones", href: "#Carrera2" },
+          { title: "Ingeniería Mecatrónica", href: "#Carrera3" },
         ],
       },
     ],

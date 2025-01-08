@@ -11,7 +11,7 @@ import Syllabus from "./syllabus";
 import '@/styles/careers.css';
 import Profile from "./profile";
 
-export default function Administracion(){
+export default function Environmental(){
 
     return(
         <main className="background d-flex flex-column gap-5 pb-5">

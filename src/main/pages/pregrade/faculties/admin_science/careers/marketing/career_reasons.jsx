@@ -12,7 +12,7 @@ export default function ReasonsStudy(){
                 <Card className="primary career-reasons-card border-0">
                     <Card.Body className="d-flex m-5 p-0 gap-4 flex-column justify-content-center">
                         <h2 className="with-underline text-center">
-                            <b>¿Por qué estudiar Administración de Empresas en UNTELS?</b>
+                            <b>¿Por qué estudiar Marketing y Negocios Internacionales en UNTELS?</b>
                         </h2>
                         <div className="career-reasons-list">
                             <p>
