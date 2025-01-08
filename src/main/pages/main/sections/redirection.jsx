@@ -42,12 +42,12 @@ export default function Redirection() {
           {items.map((item, index) => (
             <Col key={index} xs={6} md={2} className="mb-4 mx-auto">
               <div
-                className="circle-button"
+                className="circle-button d-flex justify-content-center"
                 onClick={() => window.open(item.link, "_blank")}
               >
-                <img src={item.image} alt={item.label} />
+                <img src={item.image} alt={item.label} className="circle-img"/>
               </div>
-              <p className="mt-2">{item.label}</p>
+              <p className="mt-2 text-center"><b>{item.label}</b></p>
             </Col>
           ))}
         </Row>
