@@ -23,7 +23,6 @@ export default function Main() {
       <News />
       <Announcements />
       <Experiences />
-      <Redirection />
       {
         //  <Follow />
       }
