@@ -40,7 +40,7 @@ export default function Redirection() {
       <Container>
         <Row className="text-center">
           {items.map((item, index) => (
-            <Col key={index} xs={6} md={2} className="mb-4 mx-auto">
+            <Col key={index} xs={2} md={2} className="mb-4 mx-auto">
               <div
                 className="circle-button d-flex justify-content-center"
                 onClick={() => window.open(item.link, "_blank")}
