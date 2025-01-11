@@ -212,7 +212,7 @@ a {
 .with-h-divider-on-background {
   border-bottom: 2px solid var(--on-background-accent-color);
 }
-.with-h-divider-on-background-footer {
+.with-h-divider-primary-light {
   border-bottom: 2px solid var(--primary-light);
 }
 
