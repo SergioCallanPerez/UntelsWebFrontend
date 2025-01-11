@@ -1,6 +1,5 @@
 import { React } from "react";
 import MainCarousel from "./sections/carousel.jsx";
-import Follow from "./sections/follow.jsx";
 import Announcements from "./sections/announcements.jsx";
 import Experiences from "./sections/experiences.jsx";
 import Achievements from "./sections/achievements.jsx";
@@ -9,7 +8,7 @@ import CampusLife from "./sections/campus_life.jsx";
 import Benefits from "./sections/benefits.jsx";
 import AdmissionAd from "./sections/admission_ad.jsx";
 import News from "./sections/news.jsx";
-import Redirection from "./sections/redirection.jsx";
+import WhatsAppAd from "./sections/whats_app_ad.jsx";
 
 export default function Main() {
   return (
@@ -23,9 +22,7 @@ export default function Main() {
       <News />
       <Announcements />
       <Experiences />
-      {
-        //  <Follow />
-      }
+      <WhatsAppAd />
     </main>
   );
 }

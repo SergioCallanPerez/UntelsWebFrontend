@@ -105,6 +105,14 @@
   color: var(--on-background-accent-color);
 }
 
+.btn-on-background {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border: none;
+  border-radius: 15px;
+  transition: ease 0.5s;
+}
+
 .btn-on-primary {
   background-color: var(--on-primary-accent-color);
   color: var(--untels-black);
@@ -119,9 +127,19 @@
   transform: scale(1.1);
 }
 
+.btn-on-background:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.1);
+}
+
 .btn-on-primary.mobile:hover {
   background-color: var(--untels-yellow);
   color: var(--untels-black);
+  transform: none;
+}
+
+.btn-on-background.mobile:hover {
+  background-color: var(--primary-color);
   transform: none;
 }
 
@@ -133,6 +151,14 @@
 .btn-on-primary:active {
   color: var(--untels-white);
   background-color: var(--untels-mustard) !important;
+}
+
+.btn-on-background.mobile:active {
+  background-color: var(--primary-light) !important;
+}
+
+.btn-on-background:active {
+  background-color: var(--primary-light) !important;
 }
 
 .badge-card {
@@ -186,7 +212,7 @@ a {
 .with-h-divider-on-background {
   border-bottom: 2px solid var(--on-background-accent-color);
 }
-.with-h-divider-on-background-footer {
+.with-h-divider-primary-light {
   border-bottom: 2px solid var(--primary-light);
 }
 
