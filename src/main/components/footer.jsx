@@ -41,7 +41,7 @@ const renderNavItem = (item) => {
           );
         }
         return (
-          <Link className="on-primary-color" key={child.title}>
+          <Link className="on-primary-color" key={child.title} to={child.href}>
             {child.title}
           </Link>
         );
