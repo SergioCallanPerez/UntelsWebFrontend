@@ -103,7 +103,7 @@ export default function Header() {
   return (
     <Navbar
       expand="lg"
-      className={`background sticky-top ${headerVisible ? "" : "hidden"}`}
+      className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
       onSelect={() => {
         setShowList([]); // close all dropdowns
         setCollapsed(true); // close navbar in mobile
