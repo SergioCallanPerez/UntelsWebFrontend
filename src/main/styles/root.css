@@ -85,14 +85,14 @@
   color: var(--on-primary-color);
 }
 
-.primary-color{
+.primary-color {
   color: var(--primary-color);
 }
-.primary-color-bold{
+.primary-color-bold {
   color: var(--primary-color);
   font-weight: bold;
 }
-.on-background-color-bold{
+.on-background-color-bold {
   color: var(--on-primary-color);
   font-weight: bold;
 }
@@ -176,10 +176,6 @@ body {
   font-family: "Avenir", "Arial", sans-serif;
 }
 
-main {
-  margin-top: 76px;
-}
-
 section {
   background-color: var(--background-color);
 }
@@ -190,10 +186,11 @@ a {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--untels-gray-3);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -243,25 +240,25 @@ a {
 }
 
 .with-underline::after {
-  content: ""; 
+  content: "";
   position: absolute;
   top: 120%;
   width: 150px;
   height: 6px;
   background-color: currentColor;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 .with-underline-left::after {
-  content: ""; 
+  content: "";
   position: absolute;
   top: 120%;
   width: 150px;
   height: 6px;
   background-color: currentColor;
   left: 27%;
-  transform: translateX(-100%)
+  transform: translateX(-100%);
 }
 
 .with-box-shadow {
@@ -275,7 +272,7 @@ a {
   }
 
   .with-underline-left::after {
-    content: ""; 
+    content: "";
     position: absolute;
     top: 120%;
     width: 150px;
@@ -283,13 +280,16 @@ a {
     background-color: currentColor;
     margin-left: 15%;
     left: 27%;
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }
 }
 
 .values-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta las columnas dinámicamente */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(120px, 1fr)
+  ); /* Ajusta las columnas dinámicamente */
   gap: 20px; /* Espacio entre los elementos */
   justify-items: center; /* Centra los círculos horizontalmente */
   align-items: center; /* Centra los círculos verticalmente */
@@ -304,7 +304,7 @@ a {
 }
 
 .value-circle {
-  background-color: #004A99; /* Azul oscuro */
+  background-color: #004a99; /* Azul oscuro */
   width: 80px;
   height: 80px;
   border-radius: 50%; /* Hace que el elemento sea circular */
