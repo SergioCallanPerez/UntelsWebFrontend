@@ -3,6 +3,7 @@
   --untels-white: #ffffff;
   --untels-white-rgb: 255, 255, 255;
   --untels-blue-1: #004e9b;
+  --untels-blue-1-rgb: 0, 78, 155;
   --untels-blue-2: #0071b8;
   --untels-yellow: #ffe601;
   --untels-mustard: #d39700;
@@ -54,6 +55,11 @@
 
 .primary {
   background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+
+.primary-opacity {
+  background-color: rgba(var(--untels-blue-1-rgb), 0.75);
   color: var(--on-primary-color);
 }
 
@@ -161,6 +167,28 @@
   background-color: var(--primary-light) !important;
 }
 
+.btn-on-background-muted {
+  background-color: var(--untels-gray-3);
+  color: var(--untels-black);
+  border: none;
+  border-radius: 15px;
+  transition: ease 0.5s;
+}
+
+.btn-on-background-muted:hover {
+  background-color: var(--untels-gray-2);
+  transform: scale(1.1);
+}
+
+.btn-on-background-muted.mobile:hover {
+  background-color: var(--untels-gray-3);
+  transform: none;
+}
+
+.btn-on-background-muted:active {
+  background-color: var(--untels-gray-2) !important;
+}
+
 .badge-card {
   background-color: var(--surface-color);
   color: var(--on-surface-color);
@@ -182,6 +210,10 @@ section {
 
 a {
   text-decoration: none;
+}
+
+main {
+  margin-top: 76px;
 }
 
 ::-webkit-scrollbar {
@@ -257,8 +289,7 @@ a {
   width: 150px;
   height: 6px;
   background-color: currentColor;
-  left: 27%;
-  transform: translateX(-100%);
+  left: 0px;
 }
 
 .with-box-shadow {
@@ -270,53 +301,4 @@ a {
     border-right: none;
     border-bottom: 2px solid var(--on-primary-color);
   }
-
-  .with-underline-left::after {
-    content: "";
-    position: absolute;
-    top: 120%;
-    width: 150px;
-    height: 6px;
-    background-color: currentColor;
-    margin-left: 15%;
-    left: 27%;
-    transform: translateX(-100%);
-  }
-}
-
-.values-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(120px, 1fr)
-  ); /* Ajusta las columnas dinámicamente */
-  gap: 20px; /* Espacio entre los elementos */
-  justify-items: center; /* Centra los círculos horizontalmente */
-  align-items: center; /* Centra los círculos verticalmente */
-  margin-top: 20px;
-}
-
-.value-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.value-circle {
-  background-color: #004a99; /* Azul oscuro */
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Hace que el elemento sea circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Texto blanco dentro del círculo */
-  font-size: 24px; /* Tamaño del ícono */
-}
-
-.value-text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #000000; /* Texto negro */
 }

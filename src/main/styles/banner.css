@@ -1,0 +1,34 @@
+.banner-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner-img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/1;
+}
+
+.banner-card {
+  top: 50%;
+  left: 23px;
+  transform: translateY(-50%);
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    aspect-ratio: 9/8;
+  }
+
+  .banner-card {
+    transform: none;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
