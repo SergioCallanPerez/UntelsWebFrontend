@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
@@ -20,8 +20,15 @@ export default function Header() {
   const [showList, setShowList] = useState([]);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [collapsed, setCollapsed] = useState(true);
+  const location = useLocation();
   const ref = useRef(null);
   const navigate = useNavigate();
+
+  // cierra todo en una navegacion
+  useEffect(() => {
+    setShowList([]);
+    setCollapsed(true);
+  }, [location]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -73,7 +80,7 @@ export default function Header() {
       return (
         <NavDropdown
           className={`background main-dropdown ${
-            item.href ? "cursor=pointer" : "cursor-none"
+            item.href ? "cursor-pointer" : "cursor-none"
           }`}
           key={item.title}
           title={deep === 0 ? <b>{item.title}</b> : item.title}
@@ -104,10 +111,6 @@ export default function Header() {
     <Navbar
       expand="lg"
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
-      onSelect={() => {
-        setShowList([]); // close all dropdowns
-        setCollapsed(true); // close navbar in mobile
-      }}
       expanded={!collapsed}
     >
       <Container fluid>
