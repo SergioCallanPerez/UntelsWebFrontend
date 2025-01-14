@@ -4,111 +4,15 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
 import logo from "@/assets/logoUntels.png";
 import portal from "@/assets/portalLogo.png";
+import { navData } from "@/data/mocks/nav_data";
 import "@/styles/header.css";
 
 const portalURL =
   "http://transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=13444#.XwbQV21KjIV";
-
-
-const menuData2 = [
-  {
-    title: "Nosotros",
-    children: [
-      {
-        title: "Nuestra Universidad", href: "/nosotros"
-      },
-      {
-        title: "Autoridades", href: "/autoridades" 
-      },
-      {
-        title: "Oficinas",
-        children: [
-          { title: "Gestión Académica y Prospectiva", href: "#Gestion" },
-          {
-            title: "Dirección de Responsabilidad Social Universitaria",
-            href: "#Direccion",
-          },
-          {
-            title: "Cooperación y Relaciones internacionales",
-            href: "#Cooperación",
-          },
-        ],
-      },
-      {
-        title: "Documentos de gestión",
-        children: [
-          { title: "Reglamento Académico", href: "#Reglamento" },
-          { title: "TUPA", href: "#TUPA" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Pregrado",
-    children: [
-      {
-        title: "Facultad de Ciencias Administrativas y Financieras",
-        /*TODO: Agregar el href a area*/
-        children: [
-          { title: "Administración de empresas", href: "/carreras/administracion" },
-          { title: "Marketing y Negocios Internacionales", href: "/carreras/marketing" },
-        ],
-      },
-      {
-        title: "Facultad de Ingeniería Ambiental e Industrial",
-        /*TODO: Agregar el href a area*/
-        children: [
-          { title: "Ingeniería Ambiental", href: "/carreras/ingenieria_ambiental" },
-          { title: "Ingeniería Industrial", href: "#Carrera2" },
-        ],
-      },
-      {
-        title: "Facultad de Ingeniería de Sistemas Computacionales",
-        /*TODO: Agregar el href a area*/
-        children: [
-          { title: "Ingeniería de Sistemas de Información", href: "#Carrera1" },
-          { title: "Ingeniería en Ciencia de Datos e Inteligencia Artificial", href: "#Carrera2" },
-          { title: "Ingeniería de Software", href: "#Carrera3" },
-        ],
-      },
-      {
-        title: "Facultad de Ingeniería Mecánica y Electrónica",
-        /*TODO: Agregar el href a area*/
-        children: [
-          { title: "Ingeniería Mecánica y Eléctrica", href: "#Carrera1" },
-          { title: "Ingeniería Electrónica y Telecomunicaciones", href: "#Carrera2" },
-          { title: "Ingeniería Mecatrónica", href: "#Carrera3" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Posgrado",
-    children: [
-      { title: "Proceso de Admisión 2024-II", href: "#Admision" },
-      { title: "Estructura Orgánica", href: "#Estructura" },
-      { title: "Presentación", href: "#Presentacion" },
-    ],
-  },
-  {
-    title: "Admision",
-    children: [
-      { title: "Cronograma", href: "#Cronograma" },
-      { title: "Modalidades", href: "#Modalidades" },
-      { title: "Vacantes", href: "#Vacantes" },
-      { title: "Temario", href: "#Temario" },
-      { title: "Prospecto", href: "#Prospecto" },
-      { title: "Modelo de examen", href: "#Modelo" },
-      { title: "Infórmate", href: "#Informate" },
-      { title: "Preguntas frecuentes", href: "#Preguntas" },
-      { title: "Contáctanos", href: "#Contactanos" },
-    ],
-  },
-];
 
 let lastScrollY = 0;
 
@@ -116,8 +20,15 @@ export default function Header() {
   const [showList, setShowList] = useState([]);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [collapsed, setCollapsed] = useState(true);
+  const location = useLocation();
   const ref = useRef(null);
   const navigate = useNavigate();
+
+  // cierra todo en una navegacion
+  useEffect(() => {
+    setShowList([]);
+    setCollapsed(true);
+  }, [location]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -169,7 +80,7 @@ export default function Header() {
       return (
         <NavDropdown
           className={`background main-dropdown ${
-            item.href ? "cursor=pointer" : "cursor-none"
+            item.href ? "cursor-pointer" : "cursor-none"
           }`}
           key={item.title}
           title={deep === 0 ? <b>{item.title}</b> : item.title}
@@ -200,10 +111,6 @@ export default function Header() {
     <Navbar
       expand="lg"
       className={`background fixed-top ${headerVisible ? "" : "hidden"}`}
-      onSelect={() => {
-        setShowList([]); // close all dropdowns
-        setCollapsed(true); // close navbar in mobile
-      }}
       expanded={!collapsed}
     >
       <Container fluid>
@@ -225,7 +132,7 @@ export default function Header() {
             navbarScroll
             ref={ref}
           >
-            {menuData2.map((item) => renderNavItem(item))}
+            {navData.map((item) => renderNavItem(item))}
           </Nav>
           <Nav.Link target="_blank" href={portalURL}>
             <img src={portal} height="50" alt="Portal" />

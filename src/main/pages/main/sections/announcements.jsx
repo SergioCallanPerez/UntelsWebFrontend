@@ -35,7 +35,6 @@ export default function Announcements() {
             <Col key={item.no} md={4} xs={12}>
               <div className="card p-3 with-box-shadow border-0 rounded-4">
                 <h5 className="card-title background-title">
-                  {" "}
                   <b>Comunicado N° {item.no}</b>
                 </h5>
                 <p className="card-text">{item.message}</p>

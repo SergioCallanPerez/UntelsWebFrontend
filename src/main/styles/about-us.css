@@ -1,110 +1,22 @@
-.main-img-container {
-    margin-bottom: 23px;
-    position: relative;
-}
-
-.about-us-img{
-    width: 130%;
-    height: 130%;
-}
-.about-us-title{
-    font-size: 300%;
-    margin-right: 40%;
-}
-.about-us-title-mobile{
-    font-size: 300%;
-}
-.about-us-card {
-    position: absolute;
-    left: 2%;
-    bottom: 30%;
-    aspect-ratio: 17/4;
-}
-.vision-title{
-    font-size: 300%;
-    margin-left: 40%;
-}
-.about-us-message{
-    font-size: 120%;
-}
-.main-image {
-    text-align: center;
-    margin: 0 auto;
-}
-  
-.main-image img {
-    width: 100%;
-    height: auto;
-}
-
-.container-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 50%; /* Asegura que se ajusten al ancho del contenedor */
-  }
-  
-.button-blue {
-    background-color: var(--untels-blue-1); /* Azul oscuro */
-    color: white;
-    padding: 12px 16px; /* Espaciado interno */
-    text-align: center;
-    border: none;
-    border-radius: 12px; /* Bordes redondeados */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button-gray {
-    background-color: #E0E0E0; /* Gris claro */
-    color: black;
-    padding: 12px 16px;
-    text-align: center;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.button-gray:hover {
-    background-color: #C0C0C0;
-}
-
-.timeline {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .timeline-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--untels-blue-2);
-}
-
-.timeline-item {
-    display: flex;
-    margin: 2% 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--untels-blue-2) 90%, transparent 100%);
 }
 
 .timeline-dot {
-    position: absolute;
-    left: -0.8%; 
-    width: 20px;
-    height: 20px;
-    background-color: var(--untels-blue-2);
-    border-radius: 50%;
+  position: absolute;
+  left: -7.8px;
+  width: 20px;
+  height: 20px;
+  background: var(--untels-blue-2);
+  border-radius: 50%;
 }
-@media (max-width: 768px) {
-    .timeline-dot {
-        position: absolute;
-        left: -2.2%; 
-        width: 20px;
-        height: 20px;
-        background-color: var(--untels-blue-2);
-        border-radius: 50%;
-    }
-  }
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+}

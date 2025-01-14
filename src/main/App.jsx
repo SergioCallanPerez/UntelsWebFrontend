@@ -1,7 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
-import Mission from "./pages/about-us/mission";
-import Review from "./pages/about-us/review"
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./styles/root.css";
@@ -13,7 +11,7 @@ import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketin
 import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
 import Campus from "./pages/about-us/campus";
 import Authorities from "./pages/about-us/authorities";
-import AboutUs from "./pages/about-us/about-us";
+import AboutUs from "./pages/about-us";
 
 function App() {
   return (
