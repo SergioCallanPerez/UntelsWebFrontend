@@ -5,6 +5,9 @@ import Mission from "./sections/mission";
 import Review from "./sections/review";
 import Statute from "./sections/statute";
 import OrganizationChart from "./sections/organization_chart";
+import Directory from "./sections/directory";
+import DirectoryTel from "./sections/directory_tel";
+import Campus from "./sections/campus";
 
 const navData = [
   {
@@ -28,20 +31,20 @@ const navData = [
     searchParam: "directorio",
   },
   {
-    title: "Mapa del campus",
-    searchParam: "mapa",
+    title: "Directorio Telefónico (Anexos)",
+    searchParam: "directorio-telefonico",
   },
   {
-    title: "Convenios",
-    searchParam: "convenios",
+    title: "Mapa del campus",
+    searchParam: "campus",
   },
   {
     title: "Memoria anual",
     searchParam: "memoria",
   },
   {
-    title: "Mesa de parte",
-    searchParam: "mesa",
+    title: "Convenios",
+    searchParam: "convenios",
   },
 ];
 
@@ -58,8 +61,10 @@ export default function AbutUs() {
         <Review />
         <Statute />
         <OrganizationChart />
+        <Directory />
+        <DirectoryTel />
+        <Campus />
       </FixedDrawerLayout>
     </main>
   );
 }
-

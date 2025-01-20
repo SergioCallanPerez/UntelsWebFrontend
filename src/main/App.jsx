@@ -9,7 +9,7 @@ import FacultadAdministracion from "./pages/pregrade/faculties/admin_science/fac
 import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketing/marketing";
 import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
-import Campus from "./pages/about-us/campus";
+import Campus from "./pages/about-us/sections/campus";
 import Authorities from "./pages/about-us/authorities";
 import AboutUs from "./pages/about-us";
 

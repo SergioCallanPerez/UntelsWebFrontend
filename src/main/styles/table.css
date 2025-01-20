@@ -1,0 +1,16 @@
+.table-on-background thead th {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border-radius: 5px;
+}
+
+.table-on-background{
+  border-spacing: 5px;
+  border-collapse: separate;
+}
+
+.table-on-background tbody td {
+  background-color: var(--untels-gray-3);
+  color: var(--on-background-color);
+  border-radius: 5px;
+}
