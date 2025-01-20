@@ -7,6 +7,8 @@ import { FaArrowRight } from "react-icons/fa6";
 
 import "@/styles/drawer.css";
 
+let lastScrollY = 0;
+
 export default function FixedDrawerLayout({
   children,
   title,
@@ -14,6 +16,7 @@ export default function FixedDrawerLayout({
   searchName,
 }) {
   const [collapsed, setCollapsed] = useState(isMobile);
+  const [headerVisible, setHeaderVisible] = useState(true);
   const [searchParams, setSearchParam] = useSearchParams();
   const drawerRef = useRef(null);
   const navRef = useRef(null);
@@ -78,25 +81,41 @@ export default function FixedDrawerLayout({
     };
   }, [drawerRef, navRef]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (!drawerRef.current) return;
+    const drawerTop = drawerRef.current.getBoundingClientRect().top;
+    if (drawerTop < 0 && window.scrollY > lastScrollY && window.scrollY > 76) {
+      setHeaderVisible(false);
+    } else {
+      setHeaderVisible(true);
+    }
+    lastScrollY = window.scrollY;
+  };
+
   return (
     <section ref={drawerRef} className={`drawer-layout`}>
       <div
         ref={navRef}
-        className={`background drawer-nav z-1
+        className={`background drawer-nav z-1 d-flex flex-column
           ${collapsed ? "drawer-nav-collapsed" : ""} 
+          ${headerVisible ? "drawer-nav-header" : ""} 
           `}
       >
         <div
-          style={{ height: 76, marginBottom: 15 }}
-          className="d-flex primary-color align-items-center justify-content-center"
+          className="primary-color py-4 text-center"
         >
           {title}
         </div>
 
-        <div>
-          <div className="d-flex flex-column gap-2 nav-items-container">
-            {navData.map((item) => renderDrawerNavItem(item))}
-          </div>
+        <div className="d-flex flex-column gap-2 nav-items-container">
+          {navData.map((item) => renderDrawerNavItem(item))}
         </div>
 
         <button
