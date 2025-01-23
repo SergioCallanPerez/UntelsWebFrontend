@@ -1,13 +1,23 @@
 .drawer-layout {
   display: flex;
   position: relative;
-  overflow-x: hidden;
 }
 
 .drawer-nav {
+  will-change: left, padding-top;
+  height: 100vh;
   width: 350px;
   left: 0px;
-  transition: left ease 0.4s;
+  transition: left ease 0.4s, padding-top 0.3s ease-in-out;
+}
+
+.nav-items-container {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.drawer-nav-header {
+  padding-top: 76px;
 }
 
 .drawer-nav-collapsed {
@@ -15,7 +25,8 @@
 }
 
 .drawer-content {
-  flex-grow: 1;
+  will-change: margin-left;
+  width: 100%;
   margin-left: 350px;
   transition: margin-left ease 0.4s, opacity 0.4s ease;
 }
