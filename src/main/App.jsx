@@ -8,6 +8,7 @@ import Faculty from "./pages/pregrade/faculties/faculty_page";
 import Administracion from "./pages/pregrade/faculties/admin_science/careers/administration/administracion";
 import Marketing from "./pages/pregrade/faculties/admin_science/careers/marketing/marketing";
 import Environmental from "./pages/pregrade/faculties/environmental_engineering/environmental_engineering/environmental";
+import Cepre from "./pages/cepre";
 import Campus from "./pages/about-us/sections/campus";
 import Authorities from "./pages/about-us/authorities";
 import AboutUs from "./pages/about-us";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/nosotros" element={<AboutUs/>}/>
         <Route path="/campus" element={<Campus />} />
         <Route path="/autoridades" element={<Authorities />} />
+        <Route path="/cepre/informate" element={<Cepre/>}/>
       </Routes>
       <p>La presente página solo es una maquetación para la propuesta de página web para la Universidad Nacional Tecnológica de Lima Sur aún en desarrollo.</p>
       <Footer />
