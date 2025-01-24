@@ -9,6 +9,7 @@ import Benefits from "./sections/benefits.jsx";
 import AdmissionAd from "./sections/admission_ad.jsx";
 import News from "./sections/news.jsx";
 import WhatsAppAd from "./sections/whats_app_ad.jsx";
+import QuickAccesses from "./sections/quick_access.jsx";
 
 export default function Main() {
   return (
@@ -19,6 +20,7 @@ export default function Main() {
       <AcademicPrograms />
       <CampusLife />
       <AdmissionAd />
+      <QuickAccesses/>
       <News />
       <Announcements />
       <Experiences />
