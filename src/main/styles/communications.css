@@ -1,0 +1,10 @@
+.communication-container{
+    min-height: 160px;
+  }
+  
+  @media (max-width: 768px) {
+    .communication-container{
+      min-height: 0px;
+    }
+  }
+  
