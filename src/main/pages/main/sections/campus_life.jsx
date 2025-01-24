@@ -35,7 +35,7 @@ export default function CampusLife() {
     <section>
       <Container>
         <h2 className="background-title with-underline text-center">
-          <b>Vida universitaria: ¿Qué encontrarás en UNTELS?</b>
+          <b>Vida universitaria: ¿Qué encontrarás en la UNTELS?</b>
         </h2>
         <Row className="mt-5 justify-content-center">
           {cards.map((item) => (

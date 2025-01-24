@@ -19,10 +19,10 @@ export default function Benefits() {
               </h2>
               <p>
                 En UNTELS encontrarás el lugar perfecto para crecer y alcanzar
-                tus metas profesionales Te ofrecemos :
+                tus metas profesionales.
               </p>
               <h5>
-                Te ofrecemos :
+                Te ofrecemos:
               </h5>
               <div>
                 <p>

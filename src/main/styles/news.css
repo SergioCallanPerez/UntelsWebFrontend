@@ -3,3 +3,12 @@
   aspect-ratio: 1;
   object-fit: cover;
 }
+.news-cards{
+  min-height: 700px;
+}
+
+@media (max-width: 768px) {
+  .news-cards{
+    min-height: 0px;
+  }
+}
