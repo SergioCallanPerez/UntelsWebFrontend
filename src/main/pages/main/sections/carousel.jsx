@@ -52,6 +52,7 @@ export default function MainCarousel() {
             </Carousel.Item>
           ))}
         </Carousel>
+        {/*
         <Card className="primary carousel-card border-0">
           <Card.Body className="d-flex m-5 p-0 gap-4 flex-column text-center justify-content-center">
             <Card.Title as={"h2"}>
@@ -70,6 +71,7 @@ export default function MainCarousel() {
             </Button>
           </Card.Body>
         </Card>
+        */}
         <div className="carousel-indicators"></div>
       </div>
     </section>
