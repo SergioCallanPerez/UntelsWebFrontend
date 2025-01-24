@@ -35,7 +35,8 @@ export const footerNavData = [
       },
       {
         title: "Mesa de parte",
-        href: "/nosotros",
+        href: strings.mesa_partes_url,
+        external: true
       },
     ],
   },
@@ -44,19 +45,19 @@ export const footerNavData = [
     children: [
       {
         title: "Facultad de Ciencias Administrativas y Financieras",
-        href: "/facultades/ciencias_administrativas",
+        href: "/facultades/ciencias-administrativas-y-financieras",
       },
       {
         title: "Facultad de Ingeniería Ambiental e Industrial",
-        href: "/carreras/ingenieria_ambiental",
+        href: "/facultades/ingeniería-ambiental-e-industrial",
       },
       {
         title: "Facultad de Ingeniería de Sistemas Computacionales",
-        href: "#Carrera2",
+        href: "/facultades/ingeniería-de-sistemas-computacionales",
       },
       {
         title: "Facultad de Ingeniería Mecánica y Electrónica",
-        href: "#Carrera2",
+        href: "/facultades/ingeniería-mecánica-y-electrónica",
       },
     ],
   },

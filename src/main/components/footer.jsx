@@ -8,9 +8,10 @@ import {
   PiEnvelopeLight,
 } from "react-icons/pi";
 
+import { FaXTwitter } from "react-icons/fa6";
+
 import {
   TiSocialYoutube,
-  TiSocialTwitter,
   TiSocialLinkedin,
   TiSocialInstagram,
   TiSocialFacebook,
@@ -97,7 +98,7 @@ export default function Footer() {
                   <TiSocialLinkedin size={25} />
                 </Link>
                 <Link className="on-primary-color me-3">
-                  <TiSocialTwitter size={25} />
+                  <FaXTwitter size={25} />
                 </Link>
                 <Link className="on-primary-color me-3">
                   <TiSocialInstagram size={25} />

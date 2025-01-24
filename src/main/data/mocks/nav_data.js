@@ -1,3 +1,5 @@
+import { strings } from "../strings";
+
 export const navData = [
   {
     title: "Nosotros",
@@ -92,4 +94,11 @@ export const navData = [
       { title: "Contáctanos", href: "#Contactanos" },
     ],
   },
+  {
+    title: "Centro Pre",
+    children: [
+      {title: "Infórmate", href: "/cepre/informate"},
+      {title: "Centro Pre", href: strings.centro_pre_url}
+    ],
+  }
 ];
