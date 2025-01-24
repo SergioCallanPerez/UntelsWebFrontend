@@ -13,7 +13,7 @@ export default function Activities(){
     return(
         <section>
             <Container>
-                <h2>Actividades</h2>
+                <h2 className="background-title with-underline-left mb-5">Actividades</h2>
                 <div>
                     {descActivities.map((item)=>(
                         <ul>

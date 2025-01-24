@@ -6,6 +6,7 @@ import Vacancies from "./sections/vacancies.jsx";
 import Schedule from "./sections/schedule.jsx";
 import Activities from "./sections/activities.jsx";
 import Lessons from "./sections/lessons.jsx";
+import QA from "./sections/q&a.jsx";
 
 export default function Cepre(){
 
@@ -19,6 +20,7 @@ export default function Cepre(){
             <Schedule/>
             <Activities/>
             <Lessons/>
+            <QA/>
         </main>
     );
 }

@@ -19,7 +19,7 @@ export default function Modalities(){
     return(
         <section>
             <Container>
-                <h2>Modalidades</h2>
+                <h2 className="background-title with-underline-left mb-5">Modalidades</h2>
                 <div>
                     <p>En UNTELS, encontrarás dos modalidades:</p>
                     {descModalities.map((item)=>(

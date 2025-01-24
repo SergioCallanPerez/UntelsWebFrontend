@@ -35,7 +35,7 @@ export default function Vacancies(){
 
     return(
         <section className="container mt-4">
-            <h2>Vacantes de ingreso directo</h2>
+            <h2 className="background-title with-underline-left mb-5">Vacantes de ingreso directo</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>

@@ -39,7 +39,7 @@ export default function Ciclo(){
 
     return(
         <section className="container mt-4">
-            <h2>Ciclo académico 2025-I</h2>
+            <h2 className="background-title with-underline-left mb-4">Ciclo académico 2025-I</h2>
             <p>Nuestro siguiente ciclo académico:</p>
             <Table striped bordered hover>
                 <thead>

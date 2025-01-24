@@ -16,7 +16,7 @@ export default function Schedule(){
     return(
         <section>
             <Container>
-                <h2>Horarios de clases</h2>
+                <h2 className="background-title with-underline-left mb-5">Horarios de clases</h2>
                 <div>
                     <p>Existen 2 horarios a elegir:</p>
                     {descSchedule.map((item)=>(
