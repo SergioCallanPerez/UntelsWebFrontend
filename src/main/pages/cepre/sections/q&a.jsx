@@ -1,6 +1,5 @@
 import React from "react";
 import { Table, Container } from "react-bootstrap";
-import "@/styles/qa.css"
 
 const descCost = [
   {
@@ -139,13 +138,13 @@ export default function QA() {
         <Container>
             <div>
                 <h2 className="background-title with-underline-left mb-5">¿Cuál es el costo por ciclo?</h2>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                        <th rowSpan={2}>Turno</th>
-                        <th rowSpan={2}>Modalidad</th>
-                        <th colSpan={2}>Pago al Contado</th>
-                        <th colSpan={2}>Pago Fraccionado</th>
+                <Table striped bordered hover className="table-on-background">
+                    <thead className="blue-col">
+                        <tr className="blue-col">
+                            <th rowSpan={2} className="blue-col">Turno</th>
+                            <th rowSpan={2}>Modalidad</th>
+                            <th colSpan={2}>Pago al Contado</th>
+                            <th colSpan={2}>Pago Fraccionado</th>
                         </tr>
                         <tr>
                         <th>Monto S/.</th>
@@ -179,7 +178,7 @@ export default function QA() {
             </div>
             <div>
                 <h2 className="background-title with-underline-left mb-5">¿Cuáles son los puntajes por examen?</h2>
-                <Table striped bordered hover>
+                <Table bordered className="table-on-background">
                     <thead>
                         <tr>
                             <th>Examen</th>
