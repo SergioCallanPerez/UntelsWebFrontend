@@ -9,70 +9,70 @@ import "@/styles/experiences.css";
 const cases = [
   {
     id: "1",
-    name: "Jhon Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
+    name: " Ana López",
+    text: "UNTELS me dio las herramientas para liderar proyectos internacionales. Aquí aprendí a innovar y marcar la diferencia.",
+    work: "Ingeniería Ambiental",
   },
   {
     id: "2",
-    name: "Jane Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Diseñador UX",
+    name: "Carlos Méndez",
+    text: "La calidad de los docentes y las oportunidades de investigación hicieron de mi experiencia universitaria algo único.",
+    work: "Ingeniería Electrónica",
   },
   {
     id: "3",
-    name: "Jhon Smith",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
+    name: "Enrique Paredes",
+    text: "En UNTELS descubrí mi pasión por la tecnología y aprendí a superar los retos con creatividad.",
+    work: "Ingeniería de Sistemas",
   },
   {
     id: "4",
-    name: "Jhon Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
+    name: "María González",
+    text: "La UNTELS me enseñó a trabajar en equipo y a desarrollar proyectos sostenibles con impacto real.",
+    work: "Ingeniería Ambiental",
   },
   {
     id: "5",
-    name: "Jane Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Diseñador UX",
+    name: "Fernando Ruiz",
+    text: "Mis años en UNTELS fueron fundamentales para mi desarrollo profesional y personal. Aquí aprendí a destacar.",
+    work: "Ingeniería Ambiental",
   },
   {
     id: "6",
-    name: "Jhon Smith",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
+    name: "Lucía Vargas",
+    text: "Gracias a UNTELS, desarrollé una base sólida en electrónica y la confianza para liderar proyectos innovadores.",
+    work: "Ingeniería Electrónica",
   },
   {
     id: "7",
-    name: "Jhon Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
-  },
-  {
+    name: "Paola Torres",
+    text: "En UNTELS encontré un entorno que me impulsó a pensar fuera de la caja y buscar soluciones innovadoras.",
+    work: "Ingeniería Civil"
+},
+{
     id: "8",
-    name: "Jane Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Diseñador UX",
-  },
-  {
-    id: "9",
-    name: "Jhon Smith",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
-  },
-  {
-    id: "10",
-    name: "Jhon Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Desarrollador",
-  },
-  {
-    id: "11",
-    name: "Jane Doe",
-    text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-    work: "Diseñador UX",
-  },
+    name: "Luis Paredes",
+    text: "Los valores y la calidad académica de UNTELS me prepararon para enfrentar cualquier desafío en mi carrera.",
+    work: "Ingeniería de Sistemas"
+},
+{
+  id: "9",
+  name: "Andrea Salazar",
+  text: "La UNTELS fue la base de mi éxito. Aquí descubrí cómo transformar ideas en realidades concretas.",
+  work: "Ingeniería Ambiental"
+},
+{
+  id: "10",
+  name: "Raúl Fernández",
+  text: "Lo mejor de UNTELS fue la red de contactos que formé y el aprendizaje colaborativo que experimenté.",
+  work: "Ingeniería Electrónica"
+},
+{
+  id: "11",
+  name: "Sofía Martínez",
+  text: "UNTELS me dio la oportunidad de crecer como profesional y como persona, siempre buscando la excelencia.",
+  work: "Ingeniería Industrial"
+}
 ];
 
 export default function Experiences() {

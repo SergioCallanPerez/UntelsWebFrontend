@@ -98,7 +98,7 @@ export const navData = [
     title: "Centro Pre",
     children: [
       {title: "Infórmate", href: "/cepre/informate"},
-      {title: "Centro Pre", href: strings.centro_pre_url}
+      {title: "Web del Centro Pre", href: strings.centro_pre_url}
     ],
   }
 ];
